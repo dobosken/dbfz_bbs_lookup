@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>DBFZ BBS lookup</title>
+	<link rel="stylesheet" type="text/css" href="dbfz_assets/dbfz_theme.css" title="Default" />
+	<link rel="icon" type="image/gif" href="dbfz_assets/favicon.gif">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="only 4 real super saiyajins!!1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+	<div id="container">
+		<div id="content">
+			<canvas width="1280" height="720"></canvas>
+			<script type="text/javascript" src="dbfz_assets/dbfz_bbs.js"></script>
+			<script type="text/javascript" src="dbfz_assets/dbfz_background.js"></script>
+			<div id="loading"><pre>&#9733;&#xFE0E;</pre></div>
+
+			<div id="topbar"><input type="checkbox" checked onchange="pauseAnim()"></input><input type="text" placeholder="search" id="searchbar" size="14" oninput="interactiveSearch(this.value)">
+				<div id="alltags">
+				</div>
+			</div>
+
+			<div class="bbs_content">
+				<table>
+					<thead>
+						<tr>
+							<th class="th_name_raw">name_raw</th>
+							<th class="th_id">id</th>
+							<th class="th_name_given">name_given</th>
+							<th class="th_text">description</th>
+							<th class="th_extra">+</th>
+							<th class="th_tags">tags</th>
+						</tr>
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</div>
+</body>
+
+</html>
