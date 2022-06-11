@@ -218,7 +218,7 @@
 	{
 		"id": 24,
 		"name_raw": "GotoIf",
-		"name_given": "goto",
+		"name_given": "gotoIfTrue",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -227,7 +227,7 @@
 	{
 		"id": 25,
 		"name_raw": "GotoIfNot",
-		"name_given": "setupLoop",
+		"name_given": "gotoIfFalse",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -236,7 +236,7 @@
 	{
 		"id": 26,
 		"name_raw": "CellTimeOverWrite",
-		"name_given": "",
+		"name_given": "spriteAddTime",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -443,7 +443,7 @@
 	{
 		"id": 49,
 		"name_raw": "CheckConditionEx",
-		"name_given": "",
+		"name_given": "checkFlag",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -587,7 +587,7 @@
 	{
 		"id": 65,
 		"name_raw": "CheckEnemyTeamMemberName",
-		"name_given": "opponent_character_is",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -1595,7 +1595,7 @@
 	{
 		"id": 197,
 		"name_raw": "WarpSelfDirOffset",
-		"name_given": "moveTo2",
+		"name_given": "moveToOffset",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -1793,7 +1793,7 @@
 	{
 		"id": 246,
 		"name_raw": "InitializeForIchigekiShotObject",
-		"name_given": "",
+		"name_given": "instantkillAttack",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -2801,7 +2801,7 @@
 	{
 		"id": 407,
 		"name_raw": "addDragonBall",
-		"name_given": "addDragonBall",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -3008,7 +3008,7 @@
 	{
 		"id": 447,
 		"name_raw": "DeleteParticle",
-		"name_given": "",
+		"name_given": "deleteParticle",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -3939,7 +3939,7 @@
 		"args": "",
 		"description": "",
 		"example": "",
-		"tags": "attack"
+		"tags": "attack,cinematic"
 	},
 	{
 		"id": 716,
@@ -4080,7 +4080,7 @@
 		"id": 736,
 		"name_raw": "AtkDamageToRecovery",
 		"name_given": "",
-		"args": "",
+		"args": "0 = false\n1 = true",
 		"description": "",
 		"example": "",
 		"tags": "attack"
@@ -7539,7 +7539,7 @@
 		"args": "",
 		"description": "",
 		"example": "",
-		"tags": "movement,movement"
+		"tags": "movement"
 	},
 	{
 		"id": 1276,
@@ -7877,7 +7877,7 @@
 	{
 		"id": 1335,
 		"name_raw": "EnableForwardWalk",
-		"name_given": "enableWalkForward",
+		"name_given": "enableForwardWalk",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -7899,12 +7899,12 @@
 		"args": "",
 		"description": "",
 		"example": "",
-		"tags": "movement,movement"
+		"tags": "movement"
 	},
 	{
 		"id": 1338,
 		"name_raw": "EnableBackWalk",
-		"name_given": "enableWalkBack",
+		"name_given": "enableBackWalk",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -7926,7 +7926,7 @@
 		"args": "",
 		"description": "",
 		"example": "",
-		"tags": "movement,movement"
+		"tags": "movement"
 	},
 	{
 		"id": 1341,
@@ -8039,7 +8039,7 @@
 	{
 		"id": 1353,
 		"name_raw": "EnableChangeAndAssist",
-		"name_given": "",
+		"name_given": "enableChangeAndAssist",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -8048,7 +8048,7 @@
 	{
 		"id": 1354,
 		"name_raw": "EnableMemberChangeUltimate",
-		"name_given": "",
+		"name_given": "enableMemberChangeUltimate",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -8057,7 +8057,7 @@
 	{
 		"id": 1355,
 		"name_raw": "EnableAirTurn",
-		"name_given": "",
+		"name_given": "enableAirTurn",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -8066,7 +8066,7 @@
 	{
 		"id": 1356,
 		"name_raw": "EnableMemberChange",
-		"name_given": "enableAirTurn",
+		"name_given": "enableChange",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -8084,7 +8084,7 @@
 	{
 		"id": 1358,
 		"name_raw": "EnableAssistAttack",
-		"name_given": "",
+		"name_given": "enableAssistAttack",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -8147,7 +8147,7 @@
 	{
 		"id": 1365,
 		"name_raw": "EnableZReflect",
-		"name_given": "",
+		"name_given": "enableReflect",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -8156,7 +8156,7 @@
 	{
 		"id": 1366,
 		"name_raw": "EnableKiaitame",
-		"name_given": "",
+		"name_given": "enableKiCharge",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -10217,7 +10217,7 @@
 	{
 		"id": 1839,
 		"name_raw": "ExMutekiNage",
-		"name_given": "superArmorOverdriveInvul",
+		"name_given": "superArmorGrabInvul",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -10244,7 +10244,7 @@
 	{
 		"id": 1846,
 		"name_raw": "ExMutekiBurst",
-		"name_given": "",
+		"name_given": "superArmorHitstop",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -10289,7 +10289,7 @@
 	{
 		"id": 1851,
 		"name_raw": "ExMutekiHitStop",
-		"name_given": "",
+		"name_given": "superArmorHitstop",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -10379,7 +10379,7 @@
 	{
 		"id": 1861,
 		"name_raw": "ExMutekiKakusei",
-		"name_given": "",
+		"name_given": "superArmorOverdriveGuard",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -10443,6 +10443,33 @@
 		"id": 1868,
 		"name_raw": "ExMutekiArmorBreak",
 		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "armor"
+	},
+	{
+		"id": 1870,
+		"name_raw": "",
+		"name_given": "superArmorPhysicalGuard",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "armor"
+	},
+	{
+		"id": 1871,
+		"name_raw": "",
+		"name_given": "superArmorPhysicalAssistGuard",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "armor"
+	},
+	{
+		"id": 1872,
+		"name_raw": "",
+		"name_given": "superArmorKiBlastInvul",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -14780,7 +14807,7 @@
 	{
 		"id": 2498,
 		"name_raw": "IfBeginCoType",
-		"name_given": "conditionalunk2498",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -14789,7 +14816,7 @@
 	{
 		"id": 2499,
 		"name_raw": "IfBeginNotCoType",
-		"name_given": "conditionalunk2499",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -14798,7 +14825,7 @@
 	{
 		"id": 2500,
 		"name_raw": "IfBeginOP2CoType",
-		"name_given": "conditionalunk2500",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"example": "",
