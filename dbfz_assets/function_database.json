@@ -236,7 +236,7 @@
 	{
 		"id": 26,
 		"name_raw": "CellTimeOverWrite",
-		"name_given": "spriteAddTime",
+		"name_given": "spriteOverrideTime",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -425,7 +425,7 @@
 	{
 		"id": 47,
 		"name_raw": "CheckEnemyName",
-		"name_given": "opponent_maincharacter_is",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -650,7 +650,7 @@
 	{
 		"id": 72,
 		"name_raw": "CheckTeamMemberHide",
-		"name_given": "checkTeamMember",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -6121,7 +6121,7 @@
 	},
 	{
 		"id": 1116,
-		"name_raw": "AtkMutekiIgnore",
+		"name_raw": "pierceSuperArmor",
 		"name_given": "",
 		"args": "",
 		"description": "",
@@ -6833,7 +6833,7 @@
 	{
 		"id": 1197,
 		"name_raw": "AtkFuttobiFinish",
-		"name_given": "",
+		"name_given": "attackFinishBlowback",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -6842,7 +6842,7 @@
 	{
 		"id": 1198,
 		"name_raw": "AtkDestructionFinishBomb",
-		"name_given": "",
+		"name_given": "attackFinishExplosion",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -6851,7 +6851,7 @@
 	{
 		"id": 1199,
 		"name_raw": "AtkDestructionFinishBeam",
-		"name_given": "",
+		"name_given": "attackFinishBeam",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -13394,7 +13394,7 @@
 	{
 		"id": 2266,
 		"name_raw": "Cell",
-		"name_given": "",
+		"name_given": "spriteOverrideFrame",
 		"args": "",
 		"description": "",
 		"example": "",
@@ -13726,7 +13726,7 @@
 	},
 	{
 		"id": 2315,
-		"name_raw": "CellTimeAdd",
+		"name_raw": "spriteAddTime",
 		"name_given": "",
 		"args": "",
 		"description": "",
