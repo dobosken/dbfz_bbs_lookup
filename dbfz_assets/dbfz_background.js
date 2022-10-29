@@ -45,7 +45,7 @@ function loop(frame_time) {
 }
 var backgroundAnim = requestAnimationFrame(loop);
 
-function pauseAnim() {
+function pauseAnim(e) {
 	if ( isRunning ) {
 		cancelAnimationFrame(backgroundAnim);
 	} else {

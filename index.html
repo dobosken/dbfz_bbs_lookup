@@ -18,12 +18,15 @@
 			<script type="text/javascript" src="dbfz_assets/dbfz_background.js"></script>
 			<div id="loading"><pre>&#9733;&#xFE0E;</pre></div>
 
-			<div id="topbar"><input type="checkbox" checked onchange="pauseAnim()"></input><input type="text" placeholder="search" id="searchbar" size="14" oninput="interactiveSearch(this.value)">
-				<div id="alltags">
-				</div>
+			<div class="topbar modeSelect">
+			<a href="#" onclick="changeMode(0, this)" class="modeHighlight">functions</a><a href="#" onclick="changeMode(1, this)">upon</a><a href="#" onclick="changeMode(2, this)">variables</a>
+			</div>
+			<div class="topbar"><div>Background:<input type="checkbox" checked onchange="pauseAnim()"></input></div><input type="text" placeholder="search" id="searchbar" size="14" oninput="interactiveSearch(this.value)">
+				<a href="#" onclick="tagDisplay('all')" id="alltag">Show all</a>
+				<div id="taglist"></div>
 			</div>
 
-			<div class="bbs_content">
+			<div id="bbs_content">
 				<table>
 					<thead>
 						<tr>
@@ -31,11 +34,11 @@
 							<th class="th_id">id</th>
 							<th class="th_name_given">name_given</th>
 							<th class="th_text">description</th>
-							<th class="th_extra">+</th>
+							<th class="th_extra">&#x1F512;&#xFE0E</th>
 							<th class="th_tags">tags</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody id="bbs_table">
 
 					</tbody>
 				</table>

@@ -1,0 +1,3584 @@
+[
+	{
+		"id": 0,
+		"name_raw": "Tmp",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "conditional"
+	},
+	{
+		"id": 1,
+		"name_raw": "Angle",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 2,
+		"name_raw": "CommonActionMark",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 3,
+		"name_raw": "PlayerVal0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 4,
+		"name_raw": "PlayerVal1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 5,
+		"name_raw": "PlayerVal2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 6,
+		"name_raw": "PlayerVal3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 7,
+		"name_raw": "SpeedX",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 8,
+		"name_raw": "SpeedY",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 9,
+		"name_raw": "VJumpCheck",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 10,
+		"name_raw": "BJumpCheck",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 11,
+		"name_raw": "FJumpCheck",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 12,
+		"name_raw": "EntryWait",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 13,
+		"name_raw": "ActionTime",
+		"name_given": "LoopCount",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "conditional"
+	},
+	{
+		"id": 14,
+		"name_raw": "EnemyDistanceX",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 15,
+		"name_raw": "EnemyDistanceY",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 16,
+		"name_raw": "BattleDoing",
+		"name_given": "IN_BATTLE",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate"
+	},
+	{
+		"id": 17,
+		"name_raw": "PosX",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 18,
+		"name_raw": "PosY",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 19,
+		"name_raw": "ScriptDebug",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 20,
+		"name_raw": "FrontWallDistance",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 21,
+		"name_raw": "BackWallDistance",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 22,
+		"name_raw": "CheckPlayerPrivatePoint0Exist",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 23,
+		"name_raw": "EnemyDistance",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 24,
+		"name_raw": "PlayerDamage",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 25,
+		"name_raw": "ExGage0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 26,
+		"name_raw": "ExGage1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 27,
+		"name_raw": "ExGage2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 28,
+		"name_raw": "ExGage3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 29,
+		"name_raw": "ExGage4",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 30,
+		"name_raw": "IsAir",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 31,
+		"name_raw": "IsLand",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 32,
+		"name_raw": "Dir",
+		"name_given": "Direction",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 33,
+		"name_raw": "CtrlDir",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 34,
+		"name_raw": "EnemyDiffX",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 35,
+		"name_raw": "EnemyDiffY",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 36,
+		"name_raw": "PlayerDamageOrGuard",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 37,
+		"name_raw": "IsVoiceTypeA",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 38,
+		"name_raw": "IsVoiceTypeB",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 39,
+		"name_raw": "IsVoiceTypeC",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 40,
+		"name_raw": "IsVoiceTypeD",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 41,
+		"name_raw": "SkillConditionReturn",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "conditional"
+	},
+	{
+		"id": 42,
+		"name_raw": "SignalID",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "object"
+	},
+	{
+		"id": 43,
+		"name_raw": "SignalParam",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "object"
+	},
+	{
+		"id": 44,
+		"name_raw": "PlayerCenterDistance",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 45,
+		"name_raw": "ActReg0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 46,
+		"name_raw": "ActReg1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 47,
+		"name_raw": "ActReg2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 48,
+		"name_raw": "ActReg3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 49,
+		"name_raw": "ActReg4",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 50,
+		"name_raw": "ActReg5",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 51,
+		"name_raw": "ActReg6",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 52,
+		"name_raw": "ActReg7",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 53,
+		"name_raw": "ObjReg0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 54,
+		"name_raw": "ObjReg1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 55,
+		"name_raw": "ObjReg2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 56,
+		"name_raw": "ObjReg3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 57,
+		"name_raw": "ObjReg4",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 58,
+		"name_raw": "ObjReg5",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 59,
+		"name_raw": "ObjReg6",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 60,
+		"name_raw": "ObjReg7",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 61,
+		"name_raw": "GTmpReg0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 62,
+		"name_raw": "GTmpReg1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 63,
+		"name_raw": "GTmpReg2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 64,
+		"name_raw": "GTmpReg3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 65,
+		"name_raw": "GTmpReg4",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 66,
+		"name_raw": "GTmpReg5",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 67,
+		"name_raw": "GTmpReg6",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 68,
+		"name_raw": "GTmpReg7",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 69,
+		"name_raw": "PgActReg0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 70,
+		"name_raw": "PgActReg1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 71,
+		"name_raw": "PgActReg2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 72,
+		"name_raw": "PgActReg3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 73,
+		"name_raw": "PgObjReg0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 74,
+		"name_raw": "PgObjReg1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 75,
+		"name_raw": "PgObjReg2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 76,
+		"name_raw": "PgObjReg3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 77,
+		"name_raw": "HitPoint",
+		"name_given": "Health",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 78,
+		"name_raw": "HitPointMax",
+		"name_given": "HealthMax",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 79,
+		"name_raw": "PlayerAttackRate",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 80,
+		"name_raw": "PlayerDefenceRate",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 81,
+		"name_raw": "CheckStop",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 82,
+		"name_raw": "PlayerCrushRate",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 83,
+		"name_raw": "PosXRaw",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 84,
+		"name_raw": "Boss",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 85,
+		"name_raw": "LocationTest",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate"
+	},
+	{
+		"id": 86,
+		"name_raw": "IsReactionReady",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 87,
+		"name_raw": "ReactionWait",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 88,
+		"name_raw": "ShotDamageRate",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 89,
+		"name_raw": "IsRecoverableTypeA",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 90,
+		"name_raw": "IsTrainingMode",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate"
+	},
+	{
+		"id": 91,
+		"name_raw": "DBM_Chousei0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 92,
+		"name_raw": "IsNamaDashiSkill",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 93,
+		"name_raw": "SideID",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 94,
+		"name_raw": "FriendID",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 95,
+		"name_raw": "IsMouthDoing",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 96,
+		"name_raw": "EnemyCenterDistance",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 97,
+		"name_raw": "AngleWithLink",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 98,
+		"name_raw": "IsStorySpecialType",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate"
+	},
+	{
+		"id": 99,
+		"name_raw": "Scale",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 100,
+		"name_raw": "ScaleSpeed",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 101,
+		"name_raw": "ExKizetsu",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 102,
+		"name_raw": "ExPointFX",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 103,
+		"name_raw": "ExPointFY",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 104,
+		"name_raw": "EnemyFrontDistance",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 105,
+		"name_raw": "OnIdlingTime",
+		"name_given": "FrameCount",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "conditional"
+	},
+	{
+		"id": 106,
+		"name_raw": "EnemyPushDistance",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 107,
+		"name_raw": "IchigekiState",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 108,
+		"name_raw": "IchigekiGage",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 109,
+		"name_raw": "Tension",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 110,
+		"name_raw": "EntryReady__",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 111,
+		"name_raw": "MatchEnd",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate"
+	},
+	{
+		"id": 112,
+		"name_raw": "HeliumTime",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 113,
+		"name_raw": "BackStepInvalidTime",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 114,
+		"name_raw": "ScreenTouch",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 115,
+		"name_raw": "Hikitsugi0",
+		"name_given": "ObjectParam1",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 116,
+		"name_raw": "Hikitsugi1",
+		"name_given": "ObjectParam2",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 117,
+		"name_raw": "LandingStiffTimeForKy",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 118,
+		"name_raw": "Chousei0_",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 119,
+		"name_raw": "BurstYomi",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 120,
+		"name_raw": "BurstVal",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 121,
+		"name_raw": "MOM_ItemLevel",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 122,
+		"name_raw": "MOM_ItemMotion",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 123,
+		"name_raw": "MatchStaticValue0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 124,
+		"name_raw": "MatchStaticValue1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 125,
+		"name_raw": "MOMEnemyNormal",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 126,
+		"name_raw": "MOMEnemyBoss",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 127,
+		"name_raw": "MOMEnemyBossAndBerserk",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 128,
+		"name_raw": "AttackHitUniqID",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 129,
+		"name_raw": "DamageHitUniqID",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 130,
+		"name_raw": "IsPlayer",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate,player"
+	},
+	{
+		"id": 131,
+		"name_raw": "LoopAnimeEnd",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "conditional"
+	},
+	{
+		"id": 132,
+		"name_raw": "FinishUIEnd",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 133,
+		"name_raw": "IsEnemyFinalRound",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 134,
+		"name_raw": "DebugSkillEx",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 135,
+		"name_raw": "IchigekiStateTmp",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 136,
+		"name_raw": "Timeup",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate"
+	},
+	{
+		"id": 137,
+		"name_raw": "IchigekiKuratta",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 138,
+		"name_raw": "MatchResultVoice",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 139,
+		"name_raw": "IsSomebodysCutScene",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate,conditional"
+	},
+	{
+		"id": 140,
+		"name_raw": "IsFriendsCutScene",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate,conditional"
+	},
+	{
+		"id": 141,
+		"name_raw": "IsEnemysCutScene",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate,conditional"
+	},
+	{
+		"id": 142,
+		"name_raw": "IsSomebodysCutSceneOrSelfHide",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate,conditional"
+	},
+	{
+		"id": 143,
+		"name_raw": "IsVoiceDoing",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate,conditional"
+	},
+	{
+		"id": 144,
+		"name_raw": "Medal",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 145,
+		"name_raw": "MOM_damage",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 146,
+		"name_raw": "MOM_merit",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 147,
+		"name_raw": "MOM_demerit",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 148,
+		"name_raw": "MOM_efftime",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 149,
+		"name_raw": "MOM_zentai",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 150,
+		"name_raw": "MOM_hassei",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 151,
+		"name_raw": "MOM_suki",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 152,
+		"name_raw": "IsPinchHP",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 153,
+		"name_raw": "WinActionButton",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate"
+	},
+	{
+		"id": 154,
+		"name_raw": "IsCPU",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate"
+	},
+	{
+		"id": 155,
+		"name_raw": "IsCPU_butRecipe",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate"
+	},
+	{
+		"id": 156,
+		"name_raw": "IsEnableNormalAttack",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 157,
+		"name_raw": "TrainingValue",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate"
+	},
+	{
+		"id": 158,
+		"name_raw": "IsLastDamageDustAttack",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 159,
+		"name_raw": "IsStylishMode",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 160,
+		"name_raw": "IsStylishComboSlot",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 161,
+		"name_raw": "IsStylishOneButtonInput",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 162,
+		"name_raw": "KowareCountMax",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 163,
+		"name_raw": "KowareCountCur",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 164,
+		"name_raw": "BurstUltimate",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 165,
+		"name_raw": "HomingDashTsuigekiTime",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 166,
+		"name_raw": "StunTime",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 167,
+		"name_raw": "KorogariTime",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 168,
+		"name_raw": "EnvStylishDefence",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 169,
+		"name_raw": "EnvStylishTension",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 170,
+		"name_raw": "EnvStylishBurst",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 171,
+		"name_raw": "EnvR02",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 172,
+		"name_raw": "EnvDokiDokiStop",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 173,
+		"name_raw": "EnvDokiDokiStopHikitsuke",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 174,
+		"name_raw": "EnvDokiDokiStopXRangeMin",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 175,
+		"name_raw": "EnvDokiDokiStopXRangeMax",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 176,
+		"name_raw": "EnvDokiDokiStopYRangeMax",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 177,
+		"name_raw": "EnvDokiDokiStopHassei",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 178,
+		"name_raw": "EnvDokiDokiStopFinishStop",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 179,
+		"name_raw": "EnvR10",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 180,
+		"name_raw": "EnvR11",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 181,
+		"name_raw": "EnvR12",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 182,
+		"name_raw": "EnvR13",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 183,
+		"name_raw": "EnvR14",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 184,
+		"name_raw": "EnvR15",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 185,
+		"name_raw": "EnvR16",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 186,
+		"name_raw": "EnvR17",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 187,
+		"name_raw": "EnvR18",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 188,
+		"name_raw": "EnvR19",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 189,
+		"name_raw": "EnvR20",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 190,
+		"name_raw": "EnvR21",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 191,
+		"name_raw": "EnvR22",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 192,
+		"name_raw": "EnvR23",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 193,
+		"name_raw": "EnvR24",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 194,
+		"name_raw": "EnvR25",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 195,
+		"name_raw": "EnvR26",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 196,
+		"name_raw": "EnvR27",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 197,
+		"name_raw": "Dmy",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 198,
+		"name_raw": "DokiDokiStopByDokiDokiKill",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 199,
+		"name_raw": "DokiDokiStopIgnoreTime",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 200,
+		"name_raw": "ObjTimer",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "conditional,object"
+	},
+	{
+		"id": 201,
+		"name_raw": "PlayerVal4",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 202,
+		"name_raw": "PlayerVal5",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 203,
+		"name_raw": "PlayerVal6",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 204,
+		"name_raw": "PlayerVal7",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 205,
+		"name_raw": "ChouseiForScript0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 206,
+		"name_raw": "ChouseiForScript1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 207,
+		"name_raw": "ChouseiForScript2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 208,
+		"name_raw": "ChouseiForScript3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 209,
+		"name_raw": "NeoBlitzHitDone",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 210,
+		"name_raw": "DustHomingDash2HoseiBase",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 211,
+		"name_raw": "DustHomingDash2HoseiUntilBound",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 212,
+		"name_raw": "IsStylishModeOrCPU",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 213,
+		"name_raw": "IsNeutral",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate,conditional"
+	},
+	{
+		"id": 214,
+		"name_raw": "IsEnemyDamage",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player,conditional"
+	},
+	{
+		"id": 215,
+		"name_raw": "DarkCharacter",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 216,
+		"name_raw": "IsLastDamageTsuujounage",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 217,
+		"name_raw": "IsLastDamageKakusei",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 218,
+		"name_raw": "TrialTentouNum",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 219,
+		"name_raw": "TrialBossHP",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 220,
+		"name_raw": "TrialBossHPMax",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 221,
+		"name_raw": "TrialBossBarrier",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 222,
+		"name_raw": "TrialExVal0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 223,
+		"name_raw": "TrialExVal1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 224,
+		"name_raw": "TrialExVal2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 225,
+		"name_raw": "TrialExVal3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 226,
+		"name_raw": "Alpha",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 227,
+		"name_raw": "TrialBeginPopUpNum",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 228,
+		"name_raw": "FaultlessDefenceDisableTime",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 229,
+		"name_raw": "SlowRate",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 230,
+		"name_raw": "TrialMiss",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 231,
+		"name_raw": "TrialTutorialClear",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 232,
+		"name_raw": "TrialTutorialHighScore",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 233,
+		"name_raw": "TrialTutorialScore",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 234,
+		"name_raw": "MOMSpecialValue",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 235,
+		"name_raw": "AliveSubMember1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player,conditional"
+	},
+	{
+		"id": 236,
+		"name_raw": "AliveSubMember2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player,conditional"
+	},
+	{
+		"id": 237,
+		"name_raw": "AliveEnemySubMember1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player,conditional"
+	},
+	{
+		"id": 238,
+		"name_raw": "AliveEnemySubMember2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player,conditional"
+	},
+	{
+		"id": 239,
+		"name_raw": "ForceX",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 240,
+		"name_raw": "ForceY",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 241,
+		"name_raw": "ForceXisHigh",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 242,
+		"name_raw": "ForceYisHigh",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 243,
+		"name_raw": "IsWorldSideSelf",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate,conditional"
+	},
+	{
+		"id": 244,
+		"name_raw": "IsWorldSideEnemy",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate,conditional"
+	},
+	{
+		"id": 245,
+		"name_raw": "ChargeShotVal0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 246,
+		"name_raw": "ChargeShotVal1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 247,
+		"name_raw": "ChargeShotVal2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 248,
+		"name_raw": "ChargeShotVal3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 249,
+		"name_raw": "ARendaChain",
+		"name_given": "LightAutocombo",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 250,
+		"name_raw": "BRendaChain",
+		"name_given": "MediumAutocombo",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 251,
+		"name_raw": "CRendaChain",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 252,
+		"name_raw": "RemainingHomingDashCount",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 253,
+		"name_raw": "CameraComboOnce",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 254,
+		"name_raw": "ARendaStartType",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 255,
+		"name_raw": "BRendaStartType",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 256,
+		"name_raw": "CRendaStartType",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 257,
+		"name_raw": "ARendaChainAir",
+		"name_given": "LightAutocomboAir",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 258,
+		"name_raw": "BRendaChainAir",
+		"name_given": "MediumAutocomboAir",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 259,
+		"name_raw": "CRendaChainAir",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 260,
+		"name_raw": "BodyChange",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 261,
+		"name_raw": "Tokusentai",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 262,
+		"name_raw": "TokusentaiReady",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 263,
+		"name_raw": "IsMainPlayerSelf",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player,conditional"
+	},
+	{
+		"id": 264,
+		"name_raw": "IsMainPlayerEnemy",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player,conditional"
+	},
+	{
+		"id": 265,
+		"name_raw": "CameraCombo0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 266,
+		"name_raw": "CameraCombo1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 267,
+		"name_raw": "CameraCombo2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 268,
+		"name_raw": "CameraCombo3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 269,
+		"name_raw": "CameraCombo4",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 270,
+		"name_raw": "CameraCombo5",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 271,
+		"name_raw": "CameraCombo6",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 272,
+		"name_raw": "CameraCombo7",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 273,
+		"name_raw": "CameraCombo8",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 274,
+		"name_raw": "CameraCombo9",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 275,
+		"name_raw": "IsMainPlayerAttackedEnemy",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player,conditional"
+	},
+	{
+		"id": 276,
+		"name_raw": "IsMainPlayerAttackingEnemy",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player,conditional"
+	},
+	{
+		"id": 277,
+		"name_raw": "BattleResutPoseStart",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 278,
+		"name_raw": "IsSparking",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player,conditional"
+	},
+	{
+		"id": 279,
+		"name_raw": "AliveMemberNum",
+		"name_given": "LivingTeamCount",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 280,
+		"name_raw": "DestructionFinishType",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "worldstate,conditional"
+	},
+	{
+		"id": 281,
+		"name_raw": "PosZ",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 282,
+		"name_raw": "Physique",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 283,
+		"name_raw": "CameraComboOnce0",
+		"name_given": "SmashRegular",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 284,
+		"name_raw": "CameraComboOnce1",
+		"name_given": "SmashKnockdown",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 285,
+		"name_raw": "CameraComboOnce2",
+		"name_given": "SmashVanish",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 286,
+		"name_raw": "CameraComboOnce3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 287,
+		"name_raw": "CameraComboOnce4",
+		"name_given": "EmptyVanish",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 288,
+		"name_raw": "CameraComboOnce5",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 289,
+		"name_raw": "CameraComboOnce6",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 290,
+		"name_raw": "CameraComboOnce7",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 291,
+		"name_raw": "CameraComboOnce8",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 292,
+		"name_raw": "CameraComboOnce9",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 293,
+		"name_raw": "CharType",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 294,
+		"name_raw": "AltInputUltimateChange",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 295,
+		"name_raw": "IsSubMember1Self",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 296,
+		"name_raw": "IsSubMember2Self",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 297,
+		"name_raw": "IsSubObject",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "object"
+	},
+	{
+		"id": 298,
+		"name_raw": "IsAttackedSubObject",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "object"
+	},
+	{
+		"id": 299,
+		"name_raw": "IsAttackingSubObject",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "object"
+	},
+	{
+		"id": 300,
+		"name_raw": "DownFromSlideDown",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 301,
+		"name_raw": "BlueHitPoint",
+		"name_given": "BlueHealth",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 302,
+		"name_raw": "IsClone",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 303,
+		"name_raw": "SwapBody",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 304,
+		"name_raw": "CostumeID",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 305,
+		"name_raw": "PlayerArmorHit",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 306,
+		"name_raw": "WSBPoint",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 307,
+		"name_raw": "WSBPattern",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 308,
+		"name_raw": "WSBNextHeight",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 309,
+		"name_raw": "WSBMoveDir",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 310,
+		"name_raw": "IsWorldStopperOther",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 311,
+		"name_raw": "Gravity",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 312,
+		"name_raw": "CmnCharaReg0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 313,
+		"name_raw": "CmnCharaReg1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 314,
+		"name_raw": "CmnCharaReg2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 315,
+		"name_raw": "CmnCharaReg3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 316,
+		"name_raw": "CmnCharaReg4",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 317,
+		"name_raw": "CmnCharaReg5",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 318,
+		"name_raw": "CmnCharaReg6",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 319,
+		"name_raw": "CmnCharaReg7",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 320,
+		"name_raw": "IsFloatDmgHead",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 321,
+		"name_raw": "IsFloatDmgBody",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 322,
+		"name_raw": "StageSplitCount",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 323,
+		"name_raw": "StageOffsetRadius",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 324,
+		"name_raw": "Afro",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 325,
+		"name_raw": "DmgAtkAngle",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 326,
+		"name_raw": "DmgAtkAngleGuardForce",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 327,
+		"name_raw": "IsFuwafuwaDown",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 328,
+		"name_raw": "TensionBalance",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 329,
+		"name_raw": "IsRoundTimerStop",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 330,
+		"name_raw": "FuncArg0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 331,
+		"name_raw": "FuncArg1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 332,
+		"name_raw": "FuncArg2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 333,
+		"name_raw": "FuncArg3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 334,
+		"name_raw": "PlayerStance",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 335,
+		"name_raw": "CmnCharaReg8",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 336,
+		"name_raw": "CmnCharaReg9",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 337,
+		"name_raw": "CmnCharaReg10",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 338,
+		"name_raw": "CmnCharaReg11",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 339,
+		"name_raw": "CmnCharaReg12",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 340,
+		"name_raw": "CmnCharaReg13",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 341,
+		"name_raw": "CmnCharaReg14",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 342,
+		"name_raw": "CmnCharaReg15",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 343,
+		"name_raw": "CmnCharaActReg0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 344,
+		"name_raw": "CmnCharaActReg1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 345,
+		"name_raw": "CmnCharaActReg2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 346,
+		"name_raw": "CmnCharaActReg3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 347,
+		"name_raw": "CmnCharaActReg4",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 348,
+		"name_raw": "CmnCharaActReg5",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 349,
+		"name_raw": "CmnCharaActReg6",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 350,
+		"name_raw": "CmnCharaActReg7",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 351,
+		"name_raw": "BlowOffLabel",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 352,
+		"name_raw": "IsRISCCounterHit",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 353,
+		"name_raw": "SpeedZ",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 354,
+		"name_raw": "AngleX",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 355,
+		"name_raw": "AngleY",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "position"
+	},
+	{
+		"id": 356,
+		"name_raw": "DmgFire",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 357,
+		"name_raw": "DmgElectric",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 358,
+		"name_raw": "DmgIce",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 359,
+		"name_raw": "DamageEffectCount",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 360,
+		"name_raw": "SoundActReg0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 361,
+		"name_raw": "SoundActReg1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 362,
+		"name_raw": "SoundActReg2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 363,
+		"name_raw": "SoundActReg3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 364,
+		"name_raw": "SoundObjReg0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 365,
+		"name_raw": "SoundObjReg1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 366,
+		"name_raw": "SoundObjReg2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 367,
+		"name_raw": "SoundObjReg3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 368,
+		"name_raw": "IsEnemyPlayerDown",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 369,
+		"name_raw": "EnemyDmgActCount",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 370,
+		"name_raw": "AtkDamage",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 371,
+		"name_raw": "IsTutorialMode",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 372,
+		"name_raw": "CPUVal0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 373,
+		"name_raw": "CPUVal1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 374,
+		"name_raw": "CPUVal2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 375,
+		"name_raw": "CPUVal3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 376,
+		"name_raw": "CPUVal4",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 377,
+		"name_raw": "CPUVal5",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 378,
+		"name_raw": "CPUVal6",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 379,
+		"name_raw": "CPUVal7",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 380,
+		"name_raw": "CharacterAddAttackRate",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 381,
+		"name_raw": "CharacterAddDefenceRate",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "player"
+	},
+	{
+		"id": 382,
+		"name_raw": "TutorialPhase",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 383,
+		"name_raw": "TrialReadyGo",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 384,
+		"name_raw": "EXBoss",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 385,
+		"name_raw": "IsEnemyWSDamageFloat",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 386,
+		"name_raw": "IsDeadWSBEstimateDmg",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 387,
+		"name_raw": "CmnCharaReg16",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 388,
+		"name_raw": "CmnCharaReg17",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 389,
+		"name_raw": "CmnCharaReg18",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 390,
+		"name_raw": "CmnCharaReg19",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 391,
+		"name_raw": "CmnCharaReg20",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 392,
+		"name_raw": "CmnCharaReg21",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 393,
+		"name_raw": "CmnCharaReg22",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 394,
+		"name_raw": "CmnCharaReg23",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": "reg"
+	},
+	{
+		"id": 395,
+		"name_raw": "RoundPassedTime",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 396,
+		"name_raw": "IsEnemySlow",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	},
+	{
+		"id": 397,
+		"name_raw": "BoxIndex",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"example": "",
+		"tags": ""
+	}
+]

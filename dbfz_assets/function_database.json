@@ -329,7 +329,7 @@
 		"name_given": "setEventTrigger",
 		"args": "Arg1 = TIMER or FALL SPEED\nArg2 = if TIMER the second arg sets a timer in frame duration on when to go to the TIMER upon",
 		"description": "",
-		"example": "setEventTrigger: (TIMER), 60\nupon: (TIMER)\n  enableSuperArmor: 0\nendUpon:",
+		"example": "setEventTrigger: (TIMER), 60\nupon: (TIMER)\n  enableSuperArmor: 0\n  endUpon:",
 		"tags": "interrupt"
 	},
 	{

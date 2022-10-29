@@ -1,28 +1,25 @@
-var tagsListed=["all", "movement", "position", "meter", "assist", "attack", "hitstop", "super", "defense", "armor", "flow", "conditional", "sound", "ground", "camera", "cinematic", "ui", "model", "animation"];
 var tags=[];
+var tagsListed=[];
 var searchables=[];
 var searchablesOneColumnHack;
+var db="./dbfz_assets/function_database.json"
+//fetch("https://dobosken.github.io/dbfz_bbs_lookup/dbfz_assets/function_database.json")
 
 window.addEventListener('load', (event) => {
-	fetch("https://dobosken.github.io/dbfz_bbs_lookup/dbfz_assets/function_database.json")
-		.then(response => response.json())
-		.then(json => init(json));
+	loaddb();
 });
 
-function init(t1) {
-	//load tag buttons
-	var tagBar = document.getElementById("alltags");
-	for (i=0; i<tagsListed.length; ++i) {
-		var newElement = document.createElement("a");
-		newElement.href = "#";
-		newElement.setAttribute("onclick","tagDisplay('" + tagsListed[i] + "')");
-		newElement.innerHTML = tagsListed[i];
-		tagBar.appendChild(newElement);
-	}
-	
+function loaddb() {
+	fetch(db)
+		.then(response => response.json())
+		.then(json => init(json));	
+}
+
+function init(t1) {	
 	//populate table
 	for (i=0; i<t1.length; ++i) {
 		var row = document.createElement("tr");
+		row.tabIndex = "1";
 		
 		//populate table: name_raw
 		var newElement = document.createElement("td");
@@ -81,12 +78,34 @@ function init(t1) {
 		
 		//populate table: tags
 		var newElement = document.createElement("td");
+		var tagValue = Object.values(t1[i])[6];
 		newElement.classList.add("bbs_tags");
-		newElement.textContent = Object.values(t1[i])[6];
+		newElement.textContent = tagValue;
 		row.appendChild(newElement);
+		
+		//create list of all tags that are encountered
+		var tagSeperated = tagValue.split(',');
+		tagSeperated.forEach(function(a) {
+			if (a == '') {
+				return;
+			}
+			if (tagsListed.indexOf(a) === -1) {
+				tagsListed.push(a);
+			}
+		});
 		
 		//push table data to document
 		document.getElementsByTagName("tbody")[0].appendChild(row);
+	}
+	
+	//load tag buttons
+	var tagBar = document.getElementById("taglist");
+	for (i=0; i<tagsListed.length; ++i) {
+		var newElement = document.createElement("a");
+		newElement.href = "#";
+		newElement.setAttribute("onclick","tagDisplay('" + tagsListed[i] + "')");
+		newElement.innerHTML = tagsListed[i];
+		tagBar.appendChild(newElement);
 	}
 	
 	//prepare data for tagDisplay and interactiveSearch	functions
@@ -148,4 +167,35 @@ function interactiveSearch(searchval) {
 			searchables[i].parentNode.style.display = "table-row";
 		}
 	}
+}
+
+function changeMode(mode, elem) {
+	tags = 	document.getElementsByClassName("modeHighlight");
+	tags[0].classList.remove("modeHighlight");
+
+	switch(mode){
+		//functions
+		case 0:
+			elem.classList.add("modeHighlight");
+			db="./dbfz_assets/function_database.json"
+			break;
+		//upons
+		case 1:
+			elem.classList.add("modeHighlight");
+			db="./dbfz_assets/upon_database.json"
+			break;
+		//variables
+		case 2:
+			elem.classList.add("modeHighlight");
+			db="./dbfz_assets/var_database.json"
+			break;
+	}
+	
+	document.getElementById("loading").style.display = "flex";
+	document.getElementById("bbs_table").innerHTML = "";
+	document.getElementById("taglist").innerHTML = "";
+	tags=[];
+	tagsListed=[];
+	searchables=[];
+	loaddb()
 }

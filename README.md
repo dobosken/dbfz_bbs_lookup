@@ -1,8 +1,8 @@
 # [DBFZ BBS Lookup](https://dobosken.github.io/dbfz_bbs_lookup/)
 
-A website to quickly search for and reference DBFZ bbs function documentation.
+A website to quickly search for and reference DBFZ bbs documentation.
 
-Uses [Broscar's mixed dbfz.ron](https://github.com/dobosken/dbfz_ron) for all the names, but the functions IDs will always match up, so you can use this tool for all the listed documentation and args regardless of which exact dbfz.ron you use.
+Uses [Broscar's mixed dbfz.ron](https://github.com/dobosken/dbfz_ron) as a base, but the IDs will always match up, so you can use this tool regardless of which exact dbfz.ron you use.
 
 ---
 
