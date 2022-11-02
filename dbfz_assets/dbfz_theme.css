@@ -319,7 +319,7 @@ input[type='checkbox'][disabled]{
     width: 100%;
     justify-content: center;
 	background-color: var(--bbs-block-colour);
-    margin-top: 4px;
+    margin-top: 10px;
 	box-sizing: content-box;
 }
 
@@ -331,7 +331,7 @@ input[type='checkbox'][disabled]{
 }
 
 .bbs_example::before, .bbs_args::before {
-	content: 'Example:';
+	content: 'Extra:';
 	text-decoration: underline;
 	display: block;
 	margin-bottom:5px;
@@ -350,6 +350,14 @@ input[type='checkbox'][disabled]{
 	box-sizing: content-box;
 	*/
 	display:none;
+}
+
+.code {
+	color: #ccff99;
+	padding: 10px;
+	margin: 10px;
+	display: block;
+	border: 1px solid #ccff99;
 }
 
 #container {

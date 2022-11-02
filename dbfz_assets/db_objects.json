@@ -1,0 +1,353 @@
+[
+	{
+		"id": 0,
+		"name_raw": "NULL",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 1,
+		"name_raw": "PREV",
+		"name_given": "PREVIOUS",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 2,
+		"name_raw": "PARENT",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 3,
+		"name_raw": "PLAYER",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 4,
+		"name_raw": "STACK0",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 5,
+		"name_raw": "STACK1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 6,
+		"name_raw": "STACK2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 7,
+		"name_raw": "STACK3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 8,
+		"name_raw": "STACK4",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 9,
+		"name_raw": "STACK5",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 10,
+		"name_raw": "STACK6",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 11,
+		"name_raw": "STACK7",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 12,
+		"name_raw": "STACK_FOR_CMN_ACT",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 13,
+		"name_raw": "WINNER",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 14,
+		"name_raw": "LOSER",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 15,
+		"name_raw": "____RSV2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 16,
+		"name_raw": "____RSV3",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 17,
+		"name_raw": "____RSV4",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 18,
+		"name_raw": "____RSV5",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 19,
+		"name_raw": "____RSV6",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 20,
+		"name_raw": "____RSV7",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 21,
+		"name_raw": "LOCKED",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 22,
+		"name_raw": "ENEMY",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 23,
+		"name_raw": "SELF",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 24,
+		"name_raw": "ATTACK_MASTER",
+		"name_given": "ATTACKER",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 25,
+		"name_raw": "ATTACK_SLAVE",
+		"name_given": "DEFENDER",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 26,
+		"name_raw": "TRIAL",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 27,
+		"name_raw": "PLAYER1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 28,
+		"name_raw": "PLAYER2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 29,
+		"name_raw": "SELF_MAIN_PLAYER",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 30,
+		"name_raw": "SELF_SUB_MEMBER1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 31,
+		"name_raw": "SELF_SUB_MEMBER2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 32,
+		"name_raw": "ENEMY_MAIN_PLAYER",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 33,
+		"name_raw": "ENEMY_SUB_MEMBER1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 34,
+		"name_raw": "ENEMY_SUB_MEMBER2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 35,
+		"name_raw": "PREV_MAIN_PLAYER",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 36,
+		"name_raw": "PREV_ENEMY_MAIN_PLAYER",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 37,
+		"name_raw": "MAIN_PLAYER1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 38,
+		"name_raw": "MAIN_PLAYER2",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	}
+]
