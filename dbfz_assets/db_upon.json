@@ -29,7 +29,7 @@
 	{
 		"id": 3,
 		"name_raw": "IDLING",
-		"name_given": "FRAME_STEP",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -209,7 +209,7 @@
 	{
 		"id": 23,
 		"name_raw": "SIGNAL0",
-		"name_given": "ON_HIT_OR_BLOCK",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -218,7 +218,7 @@
 	{
 		"id": 24,
 		"name_raw": "SIGNAL1",
-		"name_given": "CLASH",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -227,7 +227,7 @@
 	{
 		"id": 25,
 		"name_raw": "SIGNAL2",
-		"name_given": "BEAM_CLASH",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -317,7 +317,7 @@
 	{
 		"id": 35,
 		"name_raw": "PLAYER_DAMAGE",
-		"name_given": "ON_PLAYER_GUARD",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -371,7 +371,7 @@
 	{
 		"id": 41,
 		"name_raw": "ARMOR",
-		"name_given": "ON_ARMOR",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -416,7 +416,7 @@
 	{
 		"id": 46,
 		"name_raw": "WALL",
-		"name_given": "ON_WALL",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -479,7 +479,7 @@
 	{
 		"id": 53,
 		"name_raw": "DEMO_END",
-		"name_given": "INTRO_END",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
