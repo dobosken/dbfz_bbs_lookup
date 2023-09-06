@@ -31,8 +31,8 @@
 		"name_raw": "PlayerVal0",
 		"name_given": "plr0",
 		"args": "",
-		"description": "Generic player variable.\\nOnly altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
-		"extra": "",
+		"description": "Generic player variable.",
+		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
@@ -40,8 +40,8 @@
 		"name_raw": "PlayerVal1",
 		"name_given": "plr1",
 		"args": "",
-		"description": "Generic player variable.\\nOnly altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
-		"extra": "",
+		"description": "Generic player variable.",
+		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
@@ -49,8 +49,8 @@
 		"name_raw": "PlayerVal2",
 		"name_given": "plr2",
 		"args": "",
-		"description": "Generic player variable.\\nOnly altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
-		"extra": "",
+		"description": "Generic player variable.",
+		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
@@ -58,8 +58,8 @@
 		"name_raw": "PlayerVal3",
 		"name_given": "plr3",
 		"args": "",
-		"description": "Generic player variable.\\nOnly altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
-		"extra": "",
+		"description": "Generic player variable.",
+		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
@@ -291,8 +291,8 @@
 		"id": 32,
 		"name_raw": "Dir",
 		"name_given": "Direction",
-		"args": "",
-		"description": "The current direction an object is facing.\\n0=left and 1=right.",
+		"args": "0 = right\n1 = left.",
+		"description": "The current direction an object is facing.",
 		"extra": "",
 		"tags": ""
 	},
@@ -409,8 +409,8 @@
 		"name_raw": "ActReg0",
 		"name_given": "act0",
 		"args": "",
-		"description": "Generic action variable.\\nIs automatically set to 0 when an object returns to a neutral state.",
-		"extra": "",
+		"description": "Generic action variable.",
+		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
 		"tags": "reg"
 	},
 	{
@@ -418,8 +418,8 @@
 		"name_raw": "ActReg1",
 		"name_given": "act1",
 		"args": "",
-		"description": "Generic action variable.\\nIs automatically set to 0 when an object returns to a neutral state.",
-		"extra": "",
+		"description": "Generic action variable.",
+		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
 		"tags": "reg"
 	},
 	{
@@ -427,8 +427,8 @@
 		"name_raw": "ActReg2",
 		"name_given": "act2",
 		"args": "",
-		"description": "Generic action variable.\\nIs automatically set to 0 when an object returns to a neutral state.",
-		"extra": "",
+		"description": "Generic action variable.",
+		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
 		"tags": "reg"
 	},
 	{
@@ -436,8 +436,8 @@
 		"name_raw": "ActReg3",
 		"name_given": "act3",
 		"args": "",
-		"description": "Generic action variable.\\nIs automatically set to 0 when an object returns to a neutral state.",
-		"extra": "",
+		"description": "Generic action variable.",
+		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
 		"tags": "reg"
 	},
 	{
@@ -445,8 +445,8 @@
 		"name_raw": "ActReg4",
 		"name_given": "act4",
 		"args": "",
-		"description": "Generic action variable.\\nIs automatically set to 0 when an object returns to a neutral state.",
-		"extra": "",
+		"description": "Generic action variable.",
+		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
 		"tags": "reg"
 	},
 	{
@@ -454,8 +454,8 @@
 		"name_raw": "ActReg5",
 		"name_given": "act5",
 		"args": "",
-		"description": "Generic action variable.\\nIs automatically set to 0 when an object returns to a neutral state.",
-		"extra": "",
+		"description": "Generic action variable.",
+		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
 		"tags": "reg"
 	},
 	{
@@ -463,8 +463,8 @@
 		"name_raw": "ActReg6",
 		"name_given": "act6",
 		"args": "",
-		"description": "Generic action variable.\\nIs automatically set to 0 when an object returns to a neutral state.",
-		"extra": "",
+		"description": "Generic action variable.",
+		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
 		"tags": "reg"
 	},
 	{
@@ -472,8 +472,8 @@
 		"name_raw": "ActReg7",
 		"name_given": "act7",
 		"args": "",
-		"description": "Generic action variable.\\nIs automatically set to 0 when an object returns to a neutral state.",
-		"extra": "",
+		"description": "Generic action variable.",
+		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
 		"tags": "reg"
 	},
 	{
@@ -1039,7 +1039,7 @@
 		"name_raw": "Hikitsugi0",
 		"name_given": "ObjectParameter1",
 		"args": "",
-		"description": "Used in conjunction with the function `setArg_objectParameters`.",
+		"description": "Used in conjunction with the function 'setArg_objectParameters'.",
 		"extra": "",
 		"tags": ""
 	},
@@ -1048,7 +1048,7 @@
 		"name_raw": "Hikitsugi1",
 		"name_given": "ObjectParameter2",
 		"args": "",
-		"description": "Used in conjunction with the function `setArg_objectParameters`.",
+		"description": "Used in conjunction with the function 'setArg_objectParameters'.",
 		"extra": "",
 		"tags": ""
 	},
@@ -1811,37 +1811,37 @@
 	{
 		"id": 201,
 		"name_raw": "PlayerVal4",
-		"name_given": "",
-		"args": "plr4",
-		"description": "Generic player variable.\\nOnly altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
-		"extra": "",
+		"name_given": "plr4",
+		"args": "",
+		"description": "Generic player variable.",
+		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
 		"id": 202,
 		"name_raw": "PlayerVal5",
-		"name_given": "",
-		"args": "plr5",
-		"description": "Generic player variable.\\nOnly altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
-		"extra": "",
+		"name_given": "plr5",
+		"args": "",
+		"description": "Generic player variable.",
+		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
 		"id": 203,
 		"name_raw": "PlayerVal6",
-		"name_given": "",
-		"args": "plr6",
-		"description": "Generic player variable.\\nOnly altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
-		"extra": "",
+		"name_given": "plr6",
+		"args": "",
+		"description": "Generic player variable.",
+		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
 		"id": 204,
 		"name_raw": "PlayerVal7",
-		"name_given": "",
-		"args": "plr7",
-		"description": "Generic player variable.\\nOnly altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
-		"extra": "",
+		"name_given": "plr7",
+		"args": "",
+		"description": "Generic player variable.",
+		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
@@ -2389,7 +2389,8 @@
 		"name_raw": "CameraCombo0",
 		"name_given": "",
 		"args": "",
-		"extra": "",
+		"description": "",
+		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
 	{
@@ -2397,6 +2398,7 @@
 		"name_raw": "CameraCombo1",
 		"name_given": "",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2405,6 +2407,7 @@
 		"name_raw": "CameraCombo2",
 		"name_given": "",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2413,6 +2416,7 @@
 		"name_raw": "CameraCombo3",
 		"name_given": "",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2421,6 +2425,7 @@
 		"name_raw": "CameraCombo4",
 		"name_given": "",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2429,6 +2434,7 @@
 		"name_raw": "CameraCombo5",
 		"name_given": "",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2437,6 +2443,7 @@
 		"name_raw": "CameraCombo6",
 		"name_given": "",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2445,6 +2452,7 @@
 		"name_raw": "CameraCombo7",
 		"name_given": "",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2453,6 +2461,7 @@
 		"name_raw": "CameraCombo8",
 		"name_given": "",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2461,6 +2470,7 @@
 		"name_raw": "CameraCombo9",
 		"name_given": "",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2541,6 +2551,7 @@
 		"name_raw": "CameraComboOnce0",
 		"name_given": "SmashRegular",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2549,6 +2560,7 @@
 		"name_raw": "CameraComboOnce1",
 		"name_given": "SmashKnockdown",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2557,6 +2569,7 @@
 		"name_raw": "CameraComboOnce2",
 		"name_given": "SmashVanish",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2565,6 +2578,7 @@
 		"name_raw": "CameraComboOnce3",
 		"name_given": "",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2573,6 +2587,7 @@
 		"name_raw": "CameraComboOnce4",
 		"name_given": "EmptyVanish",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2581,6 +2596,7 @@
 		"name_raw": "CameraComboOnce5",
 		"name_given": "",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2589,6 +2605,7 @@
 		"name_raw": "CameraComboOnce6",
 		"name_given": "",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2597,6 +2614,7 @@
 		"name_raw": "CameraComboOnce7",
 		"name_given": "",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2605,6 +2623,7 @@
 		"name_raw": "CameraComboOnce8",
 		"name_given": "",
 		"args": "",
+		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"
 	},
@@ -2613,6 +2632,7 @@
 		"name_raw": "CameraComboOnce9",
 		"name_given": "",
 		"args": "",
+		"description": "",
 		"description": "",
 		"extra": "Is automatically set to 0 once a combo ends.",
 		"tags": "reg"

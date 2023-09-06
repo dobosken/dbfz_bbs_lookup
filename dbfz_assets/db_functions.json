@@ -21,9 +21,9 @@
 		"id": 2,
 		"name_raw": "CellBegin",
 		"name_given": "sprite",
-		"args": "1: A string that references a sprite stored in a character's COL file\n2: Duration in game ticks",
-		"description": "Display a frame of animation, and it's matching hurtbox/hitbox/EX_POINT, for a certain amount of game ticks.\nFunction calls underneath sprite will be active for the duration of that sprite call.",
-		"extra": "Function calls underneath sprite will be active throughout the duration of that sprite.\nYou cannot call sprite within an if-block!\nNote that hurt/hitboxes are tied to their animation frames, and need to be adjusted seperately from BBScript.",
+		"args": "1: A string reference to data in a character's COL file\n2: Duration in game ticks",
+		"description": "Display an animation frame, and load matching hurtbox/hitbox/EX_POINT data",
+		"extra": "Function calls underneath sprite will be active throughout the duration of that sprite.\nNote that calling sprite from within an if-block will crash the game.",
 		"tags": "sprite"
 	},
 	{
@@ -40,7 +40,7 @@
 		"name_raw": "IfBegin",
 		"name_given": "if",
 		"args": "",
-		"description": "Check if a variable is true (read: anything except the value 0).",
+		"description": "Check if a variable is true (anything except the value 0).",
 		"extra": "",
 		"tags": "conditional"
 	},
@@ -57,9 +57,9 @@
 		"id": 6,
 		"name_raw": "IfBeginOP2",
 		"name_given": "ifOperation",
-		"args": "1: Operator\n2: Variable or integer\n3: Variable or integer ",
-		"description": "Same as 'if', but applies an operation on the first variable before checking whether it's true or not.",
-		"extra": "ADD\\nSUB\\nMUL\\nDIV\\nMOD\\nAND\\nOR\\nBIT_AND\\nBIT_OR\\nIS_EQUAL\\nIS_GREATER\\nIS_LESS\\nIS_GREATER_OR_EQUAL\\nIS_LESS_OR_EQUAL\\nBIT_DELETE\\nIS_NOT_EQUAL\\nMOD_EQUALS_0\\nMOD_EQUALS_1\\nMOD_EQUALS_2\\nADD_DIR\\nSET\\nSET_DIR\\nPERCENT",
+		"args": "1: Operator\n2: Variable that is checked\n3: Variable or integer that will be applied to arg2",
+		"description": "Same as 'if', but applies an operation on the variable first.",
+		"extra": "[ADD\nSUB\nMUL\nDIV\nMOD\nAND\nOR\nBIT_AND\nBIT_OR\nIS_EQUAL\nIS_GREATER\nIS_LESS\nIS_GREATER_OR_EQUAL\nIS_LESS_OR_EQUAL\nBIT_DELETE\nIS_NOT_EQUAL\nMOD_EQUALS_0\nMOD_EQUALS_1\nMOD_EQUALS_2\nADD_DIR\nSET\nSET_DIR\nPERCENT]",
 		"tags": "conditional"
 	},
 	{
@@ -67,7 +67,7 @@
 		"name_raw": "IfBeginNot",
 		"name_given": "ifNot",
 		"args": "",
-		"description": "Check if a variable is false (read: the value 0).",
+		"description": "Check if a variable is false (the value 0).",
 		"extra": "",
 		"tags": "conditional"
 	},
@@ -192,9 +192,9 @@
 		"id": 21,
 		"name_raw": "InterruptBegin",
 		"name_given": "upon",
-		"args": "",
-		"description": "Traditionally known as an interrupt.\\nTriggers the block of code within when the object/player receives the matching signal.\\nSome signals are sent by the game itself (IDLING, ATTACK_COLLISION etc.), some can be triggered manually with various function calls.",
-		"extra": "Any code placed in an upon block, will trigger immediately when it's event occurs.\n[upon: (TOUCH_GROUND)\n  jumpToLabel: s32'landing'\n  endUpon:]\nProtip: Check the upon tab at the top of this website for all events.",
+		"args": "Check the upon tab at the top of this website for all signals.",
+		"description": "Triggers a block of code if the object receives a signal.",
+		"extra": "This functionality is traditionally known as an 'interrupt'.\nSome signals are sent by the game itself (IDLING, ATTACK_COLLISION etc.), some can be triggered manually with various function calls.",
 		"tags": "interrupt,signal"
 	},
 	{
@@ -211,8 +211,8 @@
 		"name_raw": "ClearInterrupt",
 		"name_given": "clearRegisteredUponCode",
 		"args": "",
-		"description": "Clear a previously set interrupt.",
-		"extra": "Clears the interrupt, meaning the code within will no longer trigger even if it's event occurs.",
+		"description": "Clear a previously set upon/interrupt.",
+		"extra": "",
 		"tags": "interrupt,signal"
 	},
 	{
@@ -329,7 +329,7 @@
 		"name_given": "setEventTrigger",
 		"args": "1: TIMER or FALL SPEED\n2: if TIMER the second arg sets a timer in frame duration on when to go to the TIMER upon",
 		"description": "Used for triggering delayed interrupts, aka timers.",
-		"extra": "Here's an example.\nThis piece of code disables invulnerability after 10 game ticks.\n[setEventTrigger: (TIMER), 10\nupon: (TIMER)\n  enableSuperArmor: 0\n  endUpon:]",
+		"extra": "Here's an example.\nThis piece of code disables invulnerability after 10 game ticks.\n[setEventTrigger: (TIMER), 10\nupon: (TIMER) {\n\tenableSuperArmor: 0\n} endUpon:]",
 		"tags": "interrupt"
 	},
 	{
@@ -379,8 +379,8 @@
 	},
 	{
 		"id": 42,
-		"name_raw": "putObjectIntoStackEx",
-		"name_given": "",
+		"name_raw": "StackControlObjectEx",
+		"name_given": "putObjectIntoStackEx",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -388,38 +388,38 @@
 	},
 	{
 		"id": 43,
-		"name_raw": "putObjectIntoStack",
-		"name_given": "",
+		"name_raw": "StackControlObject",
+		"name_given": "putObjectIntoStack",
 		"args": "1: The STACK to put the object into\n2: The actual object (usually PREVIOUS)",
 		"description": "Store a reference to a specific object in any of the generic STACK objects",
-		"extra": "First we create a ki-blast, then store it in STACK7.\n[createObject: s32'kidan_5D', 0\nputObjectIntoStack: (STACK7), (PREVIOUS)]\nWe can manipulate it later, to for example flip it's direction.\n[applyTo: (STACK7)\n  flipDirection:\n  endApply:]",
+		"extra": "First we create a ki-blast, then store it in STACK7.\n[createObject: s32'kidan_5D', (CENTER)\nputObjectIntoStack: (STACK7), (PREVIOUS)]\nWe can manipulate it later, to for example flip it's direction.\n[applyTo: (STACK7) {\n\tflipDirection:\n} endApply:]",
 		"tags": ""
 	},
 	{
 		"id": 44,
 		"name_raw": "Op1",
 		"name_given": "modifyVarMath",
-		"args": "1: Operator\\n2: Variable",
-		"description": "Apply a maths operation to a variable.\\nUsually used with 'ABSOLUTE' to ensure a variable is always a positive integer.",
-		"extra": "BOOLEAN\\nNOT\\nPERCENT\\nABSOLUTE",
+		"args": "1: Operator\n2: Variable",
+		"description": "Apply a maths operation to a variable.",
+		"extra": "Usually used with 'ABSOLUTE' to ensure a variable is always a positive integer.\n[BOOLEAN\nNOT\nPERCENT\nABSOLUTE]",
 		"tags": ""
 	},
 	{
 		"id": 45,
 		"name_raw": "Op2",
 		"name_given": "modifyVarIntoResult",
-		"args": "1: Operator\n2: Variable or integer\n3: Variable or integer ",
+		"args": "1: Operator\n2: Variable or integer\n3: Variable or integer",
 		"description": "Apply an operation of some sort, then copy the output to variable 0 (RESULT).",
-		"extra": "ADD\\nSUB\\nMUL\\nDIV\\nMOD\\nAND\\nOR\\nBIT_AND\\nBIT_OR\\nIS_EQUAL\\nIS_GREATER\\nIS_LESS\\nIS_GREATER_OR_EQUAL\\nIS_LESS_OR_EQUAL\\nBIT_DELETE\\nIS_NOT_EQUAL\\nMOD_EQUALS_0\\nMOD_EQUALS_1\\nMOD_EQUALS_2\\nADD_DIR\\nSET\\nSET_DIR\\nPERCENT",
+		"extra": "ADD\nSUB\nMUL\nDIV\nMOD\nAND\nOR\nBIT_AND\nBIT_OR\nIS_EQUAL\nIS_GREATER\nIS_LESS\nIS_GREATER_OR_EQUAL\nIS_LESS_OR_EQUAL\nBIT_DELETE\nIS_NOT_EQUAL\nMOD_EQUALS_0\nMOD_EQUALS_1\nMOD_EQUALS_2\nADD_DIR\nSET\nSET_DIR\nPERCENT",
 		"tags": ""
 	},
 	{
 		"id": 46,
 		"name_raw": "OpCopy",
 		"name_given": "copyVar",
-		"args": "1: Variable to be modified\\n2: Variable or integer",
+		"args": "1: Variable to be modified\n2: Variable or integer",
 		"description": "Copy the value of a variable or integer into another variable.",
-		"extra": "",
+		"extra": "The primary method of variable manipulation in DBFZ.\nYou'll run into stuff like this constantly in all of the vanilla scripts.\n[copyVar: var(act1), int(1)]",
 		"tags": ""
 	},
 	{
@@ -480,7 +480,7 @@
 		"id": 53,
 		"name_raw": "OpCopyEx",
 		"name_given": "copyVarFromObject",
-		"args": "1: Receiving object\\n2: Variable to be modified.\\n3: Source object.\\n4: Source variable.",
+		"args": "1: Receiving object\n2: Variable to be modified.\n3: Source object.\n4: Source variable.",
 		"description": "",
 		"extra": "",
 		"tags": ""
@@ -491,7 +491,7 @@
 		"name_given": "modifyVar",
 		"args": "1: Operator\n2: Variable or integer\n3: Variable or integer ",
 		"description": "Apply an operation of some sort, then copy the output to arg2.",
-		"extra": "",
+		"extra": "[ADD\nSUB\nMUL\nDIV\nMOD\nAND\nOR\nBIT_AND\nBIT_OR\nIS_EQUAL\nIS_GREATER\nIS_LESS\nIS_GREATER_OR_EQUAL\nIS_LESS_OR_EQUAL\nBIT_DELETE\nIS_NOT_EQUAL\nMOD_EQUALS_0\nMOD_EQUALS_1\nMOD_EQUALS_2\nADD_DIR\nSET\nSET_DIR\nPERCENT]",
 		"tags": ""
 	},
 	{
@@ -1514,6 +1514,7 @@
 	{
 		"id": 188,
 		"name_raw": "SetScale",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -1522,6 +1523,7 @@
 	{
 		"id": 189,
 		"name_raw": "AddScale",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -1584,6 +1586,7 @@
 	{
 		"id": 196,
 		"name_raw": "Warp",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -1592,6 +1595,7 @@
 	{
 		"id": 197,
 		"name_raw": "WarpSelfDirOffset",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -4076,6 +4080,7 @@
 		"id": 736,
 		"name_raw": "AtkDamageToRecovery",
 		"name_given": "",
+		"args": "",
 		"description": "",
 		"extra": "",
 		"tags": "attack"
@@ -4490,7 +4495,7 @@
 		"name_raw": "AtkLandBoundSpeedX",
 		"name_given": "groundBounceXVelocity",
 		"args": "",
-		"description": "Do not use!\\nCrashes DBFZ.",
+		"description": "Do not use!\nCrashes DBFZ.",
 		"extra": "",
 		"tags": "ground,attack"
 	},
@@ -5616,7 +5621,7 @@
 		"name_given": "attackKillType",
 		"args": "",
 		"description": "",
-		"extra": "CAN_KILL\\nCANNOT_KILL\\nDISABLE_KILL_UNTIL_COMBO_ENDS\\nINSTANT_KILL\\nKillForMOMJibaku",
+		"extra": "CAN_KILL\nCANNOT_KILL\nDISABLE_KILL_UNTIL_COMBO_ENDS\nINSTANT_KILL\nKillForMOMJibaku",
 		"tags": "attack"
 	},
 	{
@@ -13587,6 +13592,7 @@
 	{
 		"id": 2292,
 		"name_raw": "NoGuardEffect",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -13685,6 +13691,7 @@
 	{
 		"id": 2311,
 		"name_raw": "AttackTarget",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",

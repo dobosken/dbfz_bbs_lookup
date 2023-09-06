@@ -208,7 +208,7 @@ canvas {
 	direction: rtl;
 	position: absolute;
 	left: 0;
-	height: calc(100% - 180px);
+	height: calc(100% - 130px);
 	overflow-y: scroll;
 	overflow-x: hidden;
 	font-size: 1em;
@@ -236,6 +236,12 @@ td {
 tbody > tr {
 	position: relative;
 	display: none;
+}
+
+tbody:after {
+	content: '';
+	display: block;
+	height: 80px;
 }
 
 tr:hover, tr:focus {
@@ -328,6 +334,7 @@ input[type='checkbox'][disabled]{
 	border: solid 1px var(--accent-colour-bright);
 	background-color: var(--main-bg0-colour);
 	text-align: left;
+	white-space: pre-wrap;
 }
 
 .bbs_example::before, .bbs_args::before {

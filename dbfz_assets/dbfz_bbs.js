@@ -3,7 +3,6 @@ var tagsListed=[];
 var searchables=[];
 var searchablesOneColumnHack;
 var db='./dbfz_assets/db_functions.json'
-//fetch('https://dobosken.github.io/dbfz_bbs_lookup/dbfz_assets/function_database.json')
 
 window.addEventListener('load', (event) => {
 	loaddb();
