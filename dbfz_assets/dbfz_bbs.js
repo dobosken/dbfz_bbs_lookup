@@ -57,7 +57,9 @@ function init(t1) {
 			if ( Object.values(t1[i])[3] ) {
 				var newElement_1 = document.createElement('pre');
 				newElement_1.classList.add('bbs_args');
-				newElement_1.innerHTML = Object.values(t1[i])[3];
+				var extraText = Object.values(t1[i])[3].replace(/\[/g, '<span class="code">');
+				extraText = extraText.replace(/\]/g, '</span>');
+				newElement_1.innerHTML = extraText;
 				block.appendChild(newElement_1);
 			}
 			if ( Object.values(t1[i])[5] ) {
@@ -190,10 +192,15 @@ function changeMode(mode, elem) {
 			elem.classList.add('modeHighlight');
 			db='./dbfz_assets/db_variables.json';
 			break;
-		//variables
+		//objects
 		case 3:
 			elem.classList.add('modeHighlight');
 			db='./dbfz_assets/db_objects.json';
+			break;
+		//misc
+		case 4:
+			elem.classList.add('modeHighlight');
+			db='./dbfz_assets/db_misc.json';
 			break;
 	}
 	

@@ -40,7 +40,7 @@
 		"name_raw": "IfBegin",
 		"name_given": "if",
 		"args": "",
-		"description": "Check if a variable is true (anything except the value 0).",
+		"description": "Check if a variable is true (anything except the value 0)",
 		"extra": "",
 		"tags": "conditional"
 	},
@@ -58,8 +58,8 @@
 		"name_raw": "IfBeginOP2",
 		"name_given": "ifOperation",
 		"args": "1: Operator\n2: Variable that is checked\n3: Variable or integer that will be applied to arg2",
-		"description": "Same as 'if', but applies an operation on the variable first.",
-		"extra": "[ADD\nSUB\nMUL\nDIV\nMOD\nAND\nOR\nBIT_AND\nBIT_OR\nIS_EQUAL\nIS_GREATER\nIS_LESS\nIS_GREATER_OR_EQUAL\nIS_LESS_OR_EQUAL\nBIT_DELETE\nIS_NOT_EQUAL\nMOD_EQUALS_0\nMOD_EQUALS_1\nMOD_EQUALS_2\nADD_DIR\nSET\nSET_DIR\nPERCENT]",
+		"description": "Same as 'if', but applies an operation on the variable first",
+		"extra": "Check the 'operators' entry in 'misc'",
 		"tags": "conditional"
 	},
 	{
@@ -67,7 +67,7 @@
 		"name_raw": "IfBeginNot",
 		"name_given": "ifNot",
 		"args": "",
-		"description": "Check if a variable is false (the value 0).",
+		"description": "Check if a variable is false (the value 0)",
 		"extra": "",
 		"tags": "conditional"
 	},
@@ -85,7 +85,7 @@
 		"name_raw": "ElseBegin",
 		"name_given": "else",
 		"args": "",
-		"description": "",
+		"description": "Can be used to run code only if a prior conditional code block fails",
 		"extra": "",
 		"tags": "conditional"
 	},
@@ -101,9 +101,9 @@
 	{
 		"id": 11,
 		"name_raw": "Label",
-		"name_given": "beginLabel",
-		"args": "",
-		"description": "",
+		"name_given": "",
+		"args": "1: String",
+		"description": "Place a marker within a state that can be arbitrarily jumped to",
 		"extra": "",
 		"tags": "flow"
 	},
@@ -119,10 +119,10 @@
 	{
 		"id": 13,
 		"name_raw": "GotoIfOP2",
-		"name_given": "gotoIfOperation",
-		"args": "",
+		"name_given": "gotoLabelIfOperation",
+		"args": "1: Label to jump to if the condition checks out\n2: Operator\n3: Variable or integer\n4: Variable or integer",
 		"description": "",
-		"extra": "",
+		"extra": "Check the 'operators' entry in 'misc'",
 		"tags": "flow,conditional"
 	},
 	{
@@ -131,7 +131,7 @@
 		"name_given": "jumpToLabel",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Differs from #12 (gotoLabel) in that this function is usable within interrupts.",
 		"tags": "flow"
 	},
 	{
@@ -173,10 +173,10 @@
 	{
 		"id": 19,
 		"name_raw": "DeleteObject",
-		"name_given": "deactivateObjectById",
-		"args": "",
+		"name_given": "deactivateObject",
+		"args": "1: Object",
 		"description": "",
-		"extra": "",
+		"extra": "Do not ever use this on player objects. You'll just crash the game.",
 		"tags": ""
 	},
 	{
@@ -193,7 +193,7 @@
 		"name_raw": "InterruptBegin",
 		"name_given": "upon",
 		"args": "Check the upon tab at the top of this website for all signals.",
-		"description": "Triggers a block of code if the object receives a signal.",
+		"description": "Execute a block of code if the object receives a matching signal",
 		"extra": "This functionality is traditionally known as an 'interrupt'.\nSome signals are sent by the game itself (IDLING, ATTACK_COLLISION etc.), some can be triggered manually with various function calls.",
 		"tags": "interrupt,signal"
 	},
@@ -211,15 +211,15 @@
 		"name_raw": "ClearInterrupt",
 		"name_given": "clearRegisteredUponCode",
 		"args": "",
-		"description": "Clear a previously set upon/interrupt.",
-		"extra": "",
+		"description": "Clear a previously set upon/interrupt",
+		"extra": "After an upon is triggered, it’s good practice to then immediately clear that very same interrupt from within that code block.",
 		"tags": "interrupt,signal"
 	},
 	{
 		"id": 24,
 		"name_raw": "GotoIf",
 		"name_given": "gotoLabelIfTrue",
-		"args": "",
+		"args": "1: Label to jump to on succes\n2: Variable to check",
 		"description": "",
 		"extra": "",
 		"tags": "flow,conditional"
@@ -228,7 +228,7 @@
 		"id": 25,
 		"name_raw": "GotoIfNot",
 		"name_given": "gotoLabelIfFalse",
-		"args": "",
+		"args": "1: Label to jump to on succes\n2: Variable to check",
 		"description": "",
 		"extra": "",
 		"tags": "flow,conditional"
@@ -237,7 +237,7 @@
 		"id": 26,
 		"name_raw": "CellTimeOverWrite",
 		"name_given": "spriteOverrideTime",
-		"args": "",
+		"args": "1: Amount of game ticks the object's currently sprite should be set to\n2: Variable that needs to be true (anything but 0) for this function to actually apply the time override",
 		"description": "",
 		"extra": "",
 		"tags": "conditional"
@@ -246,8 +246,8 @@
 		"id": 27,
 		"name_raw": "ActionRequest",
 		"name_given": "jumpToState",
-		"args": "",
-		"description": "Exit current state immediately and go to the given state.",
+		"args": "1: String",
+		"description": "Exit current state immediately and go to the given state",
 		"extra": "",
 		"tags": "flow"
 	},
@@ -318,9 +318,9 @@
 		"id": 35,
 		"name_raw": "InterruptGoto",
 		"name_given": "jumpToLabelInObject",
-		"args": "",
+		"args": "1: Object\n2: Label",
 		"description": "",
-		"extra": "",
+		"extra": "Don't use this on objects you don't directly control.\nIf the game can't find the label in the state that object is currently in, it will crash.",
 		"tags": "flow,interrupt"
 	},
 	{
@@ -328,7 +328,7 @@
 		"name_raw": "InterruptParam0",
 		"name_given": "setEventTrigger",
 		"args": "1: TIMER or FALL SPEED\n2: if TIMER the second arg sets a timer in frame duration on when to go to the TIMER upon",
-		"description": "Used for triggering delayed interrupts, aka timers.",
+		"description": "Used for triggering delayed interrupts",
 		"extra": "Here's an example.\nThis piece of code disables invulnerability after 10 game ticks.\n[setEventTrigger: (TIMER), 10\nupon: (TIMER) {\n\tenableSuperArmor: 0\n} endUpon:]",
 		"tags": "interrupt"
 	},
@@ -372,8 +372,8 @@
 		"id": 41,
 		"name_raw": "ControlObject",
 		"name_given": "applyTo",
-		"args": "",
-		"description": "Execute code on a different object.",
+		"args": "1: Object",
+		"description": "Run code on a different object.",
 		"extra": "",
 		"tags": ""
 	},
@@ -391,17 +391,17 @@
 		"name_raw": "StackControlObject",
 		"name_given": "putObjectIntoStack",
 		"args": "1: The STACK to put the object into\n2: The actual object (usually PREVIOUS)",
-		"description": "Store a reference to a specific object in any of the generic STACK objects",
-		"extra": "First we create a ki-blast, then store it in STACK7.\n[createObject: s32'kidan_5D', (CENTER)\nputObjectIntoStack: (STACK7), (PREVIOUS)]\nWe can manipulate it later, to for example flip it's direction.\n[applyTo: (STACK7) {\n\tflipDirection:\n} endApply:]",
+		"description": "Store a reference to an object for later use",
+		"extra": "First create a ki-blast, then store it in STACK7.\n[createObject: s32'kidan_5D', (CENTER)\nputObjectIntoStack: (STACK7), (PREVIOUS)]\nWe can manipulate it later, to for example flip it's direction.\n[applyTo: (STACK7) {\n\tflipDirection:\n} endApply:]",
 		"tags": ""
 	},
 	{
 		"id": 44,
 		"name_raw": "Op1",
 		"name_given": "modifyVarMath",
-		"args": "1: Operator\n2: Variable",
-		"description": "Apply a maths operation to a variable.",
-		"extra": "Usually used with 'ABSOLUTE' to ensure a variable is always a positive integer.\n[BOOLEAN\nNOT\nPERCENT\nABSOLUTE]",
+		"args": "1: Custom operator\n2: Variable",
+		"description": "Apply a maths operation to a variable",
+		"extra": "Has it's own set of operators:[BOOLEAN\nNOT\nPERCENT\nABSOLUTE]Usually used with 'ABSOLUTE' to ensure a variable is always a positive integer.",
 		"tags": ""
 	},
 	{
@@ -409,8 +409,8 @@
 		"name_raw": "Op2",
 		"name_given": "modifyVarIntoResult",
 		"args": "1: Operator\n2: Variable or integer\n3: Variable or integer",
-		"description": "Apply an operation of some sort, then copy the output to variable 0 (RESULT).",
-		"extra": "ADD\nSUB\nMUL\nDIV\nMOD\nAND\nOR\nBIT_AND\nBIT_OR\nIS_EQUAL\nIS_GREATER\nIS_LESS\nIS_GREATER_OR_EQUAL\nIS_LESS_OR_EQUAL\nBIT_DELETE\nIS_NOT_EQUAL\nMOD_EQUALS_0\nMOD_EQUALS_1\nMOD_EQUALS_2\nADD_DIR\nSET\nSET_DIR\nPERCENT",
+		"description": "Apply an operation of some sort, then copy the output to variable 0 (RESULT)",
+		"extra": "Check the 'operators' entry in 'misc'",
 		"tags": ""
 	},
 	{
@@ -418,7 +418,7 @@
 		"name_raw": "OpCopy",
 		"name_given": "copyVar",
 		"args": "1: Variable to be modified\n2: Variable or integer",
-		"description": "Copy the value of a variable or integer into another variable.",
+		"description": "Copy the value of a variable or integer into another variable",
 		"extra": "The primary method of variable manipulation in DBFZ.\nYou'll run into stuff like this constantly in all of the vanilla scripts.\n[copyVar: var(act1), int(1)]",
 		"tags": ""
 	},
@@ -436,8 +436,8 @@
 		"name_raw": "CheckInputEx",
 		"name_given": "checkInput",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Check for user input and store the result in variable 0 (RESULT)",
+		"extra": "Check the 'input' entry in 'misc'",
 		"tags": "conditional"
 	},
 	{
@@ -489,8 +489,8 @@
 		"id": 54,
 		"name_raw": "Op2Direct",
 		"name_given": "modifyVar",
-		"args": "1: Operator\n2: Variable or integer\n3: Variable or integer ",
-		"description": "Apply an operation of some sort, then copy the output to arg2.",
+		"args": "1: Operator\n2: Variable\n3: Variable or integer ",
+		"description": "Apply an operation of some sort, then copy the output to arg2",
 		"extra": "[ADD\nSUB\nMUL\nDIV\nMOD\nAND\nOR\nBIT_AND\nBIT_OR\nIS_EQUAL\nIS_GREATER\nIS_LESS\nIS_GREATER_OR_EQUAL\nIS_LESS_OR_EQUAL\nBIT_DELETE\nIS_NOT_EQUAL\nMOD_EQUALS_0\nMOD_EQUALS_1\nMOD_EQUALS_2\nADD_DIR\nSET\nSET_DIR\nPERCENT]",
 		"tags": ""
 	},
@@ -500,7 +500,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Not used in vanilla DBFZ.\nChecking for worldStop/superFreeze is usually done by reading out variable 81 (CheckStop) instead.\n[ifNot: var(CheckStop) {\n} endIf:]",
 		"tags": "conditional"
 	},
 	{
@@ -1587,19 +1587,19 @@
 		"id": 196,
 		"name_raw": "Warp",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Object\n2: Attachmentpoint\n3: X-offset\n4: Y-offset\n5: Speed  (inverse. Smaller values = faster)",
+		"description": "Moves you to the attachmentpoint of an object",
 		"extra": "",
-		"tags": ""
+		"tags": "movement"
 	},
 	{
 		"id": 197,
 		"name_raw": "WarpSelfDirOffset",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Object\n2: Attachmentpoint\n3: X-offset\n4: Y-offset\n5: Speed  (inverse. Smaller values = faster)",
+		"description": "Same as 196 (Warp), but maintain a character's facing direction",
 		"extra": "",
-		"tags": ""
+		"tags": "movement"
 	},
 	{
 		"id": 200,
@@ -1983,8 +1983,8 @@
 		"id": 271,
 		"name_raw": "WorldStop",
 		"name_given": "superFreeze",
-		"args": "",
-		"description": "",
+		"args": "1: ?\n2: ?\n3: Duration for player\n4: Duration for every other object",
+		"description": "Pauses all activity on screen for x duration",
 		"extra": "",
 		"tags": ""
 	},
@@ -2092,7 +2092,7 @@
 		"name_raw": "SetActionTimeMax",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Limit how long an object can spend in their current state",
 		"extra": "",
 		"tags": ""
 	},
@@ -2119,8 +2119,8 @@
 		"name_raw": "UseTension",
 		"name_given": "tensionUsage",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Decrease meter from the player object",
+		"extra": "5000 = .5 bar\nNot that this function does not halt state execution. Giving a move a meter requirement is done through 1411 (addMoveFlag).\nIf you want to have a meter requirement partway through a move, take inspiration from A.Gohan's lvl1:\n[ifOperation: (IS_GREATER_OR_EQUAL), var(Tension), int(10000) {\n\tcallSubroutine: s32'Potential_loop3'\n} endIf: ]",
 		"tags": "meter"
 	},
 	{
@@ -2715,7 +2715,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "shenron"
+		"tags": ""
 	},
 	{
 		"id": 398,
@@ -2724,7 +2724,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "shenron"
+		"tags": ""
 	},
 	{
 		"id": 399,
@@ -2733,7 +2733,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "shenron"
+		"tags": ""
 	},
 	{
 		"id": 400,
@@ -2742,7 +2742,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "shenron"
+		"tags": ""
 	},
 	{
 		"id": 401,
@@ -2751,7 +2751,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "shenron"
+		"tags": ""
 	},
 	{
 		"id": 402,
@@ -2760,7 +2760,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "shenron"
+		"tags": ""
 	},
 	{
 		"id": 403,
@@ -2778,7 +2778,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "shenron,model"
+		"tags": "model"
 	},
 	{
 		"id": 405,
@@ -2787,7 +2787,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "shenron"
+		"tags": ""
 	},
 	{
 		"id": 406,
@@ -2796,7 +2796,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "shenron,sound"
+		"tags": "sound"
 	},
 	{
 		"id": 407,
@@ -2805,7 +2805,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "shenron"
+		"tags": ""
 	},
 	{
 		"id": 410,
@@ -2992,7 +2992,7 @@
 		"name_raw": "CreateObjectArg",
 		"name_given": "createObjectWithArg",
 		"args": "",
-		"description": "",
+		"description": "Same as 446 (createObject), just with 'setArg_' support",
 		"extra": "",
 		"tags": ""
 	},
@@ -3000,8 +3000,8 @@
 		"id": 446,
 		"name_raw": "CreateObject",
 		"name_given": "createObject",
-		"args": "",
-		"description": "",
+		"args": "1: State\n2: Attachmentpoint",
+		"description": "Spawn a new object, either from XXXEF or CMNEF",
 		"extra": "",
 		"tags": ""
 	},
@@ -3018,9 +3018,9 @@
 		"id": 448,
 		"name_raw": "CreateParticle",
 		"name_given": "createParticle",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Particle name\n2: Attachmentpoint",
+		"description": "Spawn a standalone particle",
+		"extra": "You're usually better off creating an actual object and attaching a particle to it with 450 (linkParticle).",
 		"tags": ""
 	},
 	{
@@ -3028,7 +3028,7 @@
 		"name_raw": "CreateParticleArg",
 		"name_given": "createParticleWithArg",
 		"args": "",
-		"description": "",
+		"description": "Same as 446 (createParticle), just with 'setArg_' support",
 		"extra": "",
 		"tags": ""
 	},
@@ -3036,19 +3036,19 @@
 		"id": 450,
 		"name_raw": "LinkParticle",
 		"name_given": "linkParticle",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Particle",
+		"description": "Link a particle effect to the current object",
+		"extra": "The particle can be from a character themselves, or from CMNEF.",
 		"tags": ""
 	},
 	{
 		"id": 451,
 		"name_raw": "LinkModel",
 		"name_given": "linkPawnWithAnimation",
-		"args": "",
-		"description": "",
-		"extra": "",
-		"tags": "model"
+		"args": "1: Short ID\n2: Animation (can be empty)",
+		"description": "Link a model and play an animation",
+		"extra": "If no animation is defined, the game will try to match sprite frames to the model's own animset.",
+		"tags": "model,animation"
 	},
 	{
 		"id": 452,
@@ -3333,17 +3333,17 @@
 		"id": 544,
 		"name_raw": "SetEnemysCell",
 		"name_given": "enemyGrabbedFrame",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: 0 - 48",
+		"description": "Override opponent character's sprite",
+		"extra": "Check the 'grabbedFrames' calls in a character's 'RoundInit' to see which numbers link up to which sprites.",
 		"tags": "grab"
 	},
 	{
 		"id": 546,
 		"name_raw": "SetGripPosition",
 		"name_given": "setGripPosition",
-		"args": "",
-		"description": "",
+		"args": "1: Attachmentpoint attacker\n2: Attachmentpoint defender\n3: ? (zLine perhaps)",
+		"description": "Opponent’s position while grabbed",
 		"extra": "",
 		"tags": "position"
 	},
@@ -3908,7 +3908,7 @@
 	{
 		"id": 712,
 		"name_raw": "AtkDamage",
-		"name_given": "damage1",
+		"name_given": "damage",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -3926,7 +3926,7 @@
 	{
 		"id": 714,
 		"name_raw": "AtkSousaiLevel",
-		"name_given": "damage2",
+		"name_given": "attackClashLevel",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -4511,7 +4511,7 @@
 	{
 		"id": 818,
 		"name_raw": "AtkLandStunTime",
-		"name_given": "hitstunAmount",
+		"name_given": "groundHitstun",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -4547,7 +4547,7 @@
 	{
 		"id": 830,
 		"name_raw": "AtkAirStunTime",
-		"name_given": "untechAmount",
+		"name_given": "airHitstun",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -4781,7 +4781,7 @@
 	{
 		"id": 882,
 		"name_raw": "AtkLandHitAction",
-		"name_given": "groundHitEffect",
+		"name_given": "groundKnockbackEffect",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -4817,7 +4817,7 @@
 	{
 		"id": 894,
 		"name_raw": "AtkAirHitAction",
-		"name_given": "airHitEffect",
+		"name_given": "airKnockbackEffect",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -5295,8 +5295,8 @@
 		"id": 965,
 		"name_raw": "AtkGBDecPerOff",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Debuff in percentage (can be stacked)\n2: Lowest limit in percentage (opponent cannot be debuffed below this value)",
+		"description": "Apply damage debuff on hit",
 		"extra": "",
 		"tags": "attack"
 	},
@@ -5305,16 +5305,16 @@
 		"name_raw": "AtkHitStopTime",
 		"name_given": "hitStop",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Freeze both attacker and defender on hit",
+		"extra": "Not affected by hitstun scaling.",
 		"tags": "hitstop,attack"
 	},
 	{
 		"id": 996,
 		"name_raw": "AtkHitStopTimeEnemyAddition",
 		"name_given": "enemyHitstopAddition",
-		"args": "",
-		"description": "",
+		"args": "1: Hitstop on block\n2: Hitstop on hit\n3: Hitstop on counter hit",
+		"description": "Freeze only the defender on hit",
 		"extra": "",
 		"tags": "hitstop,attack"
 	},
@@ -5325,7 +5325,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "attack"
+		"tags": "attack,grab"
 	},
 	{
 		"id": 1017,
@@ -5350,9 +5350,9 @@
 		"name_raw": "AtkLock",
 		"name_given": "canGrab",
 		"args": "",
-		"description": "",
-		"extra": "",
-		"tags": "attack"
+		"description": "Trigger a followup on hit if one is defined with 1042 (jumpToStateOnHit)",
+		"extra": "The datamined name is a better indicator of what this function does; it locks both attacker and defender into a predefined action.\nGrabs are really just unblockable attacks with a followup.",
+		"tags": "attack,grab"
 	},
 	{
 		"id": 1020,
@@ -5430,9 +5430,9 @@
 		"id": 1028,
 		"name_raw": "AtkShotLevel",
 		"name_given": "setProjectileDurability",
-		"args": "",
+		"args": "1: Value",
 		"description": "",
-		"extra": "",
+		"extra": "Higher levels beat lower levels.\nEquals clash.\n[0 = ?\n1 = Basic ki-blasts\n2 = Piercing ki-blasts\n3 = Beams\n4 = Most supers\n5 = Ungabunga supers",
 		"tags": "attack"
 	},
 	{
@@ -5485,9 +5485,9 @@
 		"name_raw": "AtkLockAction",
 		"name_given": "jumpToStateOnHit",
 		"args": "",
-		"description": "",
+		"description": "If hit connects, exit the current state and go to this state",
 		"extra": "",
-		"tags": "attack"
+		"tags": "attack,grab"
 	},
 	{
 		"id": 1043,
@@ -5665,8 +5665,8 @@
 		"name_raw": "AtkNextHitActionName",
 		"name_given": "applyAttackLockWithStateName",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Only objects in the given statename can hit the opponent",
+		"extra": "Mostly used to prevent other objects from interfering with cinematic attacks.",
 		"tags": "attack"
 	},
 	{
@@ -5721,7 +5721,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "attack"
+		"tags": "attack,grab"
 	},
 	{
 		"id": 1072,
@@ -5855,7 +5855,7 @@
 		"name_given": "minimalDamagePercent",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Overrides minimal damage scaling.\nTry not to use this outside of supers, 'cause it usually ends up completely breaking character balance when applied to regular attacks.",
 		"tags": "attack"
 	},
 	{
@@ -5933,10 +5933,10 @@
 	{
 		"id": 1095,
 		"name_raw": "AtkHoseiGuardBalance",
-		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "damageScalingOverride",
+		"args": "1: ",
+		"description": "Alter the attack's proration value",
+		"extra": "[0 = Disable proration\n500 = Scale as 1 hit\n1000 = Scale as 2 hits\n1500 = Scale as 3 hits\netc.]",
 		"tags": "defense,attack"
 	},
 	{
@@ -5961,9 +5961,9 @@
 		"id": 1098,
 		"name_raw": "AtkDan",
 		"name_given": "attackGuardtype",
-		"args": "",
+		"args": "1: String",
 		"description": "",
-		"extra": "",
+		"extra": "[MID\nHIGH\nLOW\nNONE]",
 		"tags": "attack"
 	},
 	{
@@ -5998,7 +5998,7 @@
 		"name_raw": "AtkHitBack",
 		"name_given": "guardPushback",
 		"args": "",
-		"description": "",
+		"description": "Horizontal pushback on block",
 		"extra": "",
 		"tags": "attack"
 	},
@@ -6162,7 +6162,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "attack"
+		"tags": "attack,grab"
 	},
 	{
 		"id": 1121,
@@ -6313,9 +6313,9 @@
 		"name_raw": "AtkLockKeep",
 		"name_given": "",
 		"args": "",
-		"description": "",
-		"extra": "",
-		"tags": "attack"
+		"description": "Prevent the opponent's characters from doing anything",
+		"extra": "Used in grabs and lock attacks.",
+		"tags": "attack,grab"
 	},
 	{
 		"id": 1140,
@@ -6700,7 +6700,7 @@
 		"name_raw": "AtkZReversal",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Automatic ki-blast deflecting",
 		"extra": "",
 		"tags": "attack"
 	},
@@ -6725,18 +6725,18 @@
 	{
 		"id": 1185,
 		"name_raw": "AtkSuikomiX",
-		"name_given": "attackXSuction",
-		"args": "",
-		"description": "",
+		"name_given": "attackXVacuum",
+		"args": "1: 0 = outward | 1 = inward\n2: X-offset\n3: Vacuum effect strength\n4: Vacuum percentage on hit\n5: Vacuum percentage on block",
+		"description": "Vacuum defender to a certain position on hit",
 		"extra": "",
 		"tags": "attack"
 	},
 	{
 		"id": 1186,
 		"name_raw": "AtkSuikomiY",
-		"name_given": "attackYSuction",
-		"args": "",
-		"description": "",
+		"name_given": "attackYVacuum",
+		"args": "1: 0 = outward | 1 = inward\n2: Y-offset\n3: Vacuum effect strength\n4: Vacuum percentage on hit\n5: Vacuum percentage on block",
+		"description": "Vacuum defender to a certain position on hit",
 		"extra": "",
 		"tags": "attack"
 	},
@@ -7814,11 +7814,11 @@
 	{
 		"id": 1307,
 		"name_raw": "InitTensionBalanceFront",
-		"name_given": "",
+		"name_given": "initCooldownTimeAssist_C",
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "meter"
+		"tags": "assist"
 	},
 	{
 		"id": 1308,
@@ -8291,10 +8291,10 @@
 	{
 		"id": 1411,
 		"name_raw": "SkillAddCondition",
-		"name_given": "addMoveFlag",
+		"name_given": "addMoveCondition",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Check the 'moveCondition' entry in 'misc'",
 		"tags": ""
 	},
 	{
@@ -8313,7 +8313,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "chain"
 	},
 	{
 		"id": 1414,
@@ -8329,8 +8329,8 @@
 		"name_raw": "SkillBeginReWriteMode",
 		"name_given": "",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Enable rewriting existing moves",
+		"extra": "[skillBeginReWriteMode: 1\nifPlayerCharacter: s16'buk' {\n\taddMove: s32'NmlAtk3B' {\n\t\tdeleteInputs:\n\t\taddMoveCondition: (IS_BOSS)\n\t} endMove:\n} endIf:]",
 		"tags": ""
 	},
 	{
@@ -8345,7 +8345,7 @@
 	{
 		"id": 1417,
 		"name_raw": "SkillDelCondition",
-		"name_given": "removeMoveFlag",
+		"name_given": "removeMoveCondition",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -8365,8 +8365,8 @@
 		"name_raw": "SkillForceDisableFlag",
 		"name_given": "",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Lock out move if flag is set",
+		"extra": "Used together with 1629 (AddSkillForceDisableFlag) to prevent the usage of a move.\nUsually used for things like zBroly alt lvl3 to keep him from spawning multiple balls.",
 		"tags": ""
 	},
 	{
@@ -8383,8 +8383,8 @@
 		"name_raw": "SkillRequestAction",
 		"name_given": "moveAlias",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Register a move, but execute a different one when it's used",
+		"extra": "checkCurrentStateEntryName will read the original addMove, not the aliased one\nThis allows you to do things like have 2 different move inputs refer to the same state, and the second one can have different properties.",
 		"tags": ""
 	},
 	{
@@ -8410,7 +8410,7 @@
 		"name_raw": "SkillFunctionCall",
 		"name_given": "moveSubroutine",
 		"args": "",
-		"description": "",
+		"description": "Call subroutine before the state even begins",
 		"extra": "",
 		"tags": ""
 	},
@@ -8439,7 +8439,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "chain"
 	},
 	{
 		"id": 1428,
@@ -8482,18 +8482,18 @@
 		"name_raw": "SkillChainCountGroup",
 		"name_given": "move_ShareChain",
 		"args": "",
-		"description": "",
-		"extra": "",
-		"tags": ""
+		"description": "Add move into a gatling chain",
+		"extra": "Used to put different moves into the same gatling chain.\nTo give an example, in the vanilla game it is used to pair up 2L and 5L.\nIn practice this means you can 5L > 2L or 2L > 5L in one chain, but 2L > 4LL does not work as it exceeds the 'maxChainIntoSelf: 2' limit set in most characters' NmlAtk5A.",
+		"tags": "chain"
 	},
 	{
 		"id": 1433,
 		"name_raw": "SkillDamageOrGuard",
-		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
-		"tags": "defense"
+		"name_given": "moveStunOverride",
+		"args": "1: String",
+		"description": "Enable a move to be used during hitstun or blockstun",
+		"extra": "[NOT_HIT_OR_BLOCKSTUN\nHIT_OR_BLOCKSTUN_OK\nHIT_OR_BLOCKSTUN_ONLY\nHITSTUN_ONLY\nBLOCKSTUN_ONLY\nNOT_APPLICABLE]",
+		"tags": ""
 	},
 	{
 		"id": 1434,
@@ -8510,7 +8510,7 @@
 		"name_given": "assistSlot",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "ASSIST_OVERRIDE\nASSIST_A\nASSIST_B\nASSIST_C",
 		"tags": "movement"
 	},
 	{
@@ -9112,18 +9112,18 @@
 		"name_raw": "AddFlexChain",
 		"name_given": "addWhiffCancelOption",
 		"args": "",
-		"description": "",
+		"description": "Allows you to chain into the given move on whiff",
 		"extra": "",
-		"tags": ""
+		"tags": "chain"
 	},
 	{
 		"id": 1638,
 		"name_raw": "AddChain",
 		"name_given": "addGatlingOption",
 		"args": "",
-		"description": "",
+		"description": "Allows you to chain into the given move on hit or block",
 		"extra": "",
-		"tags": ""
+		"tags": "chain"
 	},
 	{
 		"id": 1639,
@@ -9327,8 +9327,8 @@
 		"id": 1662,
 		"name_raw": "SenkoInput",
 		"name_given": "whiffCancelOptionBufferTime",
-		"args": "",
-		"description": "",
+		"args": "1: Move\n2: Custom buffer window",
+		"description": "Whiff cancelling, but with a long, custom input buffers",
 		"extra": "",
 		"tags": ""
 	},
@@ -9570,9 +9570,9 @@
 		"id": 1698,
 		"name_raw": "Hair",
 		"name_given": "facePose",
-		"args": "(NORMAL), (STRESSED), (ANGRY)",
+		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "[NORMAL\nSTRESSED\nANGRY]\nNote that although these 3 are universal, a lot of characters also have custom faceposes.",
 		"tags": "model,animation"
 	},
 	{
@@ -9588,9 +9588,9 @@
 		"id": 1700,
 		"name_raw": "HairReset",
 		"name_given": "mouthPose",
-		"args": "(CLOSED), (SHOW_TEETH), (OPEN)",
+		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "[CLOSED\nSHOW_TEETH\nOPEN]\nNote that although these 3 are universal, a lot of characters also have custom faceposes.",
 		"tags": "model,animation"
 	},
 	{
@@ -10074,7 +10074,7 @@
 		"id": 1798,
 		"name_raw": "SendSignal",
 		"name_given": "",
-		"args": "",
+		"args": "1: Object to send signal to\n2: Signal (upon)",
 		"description": "",
 		"extra": "",
 		"tags": "signal"
@@ -10173,9 +10173,9 @@
 		"id": 1824,
 		"name_raw": "LandingStiffTime",
 		"name_given": "landingRecovery",
-		"args": "",
+		"args": "1: Amount in ticks\n2: Priority",
 		"description": "",
-		"extra": "",
+		"extra": "DBFZ has a base landing recovery of 1f.\nIn addition, regardless of landing recovery, you cannot jump from a crouching position for an additional 3f unless you dash cancel the crouch.",
 		"tags": "ground"
 	},
 	{
@@ -11397,7 +11397,7 @@
 		"id": 2029,
 		"name_raw": "ExHoming",
 		"name_given": "homing",
-		"args": "",
+		"args": "1: Object\n2: Target object\n3: Target attachmentpoint\n4: ?\n5: X-offset\n6: ?\n7: Y-offset\n8: ?\n9: X-speed\n10: ?\n11: Y-speed",
 		"description": "",
 		"extra": "",
 		"tags": "movement"
@@ -11415,8 +11415,8 @@
 		"id": 2031,
 		"name_raw": "CheckLastDamageActionName",
 		"name_given": "checkLastAttackHitStateName",
-		"args": "",
-		"description": "",
+		"args": "1: Object\n2: Statename",
+		"description": "Check if the object was last attacked by an object with the given statename.",
 		"extra": "",
 		"tags": "conditional"
 	},
@@ -11496,9 +11496,9 @@
 		"id": 2040,
 		"name_raw": "SendSignalName",
 		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Object\n2: Signal name\n3: 0",
+		"description": "Send a named signal to an object",
+		"extra": "Extremely powerful in the right hands. This allows you to trigger arbitrary interrupts and freely interact with another object.\n[upon: (SIGNAL_NAME) {\n\tcheckSignalName: s32'ilovegoku'\n\tif: var(Result) {\n\t\tcopyVar: var(act0), int(1)\n\t} endIf: \n\tcheckSignalName: s32'ilovevegeta'\n\tif: var(Result) {\n\t\tcopyVar: var(act0), int(2)\n\t} endIf: \n} endUpon:]",
 		"tags": "signal"
 	},
 	{
@@ -11506,7 +11506,7 @@
 		"name_raw": "CheckSignalName",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "See 2040 (SendSignalName)",
 		"extra": "",
 		"tags": "signal,conditional"
 	},
@@ -11526,7 +11526,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "model"
 	},
 	{
 		"id": 2045,
@@ -11811,7 +11811,7 @@
 		"id": 2076,
 		"name_raw": "MoveCamera",
 		"name_given": "cameraMotion",
-		"args": "",
+		"args": "1: Horizontal position: Negative = Left | positive = Right\n2: Depth position: Negative = In | positive = Out (use 560000 as your starting point)\n3: Vertical position: Negative = Down | Positive = Up (use 150000 as your starting point)\n4: Pitch rotation: Negative = Down | Positive = Up\n5: Yaw rotation: Negative = Counterclockwise | Positive = Clockwise\n6: Roll rotation: Negative = Counterclockwise | Positive = Clockwise\n7: FOV: Negative = Decrease FOV | Positive = increase FOV (default: 54)\n8: Transition-in duration: How long it takes for the camera to move to its new position\n9: Camera hold duration: How long to hold the new camera position\n10: Transition-out duration: How long it takes for the camera to return its default position\n11: Priority? Just set it to 1.",
 		"description": "",
 		"extra": "",
 		"tags": "camera"
@@ -12801,9 +12801,9 @@
 		"id": 2189,
 		"name_raw": "ZLine",
 		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Integer or variable",
+		"description": "Draw order of object",
+		"extra": "Lower values = higher priority",
 		"tags": ""
 	},
 	{
@@ -12836,9 +12836,9 @@
 	{
 		"id": 2193,
 		"name_raw": "ExPointFReset",
-		"name_given": "exPointFReset",
-		"args": "",
-		"description": "",
+		"name_given": "",
+		"args": "1: Attachmentpoint\n2: X-offset\n3: Y-offset",
+		"description": "Set new coordinates for EX_POINT_F",
 		"extra": "",
 		"tags": ""
 	},
@@ -12864,7 +12864,7 @@
 		"id": 2196,
 		"name_raw": "ExPointFResetCO",
 		"name_given": "exPointFResetObject",
-		"args": "",
+		"args": "1: Object\n2: Attachmentpoint\n3: X-offset\n4: Y-offset",
 		"description": "",
 		"extra": "",
 		"tags": ""
@@ -13135,8 +13135,8 @@
 		"name_raw": "PerSpeedXEveryFrame",
 		"name_given": "xSpeedPerFrame",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Maintain horizontal momentum in %",
+		"extra": "Can go a bit above 100, but don’t go too crazy or you'll overflow a character's speed value.",
 		"tags": "movement"
 	},
 	{
@@ -13144,8 +13144,8 @@
 		"name_raw": "PerSpeedYEveryFrame",
 		"name_given": "ySpeedPerFrame",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Maintain vertical momentum in %",
+		"extra": "Can go a bit above 100, but don’t go too crazy or you'll overflow a character's speed value.",
 		"tags": "movement"
 	},
 	{
@@ -13217,7 +13217,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "If two objects overlap and they're both interacted with, the high priority object will take precedence.",
 		"tags": ""
 	},
 	{
@@ -13425,7 +13425,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2270,
@@ -13434,7 +13434,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2273,
@@ -13443,7 +13443,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2274,
@@ -13452,7 +13452,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2275,
@@ -13461,7 +13461,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2276,
@@ -13470,7 +13470,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2277,
@@ -13479,16 +13479,16 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2279,
 		"name_raw": "CreateArg_HikitsugiVal",
 		"name_given": "setArg_objectParameters",
-		"args": "",
-		"description": "",
-		"extra": "",
-		"tags": ""
+		"args": "1: Variable or integer\n2: Variable or integer",
+		"description": "Pass 2 values onto an object before creation",
+		"extra": "Arg1 will go into var 115 (ObjectParameter1) and arg2 will go into var 116 (ObjectParameter2).",
+		"tags": "setArg"
 	},
 	{
 		"id": 2280,
@@ -13497,7 +13497,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2281,
@@ -13506,7 +13506,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2282,
@@ -13515,7 +13515,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2283,
@@ -13524,7 +13524,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2284,
@@ -13533,7 +13533,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2285,
@@ -13542,7 +13542,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2286,
@@ -13551,7 +13551,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2287,
@@ -13560,7 +13560,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2288,
@@ -13569,7 +13569,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2289,
@@ -13578,7 +13578,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2291,
@@ -13587,7 +13587,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "setArg"
 	},
 	{
 		"id": 2292,
@@ -13675,7 +13675,7 @@
 		"name_raw": "ScaleForLinkIndependent",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Scale only linked particles/models, not the actual object",
 		"extra": "",
 		"tags": ""
 	},
@@ -13683,18 +13683,18 @@
 		"id": 2310,
 		"name_raw": "CockpitMessage",
 		"name_given": "uiBattleText",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: String",
+		"description": "Play one of several predefined UI messages",
+		"extra": "Check the 'UI battle text' entry in 'misc'",
 		"tags": "ui"
 	},
 	{
 		"id": 2311,
 		"name_raw": "AttackTarget",
 		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: String",
+		"description": "Define which team the objects can connect their attacks with",
+		"extra": "[ENEMY\nSELF\nALL]",
 		"tags": ""
 	},
 	{
@@ -13728,8 +13728,8 @@
 		"id": 2315,
 		"name_raw": "CellTimeAdd",
 		"name_given": "spriteAddTime",
-		"args": "",
-		"description": "",
+		"args": "1: Integer",
+		"description": "Increase amount of time a sprite is displayed",
 		"extra": "",
 		"tags": "sprite"
 	},
@@ -14807,18 +14807,18 @@
 	{
 		"id": 2498,
 		"name_raw": "IfBeginCoType",
-		"name_given": "",
-		"args": "",
-		"description": "",
+		"name_given": "ifVarOfObjectTrue",
+		"args": "1: Object\n2: Variable",
+		"description": "Checks if a variable on a specified object is true",
 		"extra": "",
 		"tags": "conditional"
 	},
 	{
 		"id": 2499,
 		"name_raw": "IfBeginNotCoType",
-		"name_given": "",
-		"args": "",
-		"description": "",
+		"name_given": "ifVarOfObjectFalse",
+		"args": "1: Object\n2: Variable",
+		"description": "Checks if a variable on a specified object is false",
 		"extra": "",
 		"tags": "conditional"
 	},

@@ -1,0 +1,56 @@
+[
+	{
+		"id": 0,
+		"name_raw": "OP2_Type",
+		"name_given": "operators",
+		"args": "[ADD\nSUB\nMUL\nDIV\nMOD\nAND\nOR\nBIT_AND\nBIT_OR\nIS_EQUAL\nIS_GREATER\nIS_LESS\nIS_GREATER_OR_EQUAL\nIS_LESS_OR_EQUAL\nBIT_DELETE\nIS_NOT_EQUAL\nMOD_EQUALS_0\nMOD_EQUALS_1\nMOD_EQUALS_2\nADD_DIR\nSET\nSET_DIR\nPERCENT]",
+		"description": "The operators available to various comparison functions",
+		"extra": "Used for:\n6 (ifOperation)\n13 (gotoLabelIfOperation)\n45 (modifyVarIntoResult)\n52 (modifyVarAfterOperation)\n54 (modifyVar)\n2500 (ifVarOfObjectOperation)",
+		"tags": ""
+	},
+	{
+		"id": 1,
+		"name_raw": "INPUT_ID",
+		"name_given": "input",
+		"args": "[INPUT_HOLD_L\nINPUT_RELEASE_L\nINPUT_PRESS_L\nINPUT_NOT_L\nINPUT_HOLD_M\nINPUT_RELEASE_M\nINPUT_PRESS_M\nINPUT_NOT_M\nINPUT_HOLD_H\nINPUT_RELEASE_H\nINPUT_PRESS_H\nINPUT_NOT_H\nINPUT_HOLD_KI\nINPUT_RELEASE_KI\nINPUT_PRESS_KI\nINPUT_NOT_KI\nINPUT_HOLD_D\nINPUT_RELEASE_D\nINPUT_PRESS_D\nINPUT_NOT_D\nINPUT_HOLD_R\nINPUT_RELEASE_R\nINPUT_PRESS_R\nINPUT_NOT_R\nINPUT_1\nINPUT_NOT_1\nINPUT_2\nINPUT_ANY_DOWN\nINPUT_NOT_2\nINPUT_DISALLOW_UP\nINPUT_3\nINPUT_NOT_3\nINPUT_4\nINPUT_ANY_BACK\nINPUT_NOT_4\nINPUT_DISALLOW_DOWN\nINPUT_5\nINPUT_NOT_5\nINPUT_6\nINPUT_ANY_FORWARD\nINPUT_NOT_6\nINPUT_7\nINPUT_NOT_7\nINPUT_8\nINPUT_ANY_UP\nINPUT_NOT_8\nINPUT_9\nINPUT_NOT_9\nINPUT_236\nINPUT_623\nINPUT_214\nINPUT_41236\nINPUT_421\nINPUT_63214\nINPUT_236236\nINPUT_214214\nINPUT_4123641236\nINPUT_6321463214\nINPUT_632146\nINPUT_236214\nINPUT_ANY_DOWNDOWN\nINPUT_BACK_FORWARD\nINPUT_CHARGE_BACK_FORWARD_30F\nINPUT_CHARGE_DOWN_UP_30F\nINPUT_GAMMA_RAY\nINPUT_GAMMA_RAY_DIZZY\nINPUT_DOWN_UP\nINPUT_646\nINPUT_THROW\nINPUT_AIR_THROW\nINPUT_DEAD_ANGLE\nINPUT_ROMAN_CANCEL\nINPUT_66\nINPUT_44\nINPUT_22\nINPUT_TECH\nINPUT_PRESS_ANY_OF_LMHS\nINPUT_BOOLEAN_OR\nINPUT_DASH\nINPUT_ANY_TWO_OF_LMHS\nINPUT_ANY_THREE_OF_LMHS\nINPUT_PRESS_TAUNT]",
+		"description": "Input checks. Uses numpad notation!",
+		"extra": "Used for:\n48 (checkInput)\n1386 (checkEnemyInput)\n1420 (moveInput)\n2297 (checkInputFromParent)",
+		"tags": ""
+	},
+	{
+		"id": 2,
+		"name_raw": "CD_CONDITION",
+		"name_given": "moveCondition",
+		"args": "[NONE\nLAND\nAIR\nHALF\nONE\nREQUIRES_25_TENSION\nCAN_JUMP\nCAN_AIR_DASH\nplr0_true\nplr1_true\nplr2_true\nplr3_true\nplr0_false\nplr1_false\nplr2_false\nplr3_false\nFIRST_EXTRA_GAUGE_FILLED\nSECOND_EXTRA_GAUGE_FILLED\nTHIRD_EXTRA_GAUGE_FILLED\nFOURTH_EXTRA_GAUGE_FILLED\nFIFTH_EXTRA_GAUGE_FILLED\nHEIGHT_ABOVE_50000\nHEIGHT_ABOVE_100000\nHEIGHT_ABOVE_150000\nHEIGHT_ABOVE_200000\nTOUCHING_WALL\nTOUCHING_SCREEN\nFIRST_EXTRA_GAUGE_EMPTY\nSECOND_EXTRA_GAUGE_EMPTY\nTHIRD_EXTRA_GAUGE_EMPTY\nFOURTH_EXTRA_GAUGE_EMPTY\nFIFTH_EXTRA_GAUGE_EMPTY\nCLOSE_TO_LEFT_CORNER\nCLOSE_TO_RIGHT_CORNER\nNOT_DASHING\nFIRST_EXTRA_GAUGE_NOT_EMPTY\nSECOND_EXTRA_GAUGE_NOT_EMPTY\nTHIRD_EXTRA_GAUGE_NOT_EMPTY\nFOURTH_EXTRA_GAUGE_NOT_EMPTY\nFIFTH_EXTRA_GAUGE_NOT_EMPTY\nAIR_DASH_HEIGHT_LIMIT\nIS_BOSS\nIS_NOT_BOSS\nBATTLING\nNOT_IN_FAULTLESS_DEFENSE\nDEBUG\nENEMY_AIRBORNE\nCLOSE_SLASH\nFAR_SLASH\nCAN_BURST\nTENSION_NOT_EMPTY\nINSTANT_KILL_NORMAL_OR_READY\nINSTANT_KILL_READY\nAIR_JUMP_HEIGHT_LIMIT\nDEBUG_EX\nSTYLISH_COMBO\nENEMY_GUARD\nENEMY_CROUCH\nBURST_GAUGE_MAX\nEnemyInHitstun\nENEMY_IN_COUNTER_HITSTUN\nENEMY_STAND\nIS_CPU\nCHAIN_READY\nIS_MAIN_PLAYER\nIS_SUB_PLAYER\nOVERDRIVE_STATE\nREQUIRES_300_TENSION\nREQUIRES_200_TENSION\nIS_KNOCKED_DOWN\nplr4_true\nplr5_true\nplr6_true\nplr7_true\nplr4_false\nplr5_false\nplr6_false\nplr7_false\nTHREE\nTWO]",
+		"description": "Block the usage of moves unless they satisfy all conditions",
+		"extra": "Used for:\n1411 (addMoveCondition)\n1417 (removeMoveCondition)",
+		"tags": ""
+	},
+	{
+		"id": 3,
+		"name_raw": "POS_TYPE",
+		"name_given": "attachmentpoint",
+		"args": "[EX_POINT_0\nEX_POINT_1\nEX_POINT_2\nEX_POINT_3\nEX_POINT_4\nEX_POINT_5\nEX_POINT_6\nEX_POINT_7\nEX_POINT_8\nEX_POINT_9\nEX_POINT_10\nEX_POINT_11\nEX_POINT_12\nEX_POINT_13\nEX_POINT_14\nEX_POINT_15\nEX_POINT_16\nEX_POINT_17\nEX_POINT_18\nEX_POINT_19\nEX_POINT_20\nEX_POINT_21\nEX_POINT_22\nEX_POINT_23\nEX_POINT_24\nEX_POINT_25\nEX_POINT_26\nEX_POINT_27\nEX_POINT_28\nEX_POINT_29\nZERO\nATTACK\nDAMAGE\nCENTER\nFLOOR_CENTER\nBODY_RANDOM\nEX_RECT_RANDOM\nAURA\nPRIVATE_0\nPRIVATE_1\nPRIVATE_2\nPRIVATE_3\nPAST_HALF\nGTMP\nHEAD\nNECK\nABDOMINAL\nR_LEG\nL_LEG\nHEART\nENEMY_LAND\nNOZEKORI\nASHIMOTO_RANDOM\nPLAYER_LAND\nFRONT_05_BODY\nFRONT_1_BODY\nFRONT_2_BODY\nBACK_1_BODY\nBACK_2_BODY\nEX_POINT_F\nWORLD_ZERO\nENEMY_CENTER\nENEMY_BODY_RANDOM\nENEMY_EX_RECT_RANDOM\nENEMY_AURA\nENEMY_HEAD\nENEMY_NECK\nENEMY_ABDOMINAL\nENEMY_R_LEG\nENEMY_L_LEG\nENEMY_HEART\nENEMY_EX_POINT_F\nEX_POINT_PG\nBODY_RANDOM_3D\nEX_POINT_RANDOM\nBIKKURI\nCHEST_3D\nLEG_CENTER\nHEAD_3D\nPELVIS_3D\nBODY_RANDOM_3D_NO_HEAD\nSHOULDER_L_3D\nSHOULDER_R_3D\nELBOW_L_3D\nELBOW_R_3D\nHAND_L_3D\nHAND_R_3D\nCALF_L_3D\nCALF_R_3D\nFOOT_L_3D\nFOOT_R_3D\nAFRO_3D\nFRONT_3_BODY\nBACK_3_BODY\nSCREEN_CENTER]",
+		"description": "Various predetermined attachmentpoints for objects",
+		"extra": "Not all attachmentpoints are actually assigned in DBFZ, though most will work.\nThe EX_POINT_ series are point coordinates assigned in COL per sprite.\nHowever, you can use 2193 (ExPointFReset) to override EX_POINT_F in BBS.",
+		"tags": ""
+	},
+	{
+		"id": 4,
+		"name_raw": "HACT_HitAction",
+		"name_given": "knockback",
+		"args": "[GROUND_DEFAULT\nAIR_DEFAULT\nCRUMPLE\nFORCE_CROUCH\nFORCE_STAND\nFORCE_STANDLOW\nHajikareStand\nHajikareStand\nAIR_FACE_UP\nAIR_VERTICAL\nAIR_FACE_DOWN\nAIR_STRONG\nSPIN\nSPIN_ALT\nHajikareAir\nSTAGGER\nExDamageBallMof\nExDamage\nNONE\nHajikareAuto\nHajikareSafeAuto\nForceStandAuto\nHajikareForNagenukeStandOrCrouch\nHajikareForNagenukeStand\nHajikareForNagenukeCrouch\nHajikareForNagenukeAir\nAIR_SOMERSAULT\nKirimomiLand\nKirimomiVert\nKirimomiSide\nZSPIN\nRUSHFINISH\nFuttobiFinish\nExplosionFinish\nWallHaritsuki\nForceStandBottom\nFloatDamage]",
+		"description": "Knockback effects for attacks",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 5,
+		"name_raw": "SCR_BTL_COCKPIT_INFO",
+		"name_given": "UI battle text",
+		"args": "[Counter!\nAssist!\nChange!\nSparking!!!\nGuard Cancel!\nSuper Move!!\nChase!\nRush!\nReflected!\nReversal!\nMaximum Power!\nRevived!\nHealed!\nRegenerate!\nDynamic!\nSmash!\nGet Outta Here!\nDown!\nPower Up!\nNice!\nGood!\nGreat!\nFantastic!\nAmazing!\nWonderful!\nExcellent!\nOutstanding!\nMeteoric!\nUltimate!\nExtreme!\nIncredible!!\nUnbelievable!!!\nFirst attack!\nHurry!\nGuard Break!\nAnti-Air!\nLevel 1\nLevel 2\nLevel 3\nLevel 4\nLevel 5\nLevel 6\nLevel 7]",
+		"description": "Possible strings for the battle text",
+		"extra": "Some strings will also play narrator voicelines.",
+		"tags": ""
+	}
+]

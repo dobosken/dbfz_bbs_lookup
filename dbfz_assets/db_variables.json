@@ -184,7 +184,7 @@
 		"name_raw": "FrontWallDistance",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Distance between the object and the wall in front of them",
 		"extra": "",
 		"tags": "position"
 	},
@@ -193,7 +193,7 @@
 		"name_raw": "BackWallDistance",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Distance between the object and the wall behind them",
 		"extra": "",
 		"tags": "position"
 	},
@@ -211,8 +211,8 @@
 		"name_raw": "EnemyDistance",
 		"name_given": "",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Distance between object and the opponent's main character",
+		"extra": "Unsigned integer, world space coords.\nCan be a negative value.",
 		"tags": "position"
 	},
 	{
@@ -1928,9 +1928,9 @@
 	{
 		"id": 214,
 		"name_raw": "IsEnemyDamage",
-		"name_given": "",
+		"name_given": "EnemyInHitstun",
 		"args": "",
-		"description": "",
+		"description": "Set to 1 while the player's main character is in hitstun",
 		"extra": "",
 		"tags": "player,conditional"
 	},
