@@ -1685,7 +1685,7 @@
 	{
 		"id": 234,
 		"name_raw": "ReAttack",
-		"name_given": "",
+		"name_given": "enableHitbox",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -10244,7 +10244,7 @@
 	{
 		"id": 1846,
 		"name_raw": "ExMutekiBurst",
-		"name_given": "superArmorHitstop",
+		"name_given": "superArmorBurstGuard",
 		"args": "",
 		"description": "",
 		"extra": "",
