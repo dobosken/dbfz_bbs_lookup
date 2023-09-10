@@ -308,19 +308,19 @@
 	{
 		"id": 34,
 		"name_raw": "InterruptAction",
-		"name_given": "",
+		"name_given": "jumpToStateUpon",
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "interrupt"
+		"tags": "flow,interrupt"
 	},
 	{
 		"id": 35,
 		"name_raw": "InterruptGoto",
-		"name_given": "jumpToLabelInObject",
+		"name_given": "jumpToLabelUpon",
 		"args": "1: Object\n2: Label",
 		"description": "",
-		"extra": "Don't use this on objects you don't directly control.\nIf the game can't find the label in the state that object is currently in, it will crash.",
+		"extra": "",
 		"tags": "flow,interrupt"
 	},
 	{
