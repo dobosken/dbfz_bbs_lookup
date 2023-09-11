@@ -237,10 +237,10 @@
 		"id": 26,
 		"name_raw": "CellTimeOverWrite",
 		"name_given": "spriteOverrideTime",
-		"args": "1: Amount of game ticks the object's currently sprite should be set to\n2: Variable that needs to be true (anything but 0) for this function to actually apply the time override",
-		"description": "",
-		"extra": "",
-		"tags": "conditional"
+		"args": "1: Amount of game ticks the object's sprite call should be set to\n2: Variable or integer that needs to be true (anything but 0) for this function to actually apply the time override",
+		"description": "Alter the currently active sprite's duration",
+		"extra": "Example override that always works:[spriteOverrideTime: 1, int(1)]\nExample override that only works if the opponent is currently in hitstun: [spriteOverrideTime: 1, var(EnemyInHitstun)]",
+		"tags": "sprite,conditional"
 	},
 	{
 		"id": 27,
@@ -318,7 +318,7 @@
 		"id": 35,
 		"name_raw": "InterruptGoto",
 		"name_given": "jumpToLabelUpon",
-		"args": "1: Object\n2: Label",
+		"args": "",
 		"description": "",
 		"extra": "",
 		"tags": "flow,interrupt"
@@ -8480,7 +8480,7 @@
 	{
 		"id": 1432,
 		"name_raw": "SkillChainCountGroup",
-		"name_given": "move_ShareChain",
+		"name_given": "moveShareChain",
 		"args": "",
 		"description": "Add move into a gatling chain",
 		"extra": "Used to put different moves into the same gatling chain.\nTo give an example, in the vanilla game it is used to pair up 2L and 5L.\nIn practice this means you can 5L > 2L or 2L > 5L in one chain, but 2L > 4LL does not work as it exceeds the 'maxChainIntoSelf: 2' limit set in most characters' NmlAtk5A.",
