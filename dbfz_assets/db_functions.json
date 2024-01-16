@@ -875,7 +875,7 @@
 	{
 		"id": 117,
 		"name_raw": "RandAddSpeedX",
-		"name_given": "addXSpeedandom",
+		"name_given": "addXSpeedrandom",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -3521,8 +3521,8 @@
 	{
 		"id": 614,
 		"name_raw": "NarrationSE",
-		"name_given": "cmnVoiceLine",
-		"args": "",
+		"name_given": "",
+		"args": "1: String. Reference: [RED/Content/Audio/Narration/JPN/Narration]",
 		"description": "",
 		"extra": "",
 		"tags": "sound"
@@ -3828,7 +3828,7 @@
 		"id": 670,
 		"name_raw": "EffectForLandBreak",
 		"name_given": "",
-		"args": "",
+		"args": "1: LAND_BREAK_S|LAND_BREAK_L|LAND_BREAK_DIR_S|LAND_BREAK_DIR_L\n2: Scale\n3: X-offset\n4: 0",
 		"description": "",
 		"extra": "",
 		"tags": "ground"
@@ -5789,7 +5789,7 @@
 	{
 		"id": 1079,
 		"name_raw": "AtkNoSousai",
-		"name_given": "",
+		"name_given": "disableAttackClashing",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -10703,7 +10703,7 @@
 	{
 		"id": 1915,
 		"name_raw": "AttackOff",
-		"name_given": "",
+		"name_given": "disableHitbox",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -13232,9 +13232,9 @@
 	{
 		"id": 2243,
 		"name_raw": "Jimaku",
-		"name_given": "",
-		"args": "",
-		"description": "",
+		"name_given": "subtitles",
+		"args": "1: Header in REDGame\n2: Duration",
+		"description": "Arg 1 usually uses the reserved keyword '!prev'.\nIt allows Arcsys to just copy the entire subtitles call and paste it after a voiceline function call, without having to change arg 1.",
 		"extra": "",
 		"tags": ""
 	},
