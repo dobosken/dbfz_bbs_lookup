@@ -12351,7 +12351,7 @@
 		"id": 2136,
 		"name_raw": "AddWindPowerOffset",
 		"name_given": "",
-		"args": ""1: X-offset\n2: Y-offset\n3: ?\n4: Wind intensity\n5: Duration\n6: ?",",
+		"args": "1: X-offset\n2: Y-offset\n3: ?\n4: Wind intensity\n5: Duration\n6: ?",
 		"description": "",
 		"extra": "",
 		"tags": ""
