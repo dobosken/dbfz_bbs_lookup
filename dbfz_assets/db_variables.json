@@ -14,7 +14,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "1 degree = 1000. 90 degrees = 90000. etc.",
 		"tags": ""
 	},
 	{
@@ -157,7 +157,7 @@
 		"name_raw": "PosX",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Relative X position on screen, depends on orientation. Front is positive, back is negative.",
 		"extra": "",
 		"tags": "position"
 	},
@@ -751,7 +751,7 @@
 		"name_raw": "PosXRaw",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Absolute X position on screen. Left side negative, right side positive",
 		"extra": "",
 		"tags": "position"
 	},

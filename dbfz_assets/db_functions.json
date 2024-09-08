@@ -23,7 +23,7 @@
 		"name_given": "sprite",
 		"args": "1: A string reference to data in a character's COL file\n2: Duration in game ticks",
 		"description": "Display an animation frame, and load matching hurtbox/hitbox/EX_POINT data",
-		"extra": "Function calls underneath sprite will be active throughout the duration of that sprite.\nNote that calling sprite from within an if-block will crash the game.",
+		"extra": "Function calls underneath a sprite call will be activated starting with that sprite.\nNote that calling sprite from within an if-block will crash the game.\n\nHas several special keywords that can be used instead of an actual sprite; keep (repeat frame, but initiate new Cell section) and null",
 		"tags": "sprite"
 	},
 	{
@@ -31,8 +31,8 @@
 		"name_raw": "CellEnd",
 		"name_given": "spriteEnd",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Explicitly ends a block of code that begins with sprite/CellBegin.",
+		"extra": "Not really needed. The game closes these automatically whenever that's required.",
 		"tags": "sprite"
 	},
 	{
@@ -409,7 +409,7 @@
 		"name_raw": "Op2",
 		"name_given": "modifyVarIntoResult",
 		"args": "1: Operator\n2: Variable or integer\n3: Variable or integer",
-		"description": "Apply an operation of some sort, then copy the output to variable 0 (RESULT)",
+		"description": "Apply an operation of some sort, then copy the output to variable 0 (Tmp/Result)",
 		"extra": "Check the 'operators' entry in 'misc'",
 		"tags": ""
 	},
@@ -436,7 +436,7 @@
 		"name_raw": "CheckInputEx",
 		"name_given": "checkInput",
 		"args": "",
-		"description": "Check for user input and store the result in variable 0 (RESULT)",
+		"description": "Check for user input and store the result in variable 0 (Tmp/Result)",
 		"extra": "Check the 'input' entry in 'misc'",
 		"tags": "conditional"
 	},
@@ -1119,9 +1119,9 @@
 		"id": 144,
 		"name_raw": "InertiaIgnore",
 		"name_given": "ignoreInertia",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Boolean, 0 or 1.",
+		"description": "While ignoring, inertia does not work and inertia does not decay.",
+		"extra": "Valid for the duration of the current action.",
 		"tags": "movement"
 	},
 	{
@@ -1300,7 +1300,7 @@
 		"name_raw": "SetAngle",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "1 degree = 1000. 90 degrees = 90000. etc.",
 		"extra": "",
 		"tags": ""
 	},
@@ -1515,9 +1515,9 @@
 		"id": 188,
 		"name_raw": "SetScale",
 		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Number",
+		"description": ".",
+		"extra": "1000=1x, 2000=2x etc",
 		"tags": ""
 	},
 	{
@@ -1676,7 +1676,7 @@
 	{
 		"id": 233,
 		"name_raw": "ReAttackNoAssert",
-		"name_given": "grabOrRelease",
+		"name_given": "enableHitboxForced",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -1714,7 +1714,7 @@
 		"name_raw": "NoAttackAction",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "The attack will not hit during the current action.",
 		"extra": "",
 		"tags": ""
 	},
@@ -1814,7 +1814,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Set to -1 to return to default.",
 		"tags": ""
 	},
 	{
@@ -1823,7 +1823,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Set to -1 to return to default.",
 		"tags": ""
 	},
 	{
@@ -1840,7 +1840,7 @@
 		"name_raw": "PushCollisionInterferenceSameSide",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Disabled. Do not use, or your game will freeze.",
 		"extra": "",
 		"tags": ""
 	},
@@ -1865,9 +1865,9 @@
 	{
 		"id": 255,
 		"name_raw": "PushFix",
-		"name_given": "",
-		"args": "",
-		"description": "",
+		"name_given": "pushOnly",
+		"args": "1: Boolean, 0 or 1.",
+		"description": "Will push, but will not be pushed.",
 		"extra": "",
 		"tags": ""
 	},
@@ -2091,9 +2091,9 @@
 		"id": 289,
 		"name_raw": "SetActionTimeMax",
 		"name_given": "",
-		"args": "",
+		"args": "1: Number.",
 		"description": "Limit how long an object can spend in their current state",
-		"extra": "",
+		"extra": "When set previously, but you want to undo it, set to 0 to cancel.",
 		"tags": ""
 	},
 	{
@@ -2120,7 +2120,7 @@
 		"name_given": "tensionUsage",
 		"args": "",
 		"description": "Decrease meter from the player object",
-		"extra": "5000 = .5 bar\nNot that this function does not halt state execution. Giving a move a meter requirement is done through 1411 (addMoveFlag).\nIf you want to have a meter requirement partway through a move, take inspiration from A.Gohan's lvl1:\n[ifOperation: (IS_GREATER_OR_EQUAL), var(Tension), int(10000) {\n\tcallSubroutine: s32'Potential_loop3'\n} endIf: ]",
+		"extra": "5000 = .5 bar\nNote that this function does not prevent state execution. Giving a move a meter requirement is done through 1411 (addMoveFlag).\nIf you want to have a meter requirement partway through a move, take inspiration from A.Gohan's lvl1:\n[ifOperation: (IS_GREATER_OR_EQUAL), var(Tension), int(10000) {\n\tcallSubroutine: s32'Potential_loop3'\n} endIf: ]",
 		"tags": "meter"
 	},
 	{
@@ -2605,7 +2605,7 @@
 		"name_raw": "SceneMulColorFrame",
 		"name_given": "overrideMulColor",
 		"args": "",
-		"description": "",
+		"description": "Disabled. Do not use, or your game will freeze.",
 		"extra": "",
 		"tags": ""
 	},
@@ -2659,7 +2659,7 @@
 		"name_raw": "BGSaturation",
 		"name_given": "setWorldSaturation",
 		"args": "",
-		"description": "",
+		"description": "Disabled. Do not use, or your game will freeze.",
 		"extra": "",
 		"tags": ""
 	},
@@ -2812,7 +2812,7 @@
 		"name_raw": "SetPostProcessSaturation",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Disabled. Do not use, or your game will freeze.",
 		"extra": "",
 		"tags": ""
 	},
@@ -2993,7 +2993,7 @@
 		"name_given": "createObjectWithArg",
 		"args": "",
 		"description": "Same as 446 (createObject), just with 'setArg_' support",
-		"extra": "",
+		"extra": "Resets any setArg_ parameters afterwards.",
 		"tags": ""
 	},
 	{
@@ -3010,9 +3010,9 @@
 		"name_raw": "DeleteParticle",
 		"name_given": "deleteParticle",
 		"args": "",
-		"description": "",
+		"description": "Disabled. Do not use, or your game will freeze.",
 		"extra": "",
-		"tags": ""
+		"tags": "particle"
 	},
 	{
 		"id": 448,
@@ -3021,7 +3021,7 @@
 		"args": "1: Particle name\n2: Attachmentpoint",
 		"description": "Spawn a standalone particle",
 		"extra": "You're usually better off creating an actual object and attaching a particle to it with 450 (linkParticle).",
-		"tags": ""
+		"tags": "particle"
 	},
 	{
 		"id": 449,
@@ -3029,8 +3029,8 @@
 		"name_given": "createParticleWithArg",
 		"args": "",
 		"description": "Same as 446 (createParticle), just with 'setArg_' support",
-		"extra": "",
-		"tags": ""
+		"extra": "Resets any setArg_ parameters afterwards.",
+		"tags": "particle"
 	},
 	{
 		"id": 450,
@@ -3039,7 +3039,7 @@
 		"args": "1: Particle",
 		"description": "Link a particle effect to the current object",
 		"extra": "The particle can be from a character themselves, or from CMNEF.",
-		"tags": ""
+		"tags": "particle"
 	},
 	{
 		"id": 451,
@@ -3054,7 +3054,7 @@
 		"id": 452,
 		"name_raw": "LinkObjectPushCollision",
 		"name_given": "",
-		"args": "",
+		"args": "1: Object.",
 		"description": "",
 		"extra": "",
 		"tags": ""
@@ -3063,7 +3063,7 @@
 		"id": 453,
 		"name_raw": "LinkObjectAngle",
 		"name_given": "",
-		"args": "",
+		"args": "1: Object.",
 		"description": "",
 		"extra": "",
 		"tags": ""
@@ -3072,17 +3072,17 @@
 		"id": 454,
 		"name_raw": "LinkObjectPosition",
 		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Object.",
+		"description": "This object's absolute position will update to match the linked object's absolute position.",
+		"extra": "Doesn't warp directly to the linked object; maintains positional offsets.",
 		"tags": "position"
 	},
 	{
 		"id": 455,
 		"name_raw": "LinkObjectDirection",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Object.",
+		"description": "This object's facing direction will update to match the linked object's facing direction.",
 		"extra": "",
 		"tags": ""
 	},
@@ -3090,8 +3090,8 @@
 		"id": 456,
 		"name_raw": "LinkObjectStop",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Object.",
+		"description": "Stop this object if the linked object is stopped (hitstop/superfreeze).",
 		"extra": "",
 		"tags": ""
 	},
@@ -3099,8 +3099,8 @@
 		"id": 457,
 		"name_raw": "LinkObjectChangeToEliminate",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Object.",
+		"description": "Destroy this object if the linked object changes states.",
 		"extra": "",
 		"tags": ""
 	},
@@ -3108,8 +3108,8 @@
 		"id": 458,
 		"name_raw": "LinkObjectDamageToEliminate",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Object.",
+		"description": "Destroy this object if the linked object is damaged.",
 		"extra": "",
 		"tags": ""
 	},
@@ -3117,8 +3117,8 @@
 		"id": 459,
 		"name_raw": "LinkObjectPositionCenter",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Object.",
+		"description": "Seems to be disabled.",
 		"extra": "",
 		"tags": "position"
 	},
@@ -3126,8 +3126,8 @@
 		"id": 460,
 		"name_raw": "LinkObjectScale",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Object.",
+		"description": "This object's scale will update to match the linked object's scale.",
 		"extra": "",
 		"tags": ""
 	},
@@ -3135,7 +3135,7 @@
 		"id": 462,
 		"name_raw": "LinkModelPersOff",
 		"name_given": "",
-		"args": "",
+		"args": "1: Object.",
 		"description": "",
 		"extra": "",
 		"tags": "model"
@@ -3144,7 +3144,7 @@
 		"id": 463,
 		"name_raw": "LinkCommonPolyLine",
 		"name_given": "",
-		"args": "",
+		"args": "1: Object.",
 		"description": "",
 		"extra": "",
 		"tags": ""
@@ -3181,8 +3181,8 @@
 		"name_raw": "LinkObjectCollision",
 		"name_given": "",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "This object's collision data will be appended to match the linked object's collision data.",
+		"extra": "Mostly used to have disjointed bodyparts affect their parent player objects, allowing for things like opponents counterhitting these player objects by hitting their disjointed bodyparts.",
 		"tags": ""
 	},
 	{
@@ -3288,8 +3288,8 @@
 		"id": 479,
 		"name_raw": "CreateSocketLinkParticle",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Object (string).\n2: Socket\n3: Attach to skeleton (boolean, 0 or 1.",
+		"description": "Create objects(!) at each skeleton socket location",
 		"extra": "",
 		"tags": ""
 	},
@@ -3345,7 +3345,7 @@
 		"args": "1: Attachmentpoint attacker\n2: Attachmentpoint defender\n3: ? (zLine perhaps)",
 		"description": "Opponent’s position while grabbed",
 		"extra": "",
-		"tags": "position"
+		"tags": "grab"
 	},
 	{
 		"id": 547,
@@ -3354,16 +3354,16 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "grab"
 	},
 	{
 		"id": 548,
 		"name_raw": "LockLinkPositionOff",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Locking link position released",
 		"extra": "",
-		"tags": "position"
+		"tags": "grab"
 	},
 	{
 		"id": 549,
@@ -3397,7 +3397,7 @@
 		"name_raw": "ScreenPosition",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Use coordinate system reserved for UI elements.",
 		"extra": "",
 		"tags": "position"
 	},
@@ -3521,8 +3521,8 @@
 	{
 		"id": 614,
 		"name_raw": "NarrationSE",
-		"name_given": "",
-		"args": "1: String. Reference: [RED/Content/Audio/Narration/JPN/Narration]",
+		"name_given": "cmnVoiceLine",
+		"args": "1: String. Reference this file for sound cue names: [RED/Content/Audio/Narration/JPN/Narration]",
 		"description": "",
 		"extra": "",
 		"tags": "sound"
@@ -3557,18 +3557,18 @@
 	{
 		"id": 618,
 		"name_raw": "RandomVoice",
-		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "randomVoice",
+		"args": "1: Voiceline 1\n2: Weight 1\n3: Voiceline 2\n4: Weight 2\n5: Voiceline 3\n6: Weight 3\n7: Voiceline 4\n8: Weight 4",
+		"description": "Play one of up to 4 voice samples.",
+		"extra": "Just set weight to 100.",
 		"tags": "sound"
 	},
 	{
 		"id": 619,
 		"name_raw": "SmartRandomVoice",
-		"name_given": "randomVoiceLine2",
+		"name_given": "randomVoiceNoRepeat",
 		"args": "",
-		"description": "",
+		"description": "Same as randomVoice (#618), but makes sure to not repeat the same voiceline.",
 		"extra": "",
 		"tags": "sound"
 	},
@@ -3585,8 +3585,8 @@
 		"id": 621,
 		"name_raw": "AttackVoice",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Voiceline\n2: Level",
+		"description": "Play a pre-set voice on attack.",
 		"extra": "",
 		"tags": "sound"
 	},
@@ -3675,17 +3675,17 @@
 		"id": 631,
 		"name_raw": "CommonBankSE",
 		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Integer (channel)\n2: String. Reference this file for sound cue names: [RED/Content/Chara/CMN/Common/Audio/SE/SEData]\n3: Integer (volume. Default = 100)",
+		"description": "Play SFX from the CMN soundbank",
+		"extra": "Channel can be pretty much any number. Used with StopBankSE.\nSome sounds are set to loop in their cue, but this will automatically be disabled when an object switches states.",
 		"tags": "sound"
 	},
 	{
 		"id": 632,
 		"name_raw": "PrivateBankSE",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Integer (channel)\n2: String. Reference a character's SEData file for sound cue names\n3: Integer (volume. Default = 100)",
+		"description": "Play SFX from a character's private soundbank",
 		"extra": "",
 		"tags": "sound"
 	},
@@ -3693,9 +3693,9 @@
 		"id": 633,
 		"name_raw": "StopBankSE",
 		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Integer (channel)\n2: Fade-out time in milliseconds",
+		"description": "Cancel an active soundbank SFX",
+		"extra": "Works with both CMN and private soundbanks. Just make sure you match up the channel correctly.\nNote that SFX channels are shared between player objects and their subobjects.",
 		"tags": "sound"
 	},
 	{
@@ -3711,8 +3711,8 @@
 		"id": 635,
 		"name_raw": "CommonBankSEPitch",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Integer (channel)\n2: String. Reference this file for sound cue names: [RED/Content/Chara/CMN/Common/Audio/SE/SEData]\n3: Integer (volume. Default = 100)\n4: Integer (pitch. Default = 100)",
+		"description": "Play SFX from the CMN soundbank, with support for pitch shifting",
 		"extra": "",
 		"tags": "sound"
 	},
@@ -3720,8 +3720,8 @@
 		"id": 636,
 		"name_raw": "PrivateBankSEPitch",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Integer (channel)\n2: String. Reference a character's SEData file for sound cue names\n3: Integer (volume. Default = 100)\n4: Integer (pitch. Default = 100)",
+		"description": "Play SFX from a character's private soundbank, with support for pitch shifting",
 		"extra": "",
 		"tags": "sound"
 	},
@@ -3765,64 +3765,64 @@
 		"id": 658,
 		"name_raw": "EffectForLanding",
 		"name_given": "",
-		"args": "",
+		"args": "1: Type\n2: Enable visuals (boolean, 0 or 1)\n3: Enable sound (boolean, 0 or 1)",
 		"description": "",
 		"extra": "",
-		"tags": "ground"
+		"tags": "particle"
 	},
 	{
 		"id": 663,
 		"name_raw": "EffectForUkemi",
 		"name_given": "",
-		"args": "",
+		"args": "1: Type\n2: Enable visuals (boolean, 0 or 1)\n3: Enable sound (boolean, 0 or 1)",
 		"description": "",
 		"extra": "",
-		"tags": "defense"
+		"tags": "particle"
 	},
 	{
 		"id": 664,
 		"name_raw": "EffectForDashStep",
 		"name_given": "",
-		"args": "",
+		"args": "1: Type\n2: Enable visuals (boolean, 0 or 1)\n3: Enable sound (boolean, 0 or 1)",
 		"description": "",
 		"extra": "",
-		"tags": "movement"
+		"tags": "particle"
 	},
 	{
 		"id": 665,
 		"name_raw": "EffectForDashStart",
 		"name_given": "",
-		"args": "",
+		"args": "1: Type\n2: Enable visuals (boolean, 0 or 1)\n3: Enable sound (boolean, 0 or 1)",
 		"description": "",
 		"extra": "",
-		"tags": "movement"
+		"tags": "particle"
 	},
 	{
 		"id": 666,
 		"name_raw": "EffectForWallBound",
 		"name_given": "",
-		"args": "",
+		"args": "1: Type\n2: Enable visuals (boolean, 0 or 1)\n3: Enable sound (boolean, 0 or 1)",
 		"description": "",
 		"extra": "",
-		"tags": "wall"
+		"tags": "particle"
 	},
 	{
 		"id": 668,
 		"name_raw": "EffectForDashStop",
 		"name_given": "dashStopEffect",
-		"args": "",
+		"args": "1: Type\n2: Enable visuals (boolean, 0 or 1)\n3: Enable sound (boolean, 0 or 1)",
 		"description": "",
 		"extra": "",
-		"tags": "movement"
+		"tags": "particle"
 	},
 	{
 		"id": 669,
 		"name_raw": "EffectForWalkStep",
 		"name_given": "walkStopEffect",
-		"args": "",
+		"args": "1: Type\n2: Enable visuals (boolean, 0 or 1)\n3: Enable sound (boolean, 0 or 1)",
 		"description": "",
 		"extra": "",
-		"tags": "movement"
+		"tags": "particle"
 	},
 	{
 		"id": 670,
@@ -3831,7 +3831,7 @@
 		"args": "1: LAND_BREAK_S|LAND_BREAK_L|LAND_BREAK_DIR_S|LAND_BREAK_DIR_L\n2: Scale\n3: X-offset\n4: 0",
 		"description": "",
 		"extra": "",
-		"tags": "ground"
+		"tags": "particle"
 	},
 	{
 		"id": 671,
@@ -3840,7 +3840,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "particle"
 	},
 	{
 		"id": 672,
@@ -3849,7 +3849,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "particle"
 	},
 	{
 		"id": 673,
@@ -3858,7 +3858,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": ""
+		"tags": "particle"
 	},
 	{
 		"id": 707,
@@ -3884,7 +3884,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Don't.",
 		"tags": "attack"
 	},
 	{
@@ -4073,7 +4073,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Attack will clash, but not will not trigger clash interrupts properly.",
 		"tags": "attack"
 	},
 	{
@@ -4389,7 +4389,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 803,
@@ -4398,7 +4398,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 804,
@@ -4407,7 +4407,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 805,
@@ -4416,7 +4416,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 806,
@@ -4425,7 +4425,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 807,
@@ -4434,7 +4434,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 808,
@@ -4443,7 +4443,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "movement,ground,attack"
+		"tags": "movement,attack"
 	},
 	{
 		"id": 809,
@@ -4452,7 +4452,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "movement,ground,attack"
+		"tags": "movement,attack"
 	},
 	{
 		"id": 810,
@@ -4461,7 +4461,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,stuntime,attack"
+		"tags": "stuntime,attack"
 	},
 	{
 		"id": 811,
@@ -4470,7 +4470,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,stuntime,attack"
+		"tags": "stuntime,attack"
 	},
 	{
 		"id": 812,
@@ -4479,7 +4479,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,stuntime,attack"
+		"tags": "stuntime,attack"
 	},
 	{
 		"id": 813,
@@ -4488,16 +4488,16 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,stuntime,attack"
+		"tags": "stuntime,attack"
 	},
 	{
 		"id": 814,
 		"name_raw": "AtkLandBoundSpeedX",
 		"name_given": "groundBounceXVelocity",
 		"args": "",
-		"description": "Do not use!\nCrashes DBFZ.",
+		"description": "Disabled. Do not use, or your game will crash.",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 815,
@@ -4506,16 +4506,16 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 818,
 		"name_raw": "AtkLandStunTime",
-		"name_given": "groundHitstun",
+		"name_given": "Hitstun",
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,stuntime,attack"
+		"tags": "stuntime,attack"
 	},
 	{
 		"id": 819,
@@ -4524,7 +4524,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,stuntime,attack"
+		"tags": "stuntime,attack"
 	},
 	{
 		"id": 820,
@@ -4533,7 +4533,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,stuntime,attack"
+		"tags": "stuntime,attack"
 	},
 	{
 		"id": 821,
@@ -4542,7 +4542,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,stuntime,attack"
+		"tags": "stuntime,attack"
 	},
 	{
 		"id": 830,
@@ -4686,7 +4686,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 855,
@@ -4695,7 +4695,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 856,
@@ -4704,7 +4704,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 857,
@@ -4713,7 +4713,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 860,
@@ -4722,7 +4722,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 861,
@@ -4731,7 +4731,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 862,
@@ -4740,7 +4740,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 870,
@@ -4781,11 +4781,11 @@
 	{
 		"id": 882,
 		"name_raw": "AtkLandHitAction",
-		"name_given": "groundKnockbackEffect",
+		"name_given": "KnockbackEffect",
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 883,
@@ -4794,16 +4794,16 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 884,
 		"name_raw": "AtkLandHitActionCounterHit",
-		"name_given": "groundCounterHitEffect",
+		"name_given": "CounterHitEffect",
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 885,
@@ -4812,7 +4812,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 894,
@@ -5091,7 +5091,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,defense,attack"
+		"tags": "defense,attack"
 	},
 	{
 		"id": 929,
@@ -5262,7 +5262,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "attack"
+		"tags": "attack,super"
 	},
 	{
 		"id": 949,
@@ -5421,8 +5421,8 @@
 		"id": 1027,
 		"name_raw": "AtkRange",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Width\n2: X-offset\n3: Height\n4: Y-offset",
+		"description": "Alter hitbox size.",
 		"extra": "",
 		"tags": "attack"
 	},
@@ -5469,7 +5469,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 1041,
@@ -5631,7 +5631,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,attack"
+		"tags": "attack"
 	},
 	{
 		"id": 1061,
@@ -5681,7 +5681,7 @@
 	{
 		"id": 1066,
 		"name_raw": "AtkFinishBG",
-		"name_given": "attackFinishBackground",
+		"name_given": "attackFinishBack",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -6018,7 +6018,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,stuntime,movement,attack"
+		"tags": "stuntime,movement,attack"
 	},
 	{
 		"id": 1105,
@@ -6027,7 +6027,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,stuntime,attack"
+		"tags": "stuntime,attack"
 	},
 	{
 		"id": 1106,
@@ -6747,7 +6747,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "defense,ground,attack"
+		"tags": "defense,,attack"
 	},
 	{
 		"id": 1188,
@@ -7737,7 +7737,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground,movement"
+		"tags": "movement"
 	},
 	{
 		"id": 1298,
@@ -7800,7 +7800,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground"
+		"tags": ""
 	},
 	{
 		"id": 1306,
@@ -8221,7 +8221,7 @@
 		"name_raw": "CheckEnemyInputEx",
 		"name_given": "checkEnemyInput",
 		"args": "",
-		"description": "",
+		"description": "Disabled. Do not use, or your game will freeze.",
 		"extra": "",
 		"tags": "conditional"
 	},
@@ -10176,7 +10176,7 @@
 		"args": "1: Amount in ticks\n2: Priority",
 		"description": "",
 		"extra": "DBFZ has a base landing recovery of 1f.\nIn addition, regardless of landing recovery, you cannot jump from a crouching position for an additional 3f unless you dash cancel the crouch.",
-		"tags": "ground"
+		"tags": ""
 	},
 	{
 		"id": 1825,
@@ -10407,10 +10407,10 @@
 		"id": 1864,
 		"name_raw": "ExMutekiAtkLevel",
 		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
-		"tags": "armor,attack"
+		"args": "1: Integer (attack level)",
+		"description": "Make armour only protect against a certain atk level and below.",
+		"extra": "#711 (AtkLevel/attackLevel) is used by an attacker to set their attack level.\nThe vanilla game (usually) uses 1 for lights, 2 for mediums, 3 for jump heavy/6M, and 4 for heavy attacks.",
+		"tags": "armor"
 	},
 	{
 		"id": 1865,
@@ -10698,7 +10698,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground"
+		"tags": ""
 	},
 	{
 		"id": 1915,
@@ -10809,11 +10809,20 @@
 		"tags": ""
 	},
 	{
+		"id": 1928,
+		"name_raw": "",
+		"name_given": "subObjectIcon",
+		"args": "1: Boolean, 0 or 1.",
+		"description": "Displays an icon indicating which player this object belongs to (possibly only when offscreen?)",
+		"extra": "",
+		"tags": ""
+	},
+	{
 		"id": 1954,
 		"name_raw": "AutoHitSignalSending",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "When given to a spawned subobject, will allow the player parent object to gatling/chain when the subobject hits something.",
 		"extra": "",
 		"tags": "signal"
 	},
@@ -12342,7 +12351,7 @@
 		"id": 2136,
 		"name_raw": "AddWindPowerOffset",
 		"name_given": "",
-		"args": "",
+		"args": ""1: X-offset\n2: Y-offset\n3: ?\n4: Wind intensity\n5: Duration\n6: ?",",
 		"description": "",
 		"extra": "",
 		"tags": ""
@@ -12624,7 +12633,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground"
+		"tags": ""
 	},
 	{
 		"id": 2169,
@@ -12633,7 +12642,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground"
+		"tags": ""
 	},
 	{
 		"id": 2170,
@@ -12642,7 +12651,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground"
+		"tags": ""
 	},
 	{
 		"id": 2171,
@@ -12801,10 +12810,10 @@
 		"id": 2189,
 		"name_raw": "ZLine",
 		"name_given": "",
-		"args": "1: Integer or variable",
-		"description": "Draw order of object",
-		"extra": "Lower values = higher priority",
-		"tags": ""
+		"args": "1: (FRONT) or (BACK)\n2: Priority",
+		"description": "Draw order of object.",
+		"extra": "There are two lines internally on the screen: the front line and the back line.\nFront draws over back, always.\nObjects on the same line, use priority to determine which gets drawn in front of the other. The object with the higher priority, will be drawn on top of the ones with a lower priority.",
+		"tags": "sprite"
 	},
 	{
 		"id": 2190,
@@ -12930,7 +12939,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "movement,ground"
+		"tags": "movement"
 	},
 	{
 		"id": 2205,
@@ -13164,7 +13173,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground"
+		"tags": ""
 	},
 	{
 		"id": 2233,
@@ -13353,7 +13362,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground"
+		"tags": ""
 	},
 	{
 		"id": 2260,
@@ -13821,7 +13830,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground"
+		"tags": ""
 	},
 	{
 		"id": 2326,
@@ -13830,7 +13839,7 @@
 		"args": "",
 		"description": "",
 		"extra": "",
-		"tags": "ground"
+		"tags": ""
 	},
 	{
 		"id": 2327,
@@ -14763,9 +14772,9 @@
 		"id": 2493,
 		"name_raw": "LinkModelSelfTeam",
 		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Character shortcode\n2: Animation, or empty string",
+		"description": "Loads model + collision + animation data.",
+		"extra": "As the name implies, the character needs to actually be on the team already. Works in CMNEF!\nCalling [linkModelSelfTeam: s32(OSM), s32()\nlinkPawnWithAnimation: s32(), s32()] prevents the model from actually displaying.",
 		"tags": "model"
 	},
 	{
