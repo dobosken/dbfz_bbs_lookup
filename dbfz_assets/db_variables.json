@@ -4,8 +4,8 @@
 		"name_raw": "Tmp",
 		"name_given": "Result",
 		"args": "",
-		"description": "'check' functions copy their output to this variable.",
-		"extra": "",
+		"description": "Used to store results from various instructions",
+		"extra": "Usually used with the functions that have 'check' in their names.",
 		"tags": "conditional"
 	},
 	{
@@ -31,8 +31,8 @@
 		"name_raw": "PlayerVal0",
 		"name_given": "plr0",
 		"args": "",
-		"description": "Generic player variable.",
-		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"description": "Generic player variable",
+		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
@@ -40,8 +40,8 @@
 		"name_raw": "PlayerVal1",
 		"name_given": "plr1",
 		"args": "",
-		"description": "Generic player variable.",
-		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"description": "Generic player variable",
+		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
@@ -49,8 +49,8 @@
 		"name_raw": "PlayerVal2",
 		"name_given": "plr2",
 		"args": "",
-		"description": "Generic player variable.",
-		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"description": "Generic player variable",
+		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
@@ -58,8 +58,8 @@
 		"name_raw": "PlayerVal3",
 		"name_given": "plr3",
 		"args": "",
-		"description": "Generic player variable.",
-		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"description": "Generic player variable",
+		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
@@ -121,7 +121,7 @@
 		"name_raw": "ActionTime",
 		"name_given": "",
 		"args": "",
-		"description": "How many game ticks the object has been in their current state for.",
+		"description": "How many game ticks the object has been in their current state for",
 		"extra": "",
 		"tags": "conditional"
 	},
@@ -157,8 +157,8 @@
 		"name_raw": "PosX",
 		"name_given": "",
 		"args": "",
-		"description": "Relative X position on screen, depends on orientation. Front is positive, back is negative.",
-		"extra": "",
+		"description": "Relative X position on screen, depends on orientation",
+		"extra": "Front is positive, back is negative.",
 		"tags": "position"
 	},
 	{
@@ -167,7 +167,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Ground level is close to 150000.",
 		"tags": "position"
 	},
 	{
@@ -291,8 +291,8 @@
 		"id": 32,
 		"name_raw": "Dir",
 		"name_given": "Direction",
-		"args": "0 = right\n1 = left.",
-		"description": "The current direction an object is facing.",
+		"args": "0 = right\n1 = left",
+		"description": "The current direction an object is facing",
 		"extra": "",
 		"tags": ""
 	},
@@ -409,8 +409,8 @@
 		"name_raw": "ActReg0",
 		"name_given": "act0",
 		"args": "",
-		"description": "Generic action variable.",
-		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
+		"description": "Generic action variable",
+		"extra": "Is automatically set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -418,8 +418,8 @@
 		"name_raw": "ActReg1",
 		"name_given": "act1",
 		"args": "",
-		"description": "Generic action variable.",
-		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
+		"description": "Generic action variable",
+		"extra": "Is automatically set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -427,8 +427,8 @@
 		"name_raw": "ActReg2",
 		"name_given": "act2",
 		"args": "",
-		"description": "Generic action variable.",
-		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
+		"description": "Generic action variable",
+		"extra": "Is automatically set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -436,8 +436,8 @@
 		"name_raw": "ActReg3",
 		"name_given": "act3",
 		"args": "",
-		"description": "Generic action variable.",
-		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
+		"description": "Generic action variable",
+		"extra": "Is automatically set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -445,8 +445,8 @@
 		"name_raw": "ActReg4",
 		"name_given": "act4",
 		"args": "",
-		"description": "Generic action variable.",
-		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
+		"description": "Generic action variable",
+		"extra": "Is automatically set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -454,8 +454,8 @@
 		"name_raw": "ActReg5",
 		"name_given": "act5",
 		"args": "",
-		"description": "Generic action variable.",
-		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
+		"description": "Generic action variable",
+		"extra": "Is automatically set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -463,8 +463,8 @@
 		"name_raw": "ActReg6",
 		"name_given": "act6",
 		"args": "",
-		"description": "Generic action variable.",
-		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
+		"description": "Generic action variable",
+		"extra": "Is automatically set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -472,8 +472,8 @@
 		"name_raw": "ActReg7",
 		"name_given": "act7",
 		"args": "",
-		"description": "Generic action variable.",
-		"extra": "Is automatically set to 0 when an object returns to a neutral state.",
+		"description": "Generic action variable",
+		"extra": "Is automatically set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -715,8 +715,8 @@
 		"name_raw": "PlayerAttackRate",
 		"name_given": "",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Damage modifier",
+		"extra": "In percent. Default is 100.",
 		"tags": "player"
 	},
 	{
@@ -724,8 +724,8 @@
 		"name_raw": "PlayerDefenceRate",
 		"name_given": "",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Defense modifier",
+		"extra": "In percent. Default is 100.",
 		"tags": "player"
 	},
 	{
@@ -751,8 +751,8 @@
 		"name_raw": "PosXRaw",
 		"name_given": "",
 		"args": "",
-		"description": "Absolute X position on screen. Left side negative, right side positive",
-		"extra": "",
+		"description": "Absolute X position on screen",
+		"extra": "Centre is 0, to the left is negative, to the right is positive.",
 		"tags": "position"
 	},
 	{
@@ -1039,7 +1039,7 @@
 		"name_raw": "Hikitsugi0",
 		"name_given": "ObjectParameter1",
 		"args": "",
-		"description": "Used in conjunction with the function 'setArg_objectParameters'.",
+		"description": "Used in conjunction with the function 'setArg_objectParameters'",
 		"extra": "",
 		"tags": ""
 	},
@@ -1048,7 +1048,7 @@
 		"name_raw": "Hikitsugi1",
 		"name_given": "ObjectParameter2",
 		"args": "",
-		"description": "Used in conjunction with the function 'setArg_objectParameters'.",
+		"description": "Used in conjunction with the function 'setArg_objectParameters'",
 		"extra": "",
 		"tags": ""
 	},
@@ -1813,8 +1813,8 @@
 		"name_raw": "PlayerVal4",
 		"name_given": "plr4",
 		"args": "",
-		"description": "Generic player variable.",
-		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"description": "Generic player variable",
+		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
@@ -1822,8 +1822,8 @@
 		"name_raw": "PlayerVal5",
 		"name_given": "plr5",
 		"args": "",
-		"description": "Generic player variable.",
-		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"description": "Generic player variable",
+		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
@@ -1831,8 +1831,8 @@
 		"name_raw": "PlayerVal6",
 		"name_given": "plr6",
 		"args": "",
-		"description": "Generic player variable.",
-		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"description": "Generic player variable",
+		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
@@ -1840,8 +1840,8 @@
 		"name_raw": "PlayerVal7",
 		"name_given": "plr7",
 		"args": "",
-		"description": "Generic player variable.",
-		"extra": "Only altered and read explicitly by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"description": "Generic player variable",
+		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
 		"tags": "reg"
 	},
 	{
@@ -2840,7 +2840,7 @@
 		"name_raw": "CmnCharaReg3",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "True if character is experiencing the effects of skillFinishToDownLoop",
 		"extra": "",
 		"tags": "reg"
 	},
@@ -2849,7 +2849,7 @@
 		"name_raw": "CmnCharaReg4",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Mikiwame registration",
 		"extra": "",
 		"tags": "reg"
 	},
@@ -2857,8 +2857,8 @@
 		"id": 317,
 		"name_raw": "CmnCharaReg5",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "Integer. Default = 0",
+		"description": "Currently selected costume",
 		"extra": "",
 		"tags": "reg"
 	},
@@ -2867,7 +2867,7 @@
 		"name_raw": "CmnCharaReg6",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "True if character is grounded",
 		"extra": "",
 		"tags": "reg"
 	},
@@ -2876,7 +2876,7 @@
 		"name_raw": "CmnCharaReg7",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "True if character is last surviving team member (limit break)",
 		"extra": "",
 		"tags": "reg"
 	},

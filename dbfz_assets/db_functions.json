@@ -31,7 +31,7 @@
 		"name_raw": "CellEnd",
 		"name_given": "spriteEnd",
 		"args": "",
-		"description": "Explicitly ends a block of code that begins with sprite/CellBegin.",
+		"description": "Explicitly ends a block of code that begins with sprite/CellBegin",
 		"extra": "Not really needed. The game closes these automatically whenever that's required.",
 		"tags": "sprite"
 	},
@@ -373,8 +373,8 @@
 		"name_raw": "ControlObject",
 		"name_given": "applyTo",
 		"args": "1: Object",
-		"description": "Run code on a different object.",
-		"extra": "",
+		"description": "Run code on a different object",
+		"extra": "Don't try to run stuff that messes with the flow control of the object.\nStick with changing variables, positioning etc.",
 		"tags": ""
 	},
 	{
@@ -419,7 +419,7 @@
 		"name_given": "copyVar",
 		"args": "1: Variable to be modified\n2: Variable or integer",
 		"description": "Copy the value of a variable or integer into another variable",
-		"extra": "The primary method of variable manipulation in DBFZ.\nYou'll run into stuff like this constantly in all of the vanilla scripts.\n[copyVar: var(act1), int(1)]",
+		"extra": "The primary method of variable manipulation in DBFZ.\n[copyVar: var(act1), int(1)]",
 		"tags": ""
 	},
 	{
@@ -1120,7 +1120,7 @@
 		"name_raw": "InertiaIgnore",
 		"name_given": "ignoreInertia",
 		"args": "1: Boolean, 0 or 1.",
-		"description": "While ignoring, inertia does not work and inertia does not decay.",
+		"description": "While ignoring, inertia does not work and inertia does not decay",
 		"extra": "Valid for the duration of the current action.",
 		"tags": "movement"
 	},
@@ -1516,7 +1516,7 @@
 		"name_raw": "SetScale",
 		"name_given": "",
 		"args": "1: Number",
-		"description": ".",
+		"description": "",
 		"extra": "1000=1x, 2000=2x etc",
 		"tags": ""
 	},
@@ -1714,7 +1714,7 @@
 		"name_raw": "NoAttackAction",
 		"name_given": "",
 		"args": "",
-		"description": "The attack will not hit during the current action.",
+		"description": "The attack will not hit during the current action",
 		"extra": "",
 		"tags": ""
 	},
@@ -1840,7 +1840,7 @@
 		"name_raw": "PushCollisionInterferenceSameSide",
 		"name_given": "",
 		"args": "",
-		"description": "Disabled. Do not use, or your game will freeze.",
+		"description": "Disabled. Do not use, or your game will freeze",
 		"extra": "",
 		"tags": ""
 	},
@@ -1867,7 +1867,7 @@
 		"name_raw": "PushFix",
 		"name_given": "pushOnly",
 		"args": "1: Boolean, 0 or 1.",
-		"description": "Will push, but will not be pushed.",
+		"description": "Will push, but will not be pushed",
 		"extra": "",
 		"tags": ""
 	},
@@ -2243,10 +2243,10 @@
 	{
 		"id": 306,
 		"name_raw": "DmgGuardStopCount",
-		"name_given": "",
+		"name_given": "forceLeaveAllAssist",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Instantly forces all assists to leave the screen",
+		"extra": "Affects the assists of both teams. Does not require the initiator to make contact with them; it just works.",
 		"tags": "defense"
 	},
 	{
@@ -2605,7 +2605,7 @@
 		"name_raw": "SceneMulColorFrame",
 		"name_given": "overrideMulColor",
 		"args": "",
-		"description": "Disabled. Do not use, or your game will freeze.",
+		"description": "Disabled. Do not use, or your game will freeze",
 		"extra": "",
 		"tags": ""
 	},
@@ -2659,7 +2659,7 @@
 		"name_raw": "BGSaturation",
 		"name_given": "setWorldSaturation",
 		"args": "",
-		"description": "Disabled. Do not use, or your game will freeze.",
+		"description": "Disabled. Do not use, or your game will freeze",
 		"extra": "",
 		"tags": ""
 	},
@@ -2812,7 +2812,7 @@
 		"name_raw": "SetPostProcessSaturation",
 		"name_given": "",
 		"args": "",
-		"description": "Disabled. Do not use, or your game will freeze.",
+		"description": "Disabled. Do not use, or your game will freeze",
 		"extra": "",
 		"tags": ""
 	},
@@ -3010,7 +3010,7 @@
 		"name_raw": "DeleteParticle",
 		"name_given": "deleteParticle",
 		"args": "",
-		"description": "Disabled. Do not use, or your game will freeze.",
+		"description": "Disabled. Do not use, or your game will freeze",
 		"extra": "",
 		"tags": "particle"
 	},
@@ -3073,7 +3073,7 @@
 		"name_raw": "LinkObjectPosition",
 		"name_given": "",
 		"args": "1: Object.",
-		"description": "This object's absolute position will update to match the linked object's absolute position.",
+		"description": "This object's absolute position will update to match the linked object's absolute position",
 		"extra": "Doesn't warp directly to the linked object; maintains positional offsets.",
 		"tags": "position"
 	},
@@ -3082,7 +3082,7 @@
 		"name_raw": "LinkObjectDirection",
 		"name_given": "",
 		"args": "1: Object.",
-		"description": "This object's facing direction will update to match the linked object's facing direction.",
+		"description": "This object's facing direction will update to match the linked object's facing direction",
 		"extra": "",
 		"tags": ""
 	},
@@ -3091,7 +3091,7 @@
 		"name_raw": "LinkObjectStop",
 		"name_given": "",
 		"args": "1: Object.",
-		"description": "Stop this object if the linked object is stopped (hitstop/superfreeze).",
+		"description": "Stop this object if the linked object is stopped (hitstop/superfreeze)",
 		"extra": "",
 		"tags": ""
 	},
@@ -3100,7 +3100,7 @@
 		"name_raw": "LinkObjectChangeToEliminate",
 		"name_given": "",
 		"args": "1: Object.",
-		"description": "Destroy this object if the linked object changes states.",
+		"description": "Destroy this object if the linked object changes states",
 		"extra": "",
 		"tags": ""
 	},
@@ -3109,7 +3109,7 @@
 		"name_raw": "LinkObjectDamageToEliminate",
 		"name_given": "",
 		"args": "1: Object.",
-		"description": "Destroy this object if the linked object is damaged.",
+		"description": "Destroy this object if the linked object is damaged",
 		"extra": "",
 		"tags": ""
 	},
@@ -3118,7 +3118,7 @@
 		"name_raw": "LinkObjectPositionCenter",
 		"name_given": "",
 		"args": "1: Object.",
-		"description": "Seems to be disabled.",
+		"description": "Seems to not function",
 		"extra": "",
 		"tags": "position"
 	},
@@ -3127,7 +3127,7 @@
 		"name_raw": "LinkObjectScale",
 		"name_given": "",
 		"args": "1: Object.",
-		"description": "This object's scale will update to match the linked object's scale.",
+		"description": "This object's scale will update to match the linked object's scale",
 		"extra": "",
 		"tags": ""
 	},
@@ -3342,7 +3342,7 @@
 		"id": 546,
 		"name_raw": "SetGripPosition",
 		"name_given": "setGripPosition",
-		"args": "1: Attachmentpoint attacker\n2: Attachmentpoint defender\n3: ? (zLine perhaps)",
+		"args": "1: Attachmentpoint attacker\n2: Attachmentpoint defender\n3: Draw order (zLine)",
 		"description": "Opponent’s position while grabbed",
 		"extra": "",
 		"tags": "grab"
@@ -3397,7 +3397,7 @@
 		"name_raw": "ScreenPosition",
 		"name_given": "",
 		"args": "",
-		"description": "Use coordinate system reserved for UI elements.",
+		"description": "Use viewport coordinate system",
 		"extra": "",
 		"tags": "position"
 	},
@@ -3559,7 +3559,7 @@
 		"name_raw": "RandomVoice",
 		"name_given": "randomVoice",
 		"args": "1: Voiceline 1\n2: Weight 1\n3: Voiceline 2\n4: Weight 2\n5: Voiceline 3\n6: Weight 3\n7: Voiceline 4\n8: Weight 4",
-		"description": "Play one of up to 4 voice samples.",
+		"description": "Play one of up to 4 voice samples",
 		"extra": "Just set weight to 100.",
 		"tags": "sound"
 	},
@@ -3568,7 +3568,7 @@
 		"name_raw": "SmartRandomVoice",
 		"name_given": "randomVoiceNoRepeat",
 		"args": "",
-		"description": "Same as randomVoice (#618), but makes sure to not repeat the same voiceline.",
+		"description": "Same as randomVoice (#618), but makes sure to not repeat the same voiceline",
 		"extra": "",
 		"tags": "sound"
 	},
@@ -3586,8 +3586,8 @@
 		"name_raw": "AttackVoice",
 		"name_given": "",
 		"args": "1: Voiceline\n2: Level",
-		"description": "Play a pre-set voice on attack.",
-		"extra": "",
+		"description": "Play a pre-set voice on attack",
+		"extra": "The game tries not to spam them, so this might not always result in a sound being played.",
 		"tags": "sound"
 	},
 	{
@@ -4495,7 +4495,7 @@
 		"name_raw": "AtkLandBoundSpeedX",
 		"name_given": "groundBounceXVelocity",
 		"args": "",
-		"description": "Disabled. Do not use, or your game will crash.",
+		"description": "Disabled. Do not use, or your game will crash",
 		"extra": "",
 		"tags": "attack"
 	},
@@ -5303,7 +5303,7 @@
 	{
 		"id": 995,
 		"name_raw": "AtkHitStopTime",
-		"name_given": "hitStop",
+		"name_given": "hitstop",
 		"args": "",
 		"description": "Freeze both attacker and defender on hit",
 		"extra": "Not affected by hitstun scaling.",
@@ -5421,8 +5421,8 @@
 		"id": 1027,
 		"name_raw": "AtkRange",
 		"name_given": "",
-		"args": "1: Width\n2: X-offset\n3: Height\n4: Y-offset",
-		"description": "Alter hitbox size.",
+		"args": "1: maxX\n2: minX\n3: maxY\n4: minY",
+		"description": "Alter hitbox size",
 		"extra": "",
 		"tags": "attack"
 	},
@@ -8221,7 +8221,7 @@
 		"name_raw": "CheckEnemyInputEx",
 		"name_given": "checkEnemyInput",
 		"args": "",
-		"description": "Disabled. Do not use, or your game will freeze.",
+		"description": "Disabled. Do not use, or your game will freeze",
 		"extra": "",
 		"tags": "conditional"
 	},
@@ -8383,8 +8383,8 @@
 		"name_raw": "SkillRequestAction",
 		"name_given": "moveAlias",
 		"args": "",
-		"description": "Register a move, but execute a different one when it's used",
-		"extra": "checkCurrentStateEntryName will read the original addMove, not the aliased one\nThis allows you to do things like have 2 different move inputs refer to the same state, and the second one can have different properties.",
+		"description": "Register a move, but execute a different state when it's used",
+		"extra": "",
 		"tags": ""
 	},
 	{
@@ -8410,7 +8410,7 @@
 		"name_raw": "SkillFunctionCall",
 		"name_given": "moveSubroutine",
 		"args": "",
-		"description": "Call subroutine before the state even begins",
+		"description": "Call subroutine before the state begins",
 		"extra": "",
 		"tags": ""
 	},
@@ -9101,6 +9101,15 @@
 	{
 		"id": 1630,
 		"name_raw": "DelSkillForceDisableFlag",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": ""
+	},
+	{
+		"id": 1635,
+		"name_raw": "",
 		"name_given": "",
 		"args": "",
 		"description": "",
@@ -10118,9 +10127,9 @@
 	{
 		"id": 1803,
 		"name_raw": "SendSignalActionName",
-		"name_given": "triggerUponInObject",
-		"args": "",
-		"description": "",
+		"name_given": "sendSignalToObject",
+		"args": "1: Object name to send signal to (s32)\n2: Signal (upon)",
+		"description": "Find an object by name, and send a signal to it",
 		"extra": "",
 		"tags": "signal"
 	},
@@ -10132,6 +10141,24 @@
 		"description": "",
 		"extra": "",
 		"tags": "signal"
+	},
+	{
+		"id": 1818,
+		"name_raw": "",
+		"name_given": "restoreSuperDash",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": "movement"
+	},
+	{
+		"id": 1819,
+		"name_raw": "",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": "movement"
 	},
 	{
 		"id": 1820,
@@ -10408,7 +10435,7 @@
 		"name_raw": "ExMutekiAtkLevel",
 		"name_given": "",
 		"args": "1: Integer (attack level)",
-		"description": "Make armour only protect against a certain atk level and below.",
+		"description": "Make armour only protect against a certain atk level and below",
 		"extra": "#711 (AtkLevel/attackLevel) is used by an attacker to set their attack level.\nThe vanilla game (usually) uses 1 for lights, 2 for mediums, 3 for jump heavy/6M, and 4 for heavy attacks.",
 		"tags": "armor"
 	},
@@ -11425,7 +11452,7 @@
 		"name_raw": "CheckLastDamageActionName",
 		"name_given": "checkLastAttackHitStateName",
 		"args": "1: Object\n2: Statename",
-		"description": "Check if the object was last attacked by an object with the given statename.",
+		"description": "Check if the object was last attacked by an object with the given statename",
 		"extra": "",
 		"tags": "conditional"
 	},
@@ -11507,7 +11534,7 @@
 		"name_given": "",
 		"args": "1: Object\n2: Signal name\n3: 0",
 		"description": "Send a named signal to an object",
-		"extra": "Extremely powerful in the right hands. This allows you to trigger arbitrary interrupts and freely interact with another object.\n[upon: (SIGNAL_NAME) {\n\tcheckSignalName: s32'ilovegoku'\n\tif: var(Result) {\n\t\tcopyVar: var(act0), int(1)\n\t} endIf: \n\tcheckSignalName: s32'ilovevegeta'\n\tif: var(Result) {\n\t\tcopyVar: var(act0), int(2)\n\t} endIf: \n} endUpon:]",
+		"extra": "This allows you to trigger arbitrary interrupts and freely interact with another object.\n[upon: (SIGNAL_NAME) {\n\tcheckSignalName: s32'ilovegoku'\n\tif: var(Result) {\n\t\tcopyVar: var(act0), int(1)\n\t} endIf: \n\tcheckSignalName: s32'ilovevegeta'\n\tif: var(Result) {\n\t\tcopyVar: var(act0), int(2)\n\t} endIf: \n} endUpon:]",
 		"tags": "signal"
 	},
 	{
@@ -12811,7 +12838,7 @@
 		"name_raw": "ZLine",
 		"name_given": "",
 		"args": "1: (FRONT) or (BACK)\n2: Priority",
-		"description": "Draw order of object.",
+		"description": "Draw order of object",
 		"extra": "There are two lines internally on the screen: the front line and the back line.\nFront draws over back, always.\nObjects on the same line, use priority to determine which gets drawn in front of the other. The object with the higher priority, will be drawn on top of the ones with a lower priority.",
 		"tags": "sprite"
 	},
@@ -12844,17 +12871,17 @@
 	},
 	{
 		"id": 2193,
-		"name_raw": "ExPointFReset",
+		"name_raw": "setEX_POINT_F",
 		"name_given": "",
 		"args": "1: Attachmentpoint\n2: X-offset\n3: Y-offset",
 		"description": "Set new coordinates for EX_POINT_F",
-		"extra": "",
+		"extra": "You can use this as an attachmentpoint for subsequent functions (e.g. createObject), or you can access it through the ExPointFX (102) and ExPointFY (103) variables.",
 		"tags": ""
 	},
 	{
 		"id": 2194,
 		"name_raw": "ExPointFRandAdd",
-		"name_given": "exPointFRandAdd",
+		"name_given": "addEX_POINT_FRandom",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -12863,7 +12890,7 @@
 	{
 		"id": 2195,
 		"name_raw": "ExPointFAdd",
-		"name_given": "exPointFAdd",
+		"name_given": "addEX_POINT_F",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -12872,9 +12899,9 @@
 	{
 		"id": 2196,
 		"name_raw": "ExPointFResetCO",
-		"name_given": "exPointFResetObject",
+		"name_given": "setObjectEX_POINT_F",
 		"args": "1: Object\n2: Attachmentpoint\n3: X-offset\n4: Y-offset",
-		"description": "",
+		"description": "Same as setEX_POINT_F (2193), except you can set the origin to a different object",
 		"extra": "",
 		"tags": ""
 	},
@@ -12917,10 +12944,10 @@
 	{
 		"id": 2202,
 		"name_raw": "SetRandom",
-		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "setRandom",
+		"args": "1: Variable\n2: Min (integer)\n3: Max (integer)",
+		"description": "Generates a random number, and stores it in arg1",
+		"extra": "Min and max are inclusive.",
 		"tags": ""
 	},
 	{
@@ -13243,8 +13270,8 @@
 		"name_raw": "Jimaku",
 		"name_given": "subtitles",
 		"args": "1: Header in REDGame\n2: Duration",
-		"description": "Arg 1 usually uses the reserved keyword '!prev'.\nIt allows Arcsys to just copy the entire subtitles call and paste it after a voiceline function call, without having to change arg 1.",
-		"extra": "",
+		"description": "Display subtitles",
+		"extra": "Arg1 usually uses the reserved keyword '!prev'.\nThis makes it look up whatever voiceline is currently queued to play.",
 		"tags": ""
 	},
 	{
@@ -13738,7 +13765,7 @@
 		"name_raw": "CellTimeAdd",
 		"name_given": "spriteAddTime",
 		"args": "1: Integer",
-		"description": "Increase amount of time a sprite is displayed",
+		"description": "Increase the amount of time a sprite is displayed",
 		"extra": "",
 		"tags": "sprite"
 	},
@@ -14098,8 +14125,8 @@
 		"name_raw": "CheckSkillName",
 		"name_given": "checkCurrentStateEntryName",
 		"args": "",
-		"description": "Not affected by moveAlias; checks the original addMove string.",
-		"extra": "",
+		"description": "Check name of the current state in the move registry",
+		"extra": "Similar to checkCurrentStateName (2033), but not affected by moveAlias (1421).\nThis allows you to create multiply entires in the move registry, that all redirect to an existing state using moveAlias, but then still differentiate between them in that state with this call.",
 		"tags": "conditional"
 	},
 	{
@@ -14773,7 +14800,7 @@
 		"name_raw": "LinkModelSelfTeam",
 		"name_given": "",
 		"args": "1: Character shortcode\n2: Animation, or empty string",
-		"description": "Loads model + collision + animation data.",
+		"description": "Loads model + collision + animation data",
 		"extra": "As the name implies, the character needs to actually be on the team already. Works in CMNEF!\nCalling [linkModelSelfTeam: s32(OSM), s32()\nlinkPawnWithAnimation: s32(), s32()] prevents the model from actually displaying.",
 		"tags": "model"
 	},
