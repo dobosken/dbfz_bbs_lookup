@@ -32,7 +32,7 @@
 		"name_given": "plr0",
 		"args": "",
 		"description": "Generic player variable",
-		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"extra": "Per-character variable. Similar to obj variables, except it always references the parent object.",
 		"tags": "reg"
 	},
 	{
@@ -41,7 +41,7 @@
 		"name_given": "plr1",
 		"args": "",
 		"description": "Generic player variable",
-		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"extra": "Per-character variable. Similar to obj variables, except it always references the parent object.",
 		"tags": "reg"
 	},
 	{
@@ -50,7 +50,7 @@
 		"name_given": "plr2",
 		"args": "",
 		"description": "Generic player variable",
-		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"extra": "Per-character variable. Similar to obj variables, except it always references the parent object.",
 		"tags": "reg"
 	},
 	{
@@ -59,7 +59,7 @@
 		"name_given": "plr3",
 		"args": "",
 		"description": "Generic player variable",
-		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"extra": "Per-character variable. Similar to obj variables, except it always references the parent object.",
 		"tags": "reg"
 	},
 	{
@@ -410,7 +410,7 @@
 		"name_given": "act0",
 		"args": "",
 		"description": "Generic action variable",
-		"extra": "Is automatically set to 0 when an object changes to a different state.",
+		"extra": "Is set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -419,7 +419,7 @@
 		"name_given": "act1",
 		"args": "",
 		"description": "Generic action variable",
-		"extra": "Is automatically set to 0 when an object changes to a different state.",
+		"extra": "Is set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -428,7 +428,7 @@
 		"name_given": "act2",
 		"args": "",
 		"description": "Generic action variable",
-		"extra": "Is automatically set to 0 when an object changes to a different state.",
+		"extra": "Is set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -437,7 +437,7 @@
 		"name_given": "act3",
 		"args": "",
 		"description": "Generic action variable",
-		"extra": "Is automatically set to 0 when an object changes to a different state.",
+		"extra": "Is set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -446,7 +446,7 @@
 		"name_given": "act4",
 		"args": "",
 		"description": "Generic action variable",
-		"extra": "Is automatically set to 0 when an object changes to a different state.",
+		"extra": "Is set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -455,7 +455,7 @@
 		"name_given": "act5",
 		"args": "",
 		"description": "Generic action variable",
-		"extra": "Is automatically set to 0 when an object changes to a different state.",
+		"extra": "Is set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -464,7 +464,7 @@
 		"name_given": "act6",
 		"args": "",
 		"description": "Generic action variable",
-		"extra": "Is automatically set to 0 when an object changes to a different state.",
+		"extra": "Is set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -473,7 +473,7 @@
 		"name_given": "act7",
 		"args": "",
 		"description": "Generic action variable",
-		"extra": "Is automatically set to 0 when an object changes to a different state.",
+		"extra": "Is set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -481,8 +481,8 @@
 		"name_raw": "ObjReg0",
 		"name_given": "obj0",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Generic object variable",
+		"extra": "Is NOT set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -490,8 +490,8 @@
 		"name_raw": "ObjReg1",
 		"name_given": "obj1",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Generic object variable",
+		"extra": "Is NOT set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -499,8 +499,8 @@
 		"name_raw": "ObjReg2",
 		"name_given": "obj2",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Generic object variable",
+		"extra": "Is NOT set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -508,8 +508,8 @@
 		"name_raw": "ObjReg3",
 		"name_given": "obj3",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Generic object variable",
+		"extra": "Is NOT set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -517,8 +517,8 @@
 		"name_raw": "ObjReg4",
 		"name_given": "obj4",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Generic object variable",
+		"extra": "Is NOT set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -526,8 +526,8 @@
 		"name_raw": "ObjReg5",
 		"name_given": "obj5",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Generic object variable",
+		"extra": "Is NOT set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -535,8 +535,8 @@
 		"name_raw": "ObjReg6",
 		"name_given": "obj6",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Generic object variable",
+		"extra": "Is NOT set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -544,8 +544,8 @@
 		"name_raw": "ObjReg7",
 		"name_given": "obj7",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Generic object variable",
+		"extra": "Is NOT set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -553,7 +553,7 @@
 		"name_raw": "GTmpReg0",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Temporary global variable.",
 		"extra": "",
 		"tags": "reg"
 	},
@@ -562,7 +562,7 @@
 		"name_raw": "GTmpReg1",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Temporary global variable.",
 		"extra": "",
 		"tags": "reg"
 	},
@@ -571,7 +571,7 @@
 		"name_raw": "GTmpReg2",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Temporary global variable.",
 		"extra": "",
 		"tags": "reg"
 	},
@@ -580,7 +580,7 @@
 		"name_raw": "GTmpReg3",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Temporary global variable.",
 		"extra": "",
 		"tags": "reg"
 	},
@@ -589,7 +589,7 @@
 		"name_raw": "GTmpReg4",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Temporary global variable.",
 		"extra": "",
 		"tags": "reg"
 	},
@@ -598,7 +598,7 @@
 		"name_raw": "GTmpReg5",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Temporary global variable.",
 		"extra": "",
 		"tags": "reg"
 	},
@@ -607,7 +607,7 @@
 		"name_raw": "GTmpReg6",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Temporary global variable.",
 		"extra": "",
 		"tags": "reg"
 	},
@@ -616,7 +616,7 @@
 		"name_raw": "GTmpReg7",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Temporary global variable.",
 		"extra": "",
 		"tags": "reg"
 	},
@@ -626,7 +626,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Is set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -635,7 +635,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Is set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -644,7 +644,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Is set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -653,7 +653,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Is set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -662,7 +662,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Is NOT set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -671,7 +671,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Is NOT set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -680,7 +680,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Is NOT set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -689,7 +689,7 @@
 		"name_given": "",
 		"args": "",
 		"description": "",
-		"extra": "",
+		"extra": "Is NOT set to 0 when an object changes to a different state.",
 		"tags": "reg"
 	},
 	{
@@ -1814,7 +1814,7 @@
 		"name_given": "plr4",
 		"args": "",
 		"description": "Generic player variable",
-		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"extra": "Per-character variable. Similar to obj variables, except it always references the parent object.",
 		"tags": "reg"
 	},
 	{
@@ -1823,7 +1823,7 @@
 		"name_given": "plr5",
 		"args": "",
 		"description": "Generic player variable",
-		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"extra": "Per-character variable. Similar to obj variables, except it always references the parent object.",
 		"tags": "reg"
 	},
 	{
@@ -1832,7 +1832,7 @@
 		"name_given": "plr6",
 		"args": "",
 		"description": "Generic player variable",
-		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"extra": "Per-character variable. Similar to obj variables, except it always references the parent object.",
 		"tags": "reg"
 	},
 	{
@@ -1841,7 +1841,7 @@
 		"name_given": "plr7",
 		"args": "",
 		"description": "Generic player variable",
-		"extra": "Only altered and read by BBS functions calls, meaning the game engine doesn't do things like automatically reset them.",
+		"extra": "Per-character variable. Similar to obj variables, except it always references the parent object.",
 		"tags": "reg"
 	},
 	{

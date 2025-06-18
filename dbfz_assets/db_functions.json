@@ -1983,7 +1983,7 @@
 		"id": 271,
 		"name_raw": "WorldStop",
 		"name_given": "superFreeze",
-		"args": "1: ?\n2: ?\n3: Duration for player\n4: Duration for every other object",
+		"args": "1: Type\n2: Attachment point (unused)\n3: Duration for player\n4: Duration for every other object",
 		"description": "Pauses all activity on screen for x duration",
 		"extra": "",
 		"tags": ""
@@ -5432,7 +5432,7 @@
 		"name_given": "setProjectileDurability",
 		"args": "1: Value",
 		"description": "",
-		"extra": "Higher levels beat lower levels.\nEquals clash.\n[0 = ?\n1 = Basic ki-blasts\n2 = Piercing ki-blasts\n3 = Beams\n4 = Most supers\n5 = Ungabunga supers",
+		"extra": "Higher levels beat lower levels.\nEquals clash.\n[-1/0 = Not a projectile\n1 = Basic ki-blasts\n2 = Piercing ki-blasts\n3 = Beams\n4 = Most supers\n5 = Ungabunga supers]",
 		"tags": "attack"
 	},
 	{
@@ -6347,10 +6347,10 @@
 	{
 		"id": 1143,
 		"name_raw": "AtkHoseiTadan",
-		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "damageScalingEachHit",
+		"args": "1: Boolean, 0 or 1.",
+		"description": "Apply damage scaling for every attack in multi-hitting moves",
+		"extra": "Default is true.",
 		"tags": "attack"
 	},
 	{
@@ -6826,7 +6826,7 @@
 		"name_raw": "AtkRushSousaiJizokuFrame",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Dragonrush break window",
 		"extra": "",
 		"tags": "attack"
 	},
@@ -10476,6 +10476,15 @@
 		"tags": "armor"
 	},
 	{
+		"id": 1869,
+		"name_raw": "ExMutekiShotLevelM1",
+		"name_given": "",
+		"args": "",
+		"description": "",
+		"extra": "",
+		"tags": "armor"
+	},
+	{
 		"id": 1870,
 		"name_raw": "",
 		"name_given": "superArmorPhysicalGuard",
@@ -11433,9 +11442,9 @@
 		"id": 2029,
 		"name_raw": "ExHoming",
 		"name_given": "homing",
-		"args": "1: Object\n2: Target object\n3: Target attachmentpoint\n4: ?\n5: X-offset\n6: ?\n7: Y-offset\n8: ?\n9: X-speed\n10: ?\n11: Y-speed",
+		"args": "1: Type\n2: Target object\n3: Target attachmentpoint\n4: X-offset\n6: Y-offset\n7: ParamA\n8: ParamB",
 		"description": "",
-		"extra": "",
+		"extra": "Type:\n[0 = DistanceAccel\n1 = FixAccel\n2 = ToSpeed]\nDistanceAccel,\nChanges acceleration according to distance. speed is overwritten.\nparamA: amount of acceleration. 100 means instantaneous arrival. This added value varies depending on distance.\nparamB: value permuted to speed every frame. 100 means extreme slippage. 0 means no slippage.\nFirst, try testing at around 10 and 50.\n\nFixAccel,\nAlways follow with a constant acceleration. speed is overwritten.\nparamA: amount of acceleration.\nparamB: value permuted to speed every frame. At 100 it's very slippery. At 0 it's not slippery.\n\nToSpeed,\nRecommended!\nConverge to a certain speed. speed is overwritten.\nparamA: Target speed.\nparamB: How close to that speed. Not a percentage value.\nFirst try testing at 30000 and 1000.",
 		"tags": "movement"
 	},
 	{
@@ -14042,18 +14051,18 @@
 	{
 		"id": 2353,
 		"name_raw": "Naguri_Nagurareru",
-		"name_given": "",
-		"args": "",
-		"description": "",
+		"name_given": "enableObjectStrike",
+		"args": "1: Boolean, 0 or 1.",
+		"description": "Allows this object to be struck by attacks (if it has collision)",
 		"extra": "",
 		"tags": ""
 	},
 	{
 		"id": 2354,
 		"name_raw": "Naguri_Naguru",
-		"name_given": "",
-		"args": "",
-		"description": "",
+		"name_given": "signalObjectStrike",
+		"args": "1: SIGNAL0 to SIGNAL9. Disable with SIGNAL_NULL",
+		"description": "Enables striking objects that have #2353 set to true. Also sends the specified signal to that object on hit.",
 		"extra": "",
 		"tags": ""
 	},
@@ -14737,7 +14746,7 @@
 		"name_raw": "SkillFinishToDownLoop",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Transition into the falling animation when this state ends.",
 		"extra": "",
 		"tags": ""
 	},
