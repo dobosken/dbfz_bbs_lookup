@@ -300,9 +300,9 @@
 		"id": 33,
 		"name_raw": "searchActionName",
 		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: State name (string)\n2: The STACK to put the object into, or NULL\n3: Count (variable / integer)",
+		"description": "Search for an object by name",
+		"extra": "Searches for an object. If the amount of objects matches the number that is stored in the amount given in arg 3, that object will be pushed into the STACK given in arg 2, and variable Tmp/Result (0) is set to true.\nThe newest object will always be 0, and older objects can be accessed incrementally.\nNote that this function only searches for objects that were created by your character, and which haven't been marked for destruction/koware yet.\n\nThe following example will create kidan_5D if none exist already.\n[searchActionName: s32(kidan_5D), (NULL), int(0)\nifNot: var(Result) {\n\tcreateObject: s32(kidan_5D), (ZERO)\n} endIf:]\nThis example increases the Y position (height) of the second kidan_5D, provided it exists.\nNote that which exact object is \"second kidan_5D\" changes when you spawn a new kidan_5D. If you'd like this \"second kidan_5D\" to always refer to the same object, then you'll have to keep track of that yourself with proper STACK manipulation.\n[searchActionName: s32(kidan_5D), (STACK0), int(1)\nif: var(Result) {\n\tapplyTo: (STACK0) {\n\t\taddYPosition: 120000\n\t} endApply:\n} endIf:]",
 		"tags": ""
 	},
 	{
@@ -4115,7 +4115,7 @@
 	{
 		"id": 756,
 		"name_raw": "atkVectorXCounterHit",
-		"name_given": "",
+		"name_given": "attackXKnockbackCounter",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -4565,7 +4565,7 @@
 	{
 		"id": 832,
 		"name_raw": "atkAirStunTimeCounterHit",
-		"name_given": "counterUntechAmount",
+		"name_given": "counterAirHitstunAmount",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -4980,18 +4980,18 @@
 		"id": 912,
 		"name_raw": "atkAttackRate",
 		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Percentage (integer)\n2: Operator\n3: Force overwrite (boolean)",
+		"description": "Change object damage modifier",
+		"extra": "Arg 2 only supports (IS_LESS) and (IS_GREATER). If the object's currently active value is less or greater than arg 1, then it is set to arg 1. Setting arg 3 to true (1), makes this function ignore arg 2 and apply arg 1 unconditionally.\n\nFor example, given the following call: [atkAttackRate: 100, (IS_GREATER), 0]The object's attack modifier will be set to 100% (default) only if the currently active value is greater than 100%.",
 		"tags": "attack"
 	},
 	{
 		"id": 913,
 		"name_raw": "atkTensionRate",
 		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Percentage (integer)\n2: Operator\n3: Force overwrite (boolean)",
+		"description": "Change object tension gain modifier",
+		"extra": "Arg 2 only supports (IS_LESS) and (IS_GREATER). If the object's currently active value is less or greater than arg 1, then it is set to arg 1. Setting arg 3 to true (1), makes this function ignore arg 2 and apply arg 1 unconditionally.\n\nFor example, given the following call: [AtkTensionRate: 100, (IS_GREATER), 0]The object's tension gain modifier will be set to 100% (default) only if the currently active value is greater than 100%.",
 		"tags": "meter,attack"
 	},
 	{
@@ -5492,7 +5492,7 @@
 	{
 		"id": 1043,
 		"name_raw": "atkComboForceHit",
-		"name_given": "canGrabDuringHitstun",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -5510,19 +5510,19 @@
 	{
 		"id": 1045,
 		"name_raw": "atkDamageEffect",
-		"name_given": "attackDamageEffect",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "",
+		"args": "1: Spawning type\n2: Object statename/particle name (string)",
+		"description": "Create effect when this object's attack collides with another object (hit)",
+		"extra": "Arg 1 can be any of the following: [Default\nNone\nObject\nCmnObject\nParticle]Their usage should be fairly self-explanatory.\nHowever, if you need examples, do reference the vanilla DBFZ scripts.",
 		"tags": "attack"
 	},
 	{
 		"id": 1046,
 		"name_raw": "atkGuardEffect",
-		"name_given": "attackGuardEffect",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "",
+		"args": "1: Spawning type\n2: Object statename/particle name (string)",
+		"description": "Create effect when this object's attack collides with another object (guard)",
+		"extra": "Arg 1 can be any of the following: [Default\nNone\nObject\nCmnObject\nParticle]Their usage should be fairly self-explanatory.\nHowever, if you need examples, do reference the vanilla DBFZ scripts.",
 		"tags": "defense,attack"
 	},
 	{
@@ -6743,11 +6743,11 @@
 	{
 		"id": 1187,
 		"name_raw": "atkLandUkemi",
-		"name_given": "disableOpponentRecovery",
-		"args": "",
-		"description": "",
-		"extra": "",
-		"tags": "defense,,attack"
+		"name_given": "enableGroundUkemi",
+		"args": "1: Boolean",
+		"description": "Enable/disable ground recovery for your attack",
+		"extra": "Set to 0 to force your opponent into a hard knockdown from your attack.",
+		"tags": "defense,attack"
 	},
 	{
 		"id": 1188,
@@ -7841,7 +7841,7 @@
 	{
 		"id": 1310,
 		"name_raw": "initTensionBalanceGuard",
-		"name_given": "",
+		"name_given": "initCooldownTimeSpecialTag",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -9137,7 +9137,7 @@
 	{
 		"id": 1639,
 		"name_raw": "addARendaChain",
-		"name_given": "cancel_whiff_",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -9191,7 +9191,7 @@
 	{
 		"id": 1645,
 		"name_raw": "ultimateCancel",
-		"name_given": "enableSparkCancel",
+		"name_given": "enableOverdriveCancel",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -9200,7 +9200,7 @@
 	{
 		"id": 1646,
 		"name_raw": "ultimateCancelPD",
-		"name_given": "",
+		"name_given": "enableOverdriveCancelOnHit",
 		"args": "",
 		"description": "",
 		"extra": "",
