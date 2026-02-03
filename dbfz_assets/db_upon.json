@@ -299,7 +299,7 @@
 	{
 		"id": 33,
 		"name_raw": "MUTEKI",
-		"name_given": "",
+		"name_given": "INVUL",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -389,7 +389,7 @@
 	{
 		"id": 43,
 		"name_raw": "MUTEKI_PRE_HITSTOP",
-		"name_given": "",
+		"name_given": "INVUL_PRE_HITSTOP",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -425,9 +425,9 @@
 	{
 		"id": 47,
 		"name_raw": "PLAYER_ACTION_CHANGE",
-		"name_given": "AFTER_EXIT",
+		"name_given": "PLAYER_STATE_CHANGE",
 		"args": "",
-		"description": "Will run right after an objects exits their current state",
+		"description": "Will run right after the player object changes to a different state",
 		"extra": "",
 		"tags": ""
 	},
@@ -578,7 +578,7 @@
 	{
 		"id": 64,
 		"name_raw": "MUTEKI_PRE_HITSTOP_FOR_TOBIDOUGU",
-		"name_given": "",
+		"name_given": "INVUL_PRE_HITSTOP_FOR_PROJECTILES",
 		"args": "",
 		"description": "",
 		"extra": "",

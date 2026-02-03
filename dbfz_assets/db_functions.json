@@ -668,7 +668,7 @@
 	{
 		"id": 74,
 		"name_raw": "ifBeginGameMode",
-		"name_given": "",
+		"name_given": "ifGameMode",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -3305,9 +3305,9 @@
 	{
 		"id": 481,
 		"name_raw": "linkObjectMaterialSet",
-		"name_given": "",
+		"name_given": "createSocketLinkParticleOnObject",
 		"args": "",
-		"description": "",
+		"description": "Same as #479, but with the ability to spawn on another object.",
 		"extra": "",
 		"tags": ""
 	},
@@ -3342,9 +3342,9 @@
 		"id": 546,
 		"name_raw": "setGripPosition",
 		"name_given": "setGripPosition",
-		"args": "1: Attachmentpoint attacker\n2: Attachmentpoint defender\n3: Draw order (zLine)",
-		"description": "Opponent’s position while grabbed",
-		"extra": "",
+		"args": "1: Attachmentpoint attacker\n2: Attachmentpoint defender\n3: Grip modifier (bitmask)",
+		"description": "Position control for grab interactions",
+		"extra": "Arg 3 is a bitmask. You can enable a flag by changing it's value from 0 to 1, and you can enable multiple flags at once. Read the bitmask from right to left!\n\n[0: Set the moving object to yourself, not an enemy.\n1: Allow the moving object to clip into the ground\n2: Force the moving object to a Y coordinate of 0]",
 		"tags": "grab"
 	},
 	{
@@ -5330,10 +5330,10 @@
 	{
 		"id": 1017,
 		"name_raw": "atkArmorBreak",
-		"name_given": "armorBreak",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "",
+		"args": "1: Boolean",
+		"description": "Lets your attack break armour",
+		"extra": "Only works if the receiving end has #1868 (exMutekiArmorBreak) set to false! The default in DBFZ has it turned on.",
 		"tags": "armor,attack"
 	},
 	{
@@ -5429,7 +5429,7 @@
 	{
 		"id": 1028,
 		"name_raw": "atkShotLevel",
-		"name_given": "setProjectileDurability",
+		"name_given": "setProjectileLevel",
 		"args": "1: Value",
 		"description": "",
 		"extra": "Higher levels beat lower levels.\nEquals clash.\n[-1/0 = Not a projectile\n1 = Basic ki-blasts\n2 = Piercing ki-blasts\n3 = Beams\n4 = Most supers\n5 = Ungabunga supers]",
@@ -5690,10 +5690,10 @@
 	{
 		"id": 1067,
 		"name_raw": "atkHitPositionType",
-		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "moveOpponentOnHit",
+		"args": "1: Type\n2: X\n3: Y",
+		"description": "Reposition the object your attack hits",
+		"extra": "Type options\n[None = Do not use\nRelativeAttackerNow = Move enemies relative to the attacking object\nAbsoluteNow = Move enemies to world coordinates\nRelativeDefenderNow = Move enemies relative to their own position\nRelativeAttacker = Move enemies relative to the attacking object, 1 frame after it connects\nAbsolute = Move enemies to world coordinates, 1 frame after it connects\nRelativeDefender = Move enemies relative to their own position, 1 frame after it connects]",
 		"tags": "position,attack"
 	},
 	{
@@ -6122,9 +6122,9 @@
 	{
 		"id": 1116,
 		"name_raw": "atkMutekiIgnore",
-		"name_given": "pierceSuperArmor",
-		"args": "",
-		"description": "",
+		"name_given": "atkInvulOverride",
+		"args": "1: Boolean",
+		"description": "Lets your attacks connect through all forms of invulnerability",
 		"extra": "",
 		"tags": "armor,attack"
 	},
@@ -6365,10 +6365,10 @@
 	{
 		"id": 1145,
 		"name_raw": "atkMutekiTime",
-		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "atkInvulTime",
+		"args": "1: Integer",
+		"description": "When you hit with an attack, become invul for some time",
+		"extra": "Seems to not survive action/state transitions.",
 		"tags": "armor,attack"
 	},
 	{
@@ -6699,9 +6699,9 @@
 		"id": 1182,
 		"name_raw": "atkZReversal",
 		"name_given": "",
-		"args": "",
-		"description": "Automatic ki-blast deflecting",
-		"extra": "",
+		"args": "1: Boolean",
+		"description": "Automatic ki blast deflecting",
+		"extra": "Despite starting with `atk`, does not require an active hitbox.",
 		"tags": "attack"
 	},
 	{
@@ -8364,9 +8364,9 @@
 		"id": 1419,
 		"name_raw": "skillForceDisableFlag",
 		"name_given": "",
-		"args": "",
+		"args": "1: Bitmask",
 		"description": "Lock out move if flag is set",
-		"extra": "Used together with 1629 (AddSkillForceDisableFlag) to prevent the usage of a move.\nUsually used for things like zBroly alt lvl3 to keep him from spawning multiple balls.",
+		"extra": "Used together with 1629 (AddSkillForceDisableFlag) to prevent the usage of a move.\nTo give an example, it's used for zBroly alt lvl3 to keep him from using the move when a previous projectile already exists.",
 		"tags": ""
 	},
 	{
@@ -8932,8 +8932,8 @@
 		"name_raw": "skillEstTagMuteki",
 		"name_given": "",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Let the CPU know this move has invul properties",
+		"extra": "Gives these moves higher priority when the CPU gets up, is guarding, or gets hit.",
 		"tags": "armor"
 	},
 	{
@@ -8941,8 +8941,8 @@
 		"name_raw": "skillEstTagShotMuteki",
 		"name_given": "",
 		"args": "",
-		"description": "",
-		"extra": "",
+		"description": "Let the CPU know this move has projectile invul properties",
+		"extra": "Gives these moves higher priority when a lot of projectiles are out on the screen.",
 		"tags": "armor"
 	},
 	{
@@ -9084,7 +9084,7 @@
 		"id": 1628,
 		"name_raw": "addSkillForceDisableFlagQuick",
 		"name_given": "",
-		"args": "",
+		"args": "1: Bitmask",
 		"description": "",
 		"extra": "",
 		"tags": ""
@@ -9093,7 +9093,7 @@
 		"id": 1629,
 		"name_raw": "addSkillForceDisableFlag",
 		"name_given": "",
-		"args": "",
+		"args": "1: Bitmask",
 		"description": "",
 		"extra": "",
 		"tags": ""
@@ -9102,7 +9102,7 @@
 		"id": 1630,
 		"name_raw": "delSkillForceDisableFlag",
 		"name_given": "",
-		"args": "",
+		"args": "1: Bitmask",
 		"description": "",
 		"extra": "",
 		"tags": ""
@@ -9993,7 +9993,7 @@
 		"id": 1787,
 		"name_raw": "recoverBlueHitPoint",
 		"name_given": "",
-		"args": "",
+		"args": "1: Health gain per frame\n2: Duration in frames",
 		"description": "",
 		"extra": "",
 		"tags": "health"
@@ -10226,37 +10226,37 @@
 	{
 		"id": 1827,
 		"name_raw": "exMuteki",
-		"name_given": "enableSuperArmor",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invul",
+		"args": "1: Boolean",
+		"description": "Makes you invulnerable",
+		"extra": "By default, calling this will make you invulnerable to (nearly) everything.\nYou'll need to call `invul` or `muteki` modifiers to make your type of invulnerability more specific.",
 		"tags": "armor"
 	},
 	{
 		"id": 1828,
 		"name_raw": "exMutekiTime",
-		"name_given": "superArmorTime",
-		"args": "",
-		"description": "",
+		"name_given": "invulTime",
+		"args": "1: Time in frames",
+		"description": "Makes you invulnerable for a certain amount of time",
 		"extra": "",
 		"tags": "armor"
 	},
 	{
 		"id": 1839,
 		"name_raw": "exMutekiNage",
-		"name_given": "superArmorGrabInvul",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invulToThrows",
+		"args": "1: Boolean",
+		"description": "Apply invul to throw attacks",
+		"extra": "You're generally better off using #1850 (exMutekiGuardImpossible) instead",
 		"tags": "throw,armor"
 	},
 	{
 		"id": 1840,
 		"name_raw": "exMutekiType",
-		"name_given": "superArmorType",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invulType",
+		"args": "1: Named type",
+		"description": "Changes what kind of invulnerability you have",
+		"extra": "Named type can be one of:\n[DODGE = Attacks will not collide. There is no interaction between the ATTACKER and DEFENDER.\nARMOR = Attacks will collide. The DEFENDER's action is not interrupted.\nPARRY = Seems to be inactive.]Default is DODGE.",
 		"tags": "armor"
 	},
 	{
@@ -10264,15 +10264,15 @@
 		"name_raw": "exMutekiHitPoint",
 		"name_given": "",
 		"args": "",
-		"description": "",
+		"description": "Unusable",
 		"extra": "",
 		"tags": "health,armor"
 	},
 	{
 		"id": 1846,
 		"name_raw": "exMutekiBurst",
-		"name_given": "superArmorBurstGuard",
-		"args": "",
+		"name_given": "invulToSparkingBurst",
+		"args": "1: Boolean",
 		"description": "",
 		"extra": "",
 		"tags": "armor"
@@ -10280,46 +10280,46 @@
 	{
 		"id": 1847,
 		"name_raw": "exMutekiJodan",
-		"name_given": "superArmorLoseMid",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invulLoseToMidAtk",
+		"args": "1: Boolean",
+		"description": "Makes your invul lose to attacks that must be guarded mid",
+		"extra": "Attacks will have to be specifically set to mid guard for this to work. This is not done by default in vanilla DBFZ!",
 		"tags": "armor"
 	},
 	{
 		"id": 1848,
 		"name_raw": "exMutekiChudan",
-		"name_given": "superArmorLoseHigh",
-		"args": "",
-		"description": "",
+		"name_given": "invulLoseToHighAtk",
+		"args": "1: Boolean",
+		"description": "Makes your invul lose to attacks that must be guarded high",
 		"extra": "",
 		"tags": "armor"
 	},
 	{
 		"id": 1849,
 		"name_raw": "exMutekiGedan",
-		"name_given": "superArmorLoseLow",
-		"args": "",
-		"description": "",
+		"name_given": "invulLoseToLowAtk",
+		"args": "1: Boolean",
+		"description": "Makes your invul lose to attacks that must be guarded low",
 		"extra": "",
 		"tags": "armor"
 	},
 	{
 		"id": 1850,
 		"name_raw": "exMutekiGuardImpossible",
-		"name_given": "",
-		"args": "",
-		"description": "",
+		"name_given": "invulToUnblockableAtk",
+		"args": "1: Boolean",
+		"description": "Apply invul to grabs",
 		"extra": "",
 		"tags": "defense,armor"
 	},
 	{
 		"id": 1851,
 		"name_raw": "exMutekiHitStop",
-		"name_given": "superArmorHitstop",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invulExtraHitstop",
+		"args": "1: Integer\n2: Integer",
+		"description": "Apply extra hitstop when invul is triggered",
+		"extra": "1: Self\n2: Enemy\nDefault is -2, -2.\n\nNote that this is independent from any hitstop the opponent applies with their attack, and will be applied to both parties afterwards.",
 		"tags": "hitstop,armor"
 	},
 	{
@@ -10334,7 +10334,7 @@
 	{
 		"id": 1853,
 		"name_raw": "exMutekiNagenuke",
-		"name_given": "superArmorThrowTech",
+		"name_given": "",
 		"args": "",
 		"description": "",
 		"extra": "",
@@ -10343,81 +10343,81 @@
 	{
 		"id": 1854,
 		"name_raw": "exMutekiAntiAir",
-		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invulToAnti-airAtk",
+		"args": "1: Boolean",
+		"description": "Apply invul to anti-air attacks",
+		"extra": "Default is ON.\nAnti-airs being stuff like the universal 2H attack.",
 		"tags": "armor"
 	},
 	{
 		"id": 1855,
 		"name_raw": "exMutekiDamageRate",
-		"name_given": "superArmorDamagePercent",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invulDamagePassthrough",
+		"args": "1: Integer (percentage)",
+		"description": "How much damage of an opponent's attack is applied to you during invul",
+		"extra": "Requires an attack to actually collide with you, so doesn't work with the DODGE invul type.\nWill apply a red tint to the defending object when it is damaged.",
 		"tags": "armor"
 	},
 	{
 		"id": 1856,
 		"name_raw": "exMutekiObjectAttack",
-		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invulToProjectiles",
+		"args": "1: Boolean",
+		"description": "Apply invul to projectile attacks",
+		"extra": "Does not apply to sub-objects (objects with #1926 set to true, e.g. AEN's A17 calls).",
 		"tags": "armor"
 	},
 	{
 		"id": 1857,
 		"name_raw": "exMutekiHontaiAttack",
-		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invulToPlayers",
+		"args": "1: Boolean",
+		"description": "Apply invul to attacks from player objects",
+		"extra": "Default is ON.\nCan be used to disable invul against direct attacks from player objects (both MAIN and SUB (assists))",
 		"tags": "armor"
 	},
 	{
 		"id": 1858,
 		"name_raw": "exMutekiFire",
-		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invulToFire",
+		"args": "1: Boolean",
+		"description": "Apply invul to fire attacks",
+		"extra": "Applies to attacks that have #726 (atkEffectFire) set to true. Those attacks do not exist in vanilla DBFZ, but do function.",
 		"tags": "armor"
 	},
 	{
 		"id": 1859,
 		"name_raw": "exMutekiForReflact",
 		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Boolean",
+		"description": "Unusable",
+		"extra": "Will break any invul you set when enabled.",
 		"tags": "armor"
 	},
 	{
 		"id": 1860,
 		"name_raw": "exMutekiShotLevel0",
-		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invulToLevel0Projectiles",
+		"args": "1: Boolean",
+		"description": "Apply invul to level 0 projectiles",
+		"extra": "Applies to attacks with 1028 (atkShotLevel) to 0.\nNot many exist in DBFZ, for they're not really meant to actually be projectiles. One example is the A17 that is summoned by A18.\nNot worth messing with unless you intend to do a total conversion.",
 		"tags": "armor"
 	},
 	{
 		"id": 1861,
 		"name_raw": "exMutekiKakusei",
-		"name_given": "superArmorOverdriveGuard",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invulToSuperAtk",
+		"args": "1: Boolean",
+		"description": "Apply invul to super / overdrive attacks",
+		"extra": "Does not work on grab supers.",
 		"tags": "armor"
 	},
 	{
 		"id": 1862,
 		"name_raw": "exMutekiDamageRateHitPointRecover",
 		"name_given": "",
-		"args": "",
-		"description": "",
+		"args": "1: Boolean",
+		"description": "Unusable",
 		"extra": "",
 		"tags": "health,armor"
 	},
@@ -10433,9 +10433,9 @@
 	{
 		"id": 1864,
 		"name_raw": "exMutekiAtkLevel",
-		"name_given": "",
+		"name_given": "invulToAtkLevels",
 		"args": "1: Integer (attack level)",
-		"description": "Make armour only protect against a certain atk level and below",
+		"description": "Apply invul to attacks of a certain level and lower",
 		"extra": "#711 (AtkLevel/attackLevel) is used by an attacker to set their attack level.\nThe vanilla game (usually) uses 1 for lights, 2 for mediums, 3 for jump heavy/6M, and 4 for heavy attacks.",
 		"tags": "armor"
 	},
@@ -10451,64 +10451,64 @@
 	{
 		"id": 1866,
 		"name_raw": "mutekiHead",
-		"name_given": "headInvul",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invulToAirAttacks",
+		"args": "1: Boolean",
+		"description": "Apply invul to aerial attacks",
+		"extra": "Automatically spawns a `cmn_muteki` particle for the defender when this happens.\n\nTechnically not invul to air attacks per se, but attacks with head property instead. However, in DBFZ all air attacks are automatically given the head property, thus the invulToAirAttacks in the given name.",
 		"tags": "armor"
 	},
 	{
 		"id": 1867,
 		"name_raw": "exMutekiKezuri",
 		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Integer (percentage)",
+		"description": "Unusable",
+		"extra": "Same as #1855 (exMutekiDamageRate), just with chip kills disabled. However, chip kills are already disabled in DBFZ.",
 		"tags": "armor"
 	},
 	{
 		"id": 1868,
 		"name_raw": "exMutekiArmorBreak",
-		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invulToArmorBreak",
+		"args": "1: Boolean",
+		"description": "Apply invul to ArmorBreak attacks",
+		"extra": "When set to false, attacks with #1017 (atkArmorBreak) enabled can break your invul.\nNo such attacks exist in vanilla DBFZ.",
 		"tags": "armor"
 	},
 	{
 		"id": 1869,
 		"name_raw": "exMutekiShotLevelM1",
-		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invulToLevel-1Projectiles",
+		"args": "1: Boolean",
+		"description": "Apply invul to level -1 projectiles",
+		"extra": "Bit of a weird call, because -1 projectiles are not meant to be projectiles at all.\nOnly ever called in vanilla DBFZ, and only to disable it.",
 		"tags": "armor"
 	},
 	{
 		"id": 1870,
 		"name_raw": "",
-		"name_given": "superArmorPhysicalGuard",
-		"args": "",
-		"description": "",
+		"name_given": "invulToMainPlayerPhysical",
+		"args": "1: Boolean",
+		"description": "Apply invul to physical attacks from a main player object",
 		"extra": "",
 		"tags": "armor"
 	},
 	{
 		"id": 1871,
 		"name_raw": "",
-		"name_given": "superArmorPhysicalAssistGuard",
-		"args": "",
-		"description": "",
+		"name_given": "invulToSubPlayerPhysical",
+		"args": "1: Boolean",
+		"description": "Apply invul to physical attacks from a sub player object",
 		"extra": "",
 		"tags": "armor"
 	},
 	{
 		"id": 1872,
 		"name_raw": "",
-		"name_given": "superArmorKiBlastInvul",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"name_given": "invulToKiBlasts",
+		"args": "1: Boolean",
+		"description": "Apply invul to level 1 and 2 projectiles",
+		"extra": "Causes a DODGE even when the invul type is set to ARMOR.\nAutomatically spawns a `cmn_muteki` particle for the defender when this happens.",
 		"tags": "armor"
 	},
 	{
@@ -12414,9 +12414,9 @@
 		"id": 2139,
 		"name_raw": "event_SetAction",
 		"name_given": "",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Statename (string)\n2: Selector (integer)",
+		"description": "Force object into a state",
+		"extra": "Your only access to ActionRequestForce from BBS. Can be used outside of events, but only affects main character objects.\nOptions for arg 2:[0: Self\n1: Enemy]\nNote: Only affects the main character each side starts out with! Does not affect characters that are tagged in later.",
 		"tags": ""
 	},
 	{
@@ -13278,9 +13278,9 @@
 		"id": 2243,
 		"name_raw": "jimaku",
 		"name_given": "subtitles",
-		"args": "1: Header in REDGame\n2: Duration",
+		"args": "1: Header in REDGame\n2: Duration (bitmask)",
 		"description": "Display subtitles",
-		"extra": "Arg1 usually uses the reserved keyword '!prev'.\nThis makes it look up whatever voiceline is currently queued to play.",
+		"extra": "Arg 1 usually uses the reserved keyword '!prev'.\nThis makes it look up whatever voiceline is currently queued to play.\n\nArg 2 is a bitmask. You can enable a flag by changing it's value from 0 to 1, and you can enable multiple flags at once. Read the bitmask from right to left!\n\n[0-29: Time.\n30: Force subtitles to ignore state (action) changes, causing them to always play in full.\n31: Force subtitles to disappear once a character's mouth has stopped moving (set by a flag, which might not correspond to the actual animation).]",
 		"tags": ""
 	},
 	{
@@ -14870,7 +14870,7 @@
 	{
 		"id": 2500,
 		"name_raw": "ifBeginOP2CoType",
-		"name_given": "",
+		"name_given": "ifVarOfObjectOperation",
 		"args": "",
 		"description": "",
 		"extra": "",
