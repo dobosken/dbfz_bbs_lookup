@@ -3341,7 +3341,7 @@
 	{
 		"id": 546,
 		"name_raw": "setGripPosition",
-		"name_given": "setGripPosition",
+		"name_given": "",
 		"args": "1: Attachmentpoint attacker\n2: Attachmentpoint defender\n3: Grip modifier (bitmask)",
 		"description": "Position control for grab interactions",
 		"extra": "Arg 3 is a bitmask. You can enable a flag by changing it's value from 0 to 1, and you can enable multiple flags at once. Read the bitmask from right to left!\n\n[0: Set the moving object to yourself, not an enemy.\n1: Allow the moving object to clip into the ground\n2: Force the moving object to a Y coordinate of 0]",
