@@ -10481,7 +10481,7 @@
 		"name_given": "invulToLevel-1Projectiles",
 		"args": "1: Boolean",
 		"description": "Apply invul to level -1 projectiles",
-		"extra": "Bit of a weird call, because -1 projectiles are not meant to be projectiles at all.\nOnly ever called in vanilla DBFZ, and only to disable it.",
+		"extra": "Bit of a weird call, because -1 projectiles are not meant to be projectiles at all.",
 		"tags": "armor"
 	},
 	{
