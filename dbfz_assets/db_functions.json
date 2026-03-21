@@ -9336,8 +9336,8 @@
 		"id": 1662,
 		"name_raw": "senkoInput",
 		"name_given": "whiffCancelOptionBufferTime",
-		"args": "1: Move\n2: Custom buffer window",
-		"description": "Whiff cancelling, but with a long, custom input buffers",
+		"args": "1: Move\n2: Custom buffer window in frames (integer)",
+		"description": "Whiff cancelling, but with a custom input buffers",
 		"extra": "",
 		"tags": ""
 	},
@@ -13669,6 +13669,15 @@
 		"description": "",
 		"extra": "",
 		"tags": "hitstop"
+	},
+	{
+		"id": 2297,
+		"name_raw": "",
+		"name_given": "checkInputFromParent",
+		"args": "1: Input",
+		"description": "",
+		"extra": "As with nearly all checks, result goes into var #0",
+		"tags": "conditional"
 	},
 	{
 		"id": 2298,
