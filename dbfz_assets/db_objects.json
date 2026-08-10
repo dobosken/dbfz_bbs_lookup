@@ -349,5 +349,14 @@
 		"description": "",
 		"extra": "",
 		"tags": ""
+	},
+	{
+		"id": 39,
+		"name_raw": "",
+		"name_given": "STOLEN_ASSIST",
+		"args": "",
+		"description": "ID given to objects summoned with function #2529 (osmAssistSteal)",
+		"extra": "",
+		"tags": ""
 	}
 ]

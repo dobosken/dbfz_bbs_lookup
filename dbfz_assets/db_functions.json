@@ -3054,7 +3054,7 @@
 		"id": 452,
 		"name_raw": "linkObjectPushCollision",
 		"name_given": "",
-		"args": "1: Object.",
+		"args": "1: Object",
 		"description": "",
 		"extra": "",
 		"tags": ""
@@ -3063,7 +3063,7 @@
 		"id": 453,
 		"name_raw": "linkObjectAngle",
 		"name_given": "",
-		"args": "1: Object.",
+		"args": "1: Object",
 		"description": "",
 		"extra": "",
 		"tags": ""
@@ -3072,7 +3072,7 @@
 		"id": 454,
 		"name_raw": "linkObjectPosition",
 		"name_given": "",
-		"args": "1: Object.",
+		"args": "1: Object",
 		"description": "This object's absolute position will update to match the linked object's absolute position",
 		"extra": "Doesn't warp directly to the linked object; maintains positional offsets.",
 		"tags": "position"
@@ -3081,7 +3081,7 @@
 		"id": 455,
 		"name_raw": "linkObjectDirection",
 		"name_given": "",
-		"args": "1: Object.",
+		"args": "1: Object",
 		"description": "This object's facing direction will update to match the linked object's facing direction",
 		"extra": "",
 		"tags": ""
@@ -3090,7 +3090,7 @@
 		"id": 456,
 		"name_raw": "linkObjectStop",
 		"name_given": "",
-		"args": "1: Object.",
+		"args": "1: Object",
 		"description": "Stop this object if the linked object is stopped (hitstop/superfreeze)",
 		"extra": "",
 		"tags": ""
@@ -3099,7 +3099,7 @@
 		"id": 457,
 		"name_raw": "linkObjectChangeToEliminate",
 		"name_given": "",
-		"args": "1: Object.",
+		"args": "1: Object",
 		"description": "Destroy this object if the linked object changes states",
 		"extra": "",
 		"tags": ""
@@ -3108,7 +3108,7 @@
 		"id": 458,
 		"name_raw": "linkObjectDamageToEliminate",
 		"name_given": "",
-		"args": "1: Object.",
+		"args": "1: Object",
 		"description": "Destroy this object if the linked object is damaged",
 		"extra": "",
 		"tags": ""
@@ -3117,7 +3117,7 @@
 		"id": 459,
 		"name_raw": "linkObjectPositionCenter",
 		"name_given": "",
-		"args": "1: Object.",
+		"args": "1: Object",
 		"description": "Seems to not function",
 		"extra": "",
 		"tags": "position"
@@ -3126,7 +3126,7 @@
 		"id": 460,
 		"name_raw": "linkObjectScale",
 		"name_given": "",
-		"args": "1: Object.",
+		"args": "1: Object",
 		"description": "This object's scale will update to match the linked object's scale",
 		"extra": "",
 		"tags": ""
@@ -3135,7 +3135,7 @@
 		"id": 462,
 		"name_raw": "linkModelPersOff",
 		"name_given": "",
-		"args": "1: Object.",
+		"args": "1: Object",
 		"description": "",
 		"extra": "",
 		"tags": "model"
@@ -3144,7 +3144,7 @@
 		"id": 463,
 		"name_raw": "linkCommonPolyLine",
 		"name_given": "",
-		"args": "1: Object.",
+		"args": "1: Object",
 		"description": "",
 		"extra": "",
 		"tags": ""
@@ -3288,9 +3288,9 @@
 		"id": 479,
 		"name_raw": "createSocketLinkParticle",
 		"name_given": "",
-		"args": "1: Object (string).\n2: Socket\n3: Attach to skeleton (boolean, 0 or 1.",
+		"args": "1: Object (string)\n2: Socket (bitmask)\n3: Attach object (boolean, 0 or 1)",
 		"description": "Create objects(!) at each skeleton socket location",
-		"extra": "",
+		"extra": "The bitmask corresponds to different sockets on a skeleton. You can select multiple.\nThe bitmask is read from right-to-left. The rightmost position corresponds to the first socket in the following list:\n[POS_HEAD_3D\nPOS_CHEST_3D\nPOS_PELVIS_3D\nPOS_SHOULDER_L_3D\nPOS_SHOULDER_R_3D\nPOS_ELBOW_L_3D\nPOS_ELBOW_R_3D\nPOS_HAND_L_3D\nPOS_HAND_R_3D\nPOS_CALF_L_3D\nPOS_CALF_R_3D\nPOS_FOOT_L_3D\nPOS_FOOT_R_3D]\nThe last parameter determines whether the object sticks to the socket it is attached to, or remains in place once created.",
 		"tags": ""
 	},
 	{
@@ -3306,9 +3306,9 @@
 		"id": 481,
 		"name_raw": "linkObjectMaterialSet",
 		"name_given": "createSocketLinkParticleOnObject",
-		"args": "",
+		"args": "1: Object (string)\n2: Socket (bitmask)\n3: Attach object (boolean, 0 or 1)\n4: Object",
 		"description": "Same as #479, but with the ability to spawn on another object.",
-		"extra": "",
+		"extra": "The object must be from CMN, or from the character that this function call originates from. You cannot summon an object belonging to a different character with this function.",
 		"tags": ""
 	},
 	{
@@ -9337,7 +9337,7 @@
 		"name_raw": "senkoInput",
 		"name_given": "whiffCancelOptionBufferTime",
 		"args": "1: Move\n2: Custom buffer window in frames (integer)",
-		"description": "Whiff cancelling, but with a custom input buffers",
+		"description": "Whiff cancelling, but with a custom input buffer",
 		"extra": "",
 		"tags": ""
 	},
@@ -11640,9 +11640,9 @@
 		"id": 2052,
 		"name_raw": "playCameraAnime",
 		"name_given": "playCameraAnimation",
-		"args": "",
-		"description": "",
-		"extra": "",
+		"args": "1: Camera animation (from a character's CameraData)\n2: Object to centre on\n3: Blend-in frames\n4: Blend-out frames",
+		"description": "Play prebaked camera animation",
+		"extra": "Setting arg 2 to NULL will cause the animation to be centred on the screen.\nSetting arg 4 to -1 will cause the game to hold on the last position of the animation, rather than blend back into the generic camera after it's done.",
 		"tags": "animation,camera"
 	},
 	{
