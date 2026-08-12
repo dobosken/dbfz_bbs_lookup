@@ -120,7 +120,7 @@
 		"id": 13,
 		"name_raw": "gotoIfOP2",
 		"name_given": "gotoLabelIfOperation",
-		"args": "1: Label to jump to if the condition checks out\n2: Operator\n3: Variable or integer\n4: Variable or integer",
+		"args": "1: Label to jump to if the condition check is true\n2: Operator\n3: Variable or integer\n4: Variable or integer",
 		"description": "",
 		"extra": "Check the 'operators' entry in 'misc'",
 		"tags": "flow,conditional"
@@ -219,7 +219,7 @@
 		"id": 24,
 		"name_raw": "gotoIf",
 		"name_given": "gotoLabelIfTrue",
-		"args": "1: Label to jump to on succes\n2: Variable to check",
+		"args": "1: Label to jump to if variable is true/not 0\n2: Variable to check",
 		"description": "",
 		"extra": "",
 		"tags": "flow,conditional"
@@ -228,7 +228,7 @@
 		"id": 25,
 		"name_raw": "gotoIfNot",
 		"name_given": "gotoLabelIfFalse",
-		"args": "1: Label to jump to on succes\n2: Variable to check",
+		"args": "1: Label to jump to if variable is false/0\n2: Variable to check",
 		"description": "",
 		"extra": "",
 		"tags": "flow,conditional"
